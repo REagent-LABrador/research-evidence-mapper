@@ -1,0 +1,2649 @@
+{
+  "coverage": {
+    "confidence_profile": {
+      "below_0_65": 5,
+      "hedged_but_confident": [],
+      "max": 0.9,
+      "min": 0.4,
+      "n": 20
+    },
+    "defaults_applied": [
+      "reason: not supplied (null)",
+      "years: no time limit (not supplied)"
+    ],
+    "depth": "quick",
+    "duplicates_dropped": 3,
+    "figures_read": 0,
+    "found": 20,
+    "has_disease_node": true,
+    "id_seq": {
+      "gap": 23,
+      "link": 11
+    },
+    "interventions_without_target": [],
+    "interventions_without_target_count": 0,
+    "limits": {
+      "max_papers": 10,
+      "max_queries": 2
+    },
+    "no_quote_discarded": 0,
+    "proteins_without_accession": [],
+    "proteins_without_accession_count": 0,
+    "queries": [
+      {
+        "n_results": 10,
+        "q": "IRAK4 inhibitor synovial fibroblast cytokine release rheumatoid arthritis",
+        "search_id": "s_4d61d432",
+        "tool": "paperclip.search"
+      },
+      {
+        "n_results": 10,
+        "q": "PF-06650833 IRAK4 fibroblast-like synoviocytes IL-6 TNF cytokine",
+        "search_id": "s_8efdf7d7",
+        "tool": "paperclip.search"
+      }
+    ],
+    "quotes_unverified": 0,
+    "read": 4,
+    "stop_reason": "queries_exhausted",
+    "truncated": true,
+    "used": 4,
+    "years": null
+  },
+  "delta": {
+    "findings_added": [
+      "f10_1",
+      "f11_1",
+      "f2_1",
+      "f4_1",
+      "f5_1",
+      "f6_1",
+      "f8_1",
+      "f9_1"
+    ],
+    "gaps_added": [
+      "g10",
+      "g11",
+      "g12",
+      "g13",
+      "g14",
+      "g15",
+      "g16",
+      "g17",
+      "g18",
+      "g19",
+      "g20",
+      "g21",
+      "g22",
+      "g23"
+    ],
+    "gaps_resolved": [
+      "g1"
+    ],
+    "links_added": [
+      "L10",
+      "L11",
+      "L8",
+      "L9"
+    ],
+    "links_changed": [
+      "L2",
+      "L4"
+    ],
+    "papers_added": [
+      "p5"
+    ],
+    "round": 2,
+    "things_added": [
+      "t7",
+      "t8",
+      "t9"
+    ]
+  },
+  "error": null,
+  "findings": [
+    {
+      "confidence": 0.75,
+      "flags": [],
+      "from": "t1",
+      "hedged": false,
+      "how": "associated_with",
+      "id": "f8_1",
+      "is_own_result": false,
+      "line": 7,
+      "paper": "p1",
+      "quote": "Interleukin-1 receptor-associated kinase 4 (IRAK4) is a pivotal enzyme in the Toll-like receptor (TLR)/MYD88 dependent signaling pathway, which is highly activated in rheumatoid arthritis tissues and activated B cell-like diffuse large B-cell lymphoma (ABC-DLBCL).",
+      "quote_verified": true,
+      "round": 2,
+      "says": "yes",
+      "section": "abstract",
+      "to": "t2",
+      "where": "ra tissue"
+    },
+    {
+      "confidence": 0.4,
+      "flags": [
+        "review_restatement"
+      ],
+      "from": "t1",
+      "hedged": true,
+      "how": "drives",
+      "id": "f13",
+      "is_own_result": false,
+      "paper": "p4",
+      "quote": "Given the critical role of IRAK-4 in inflammatory processes, modulation of IRAK-4 kinase activity presents an attractive therapeutic approach for the treatment of immune and inflammatory diseases.",
+      "quote_verified": true,
+      "round": 1,
+      "says": "yes",
+      "section": "abstract",
+      "to": "t4",
+      "where": null
+    },
+    {
+      "confidence": 0.6,
+      "flags": [
+        "review_restatement"
+      ],
+      "from": "t1",
+      "hedged": true,
+      "how": "drives",
+      "id": "f9_1",
+      "is_own_result": false,
+      "line": 6,
+      "paper": "p4",
+      "quote": "Out of four members in the mammalian IRAK family, IRAK-4 is considered to be the “master IRAK”, the only family member indispensable for IL-1R/TLR signaling.",
+      "quote_verified": true,
+      "round": 2,
+      "says": "yes",
+      "section": "abstract",
+      "to": "t8",
+      "where": null
+    },
+    {
+      "confidence": 0.85,
+      "flags": [],
+      "from": "t3",
+      "hedged": false,
+      "how": "inhibits",
+      "id": "f1",
+      "is_own_result": true,
+      "paper": "p1",
+      "quote": "We developed a dual IRAK4/PIM1 inhibitor KIC-0101 that potently suppresses the NF- κ B pathway and proinflammatory cytokine induction  in vitro  and  in vivo .",
+      "quote_verified": true,
+      "round": 1,
+      "says": "yes",
+      "section": "abstract",
+      "to": "t1",
+      "where": null
+    },
+    {
+      "confidence": 0.85,
+      "flags": [],
+      "from": "t3",
+      "hedged": false,
+      "how": "inhibits",
+      "id": "f5_1",
+      "is_own_result": true,
+      "line": 7,
+      "paper": "p1",
+      "quote": "We developed a dual IRAK4/PIM1 inhibitor KIC-0101 that potently suppresses the NF- κ B pathway and proinflammatory cytokine induction",
+      "quote_verified": true,
+      "round": 2,
+      "says": "yes",
+      "section": "abstract",
+      "to": "t1",
+      "where": null
+    },
+    {
+      "confidence": 0.9,
+      "flags": [],
+      "from": "t3",
+      "hedged": false,
+      "how": "inhibits",
+      "id": "f5",
+      "is_own_result": true,
+      "paper": "p2",
+      "quote": "To investigate the role of PF‐06650833, a highly potent and selective small‐molecule inhibitor of interleukin‐1–associated kinase 4 (IRAK4), in autoimmune pathophysiology in vitro, in vivo, and in the clinical setting.",
+      "quote_verified": true,
+      "round": 1,
+      "says": "yes",
+      "section": "abstract",
+      "to": "t1",
+      "where": null
+    },
+    {
+      "confidence": 0.6,
+      "flags": [],
+      "from": "t3",
+      "hedged": false,
+      "how": "inhibits",
+      "id": "f9",
+      "is_own_result": true,
+      "paper": "p3",
+      "quote": "Unexpectedly, although both compounds had excellent IC 50  on IRAK4 kinase activity, only BAY-1834845 but not PF-06650833 or high dose dexamethasone could significantly prevent lung injury according to a blinded pathology scoring.",
+      "quote_verified": true,
+      "round": 1,
+      "says": "yes",
+      "section": "abstract",
+      "to": "t1",
+      "where": null
+    },
+    {
+      "confidence": 0.85,
+      "flags": [],
+      "from": "t3",
+      "hedged": false,
+      "how": "inhibits",
+      "id": "f10_1",
+      "is_own_result": false,
+      "line": 6,
+      "paper": "p5",
+      "quote": "PF-06650833 is a potent, selective inhibitor of interleukin-1 receptor-associated kinase 4 (IRAK4).",
+      "quote_verified": true,
+      "round": 2,
+      "says": "yes",
+      "section": "abstract",
+      "to": "t1",
+      "where": null
+    },
+    {
+      "confidence": 0.85,
+      "flags": [],
+      "from": "t3",
+      "hedged": false,
+      "how": "treats",
+      "id": "f4",
+      "is_own_result": true,
+      "paper": "p1",
+      "quote": "In rheumatoid arthritis mouse models, treatment with KIC-0101 significantly ameliorated cartilage damage and inflammation.",
+      "quote_verified": true,
+      "round": 1,
+      "says": "yes",
+      "section": "abstract",
+      "to": "t2",
+      "where": "mouse"
+    },
+    {
+      "confidence": 0.75,
+      "flags": [],
+      "from": "t3",
+      "hedged": false,
+      "how": "treats",
+      "id": "f7",
+      "is_own_result": true,
+      "paper": "p2",
+      "quote": "In vivo, PF‐06650833 reduced circulating autoantibody levels in the pristane‐induced and MRL/ lpr  murine models of lupus and protected against CIA in rats.",
+      "quote_verified": true,
+      "round": 1,
+      "says": "yes",
+      "section": "abstract",
+      "to": "t2",
+      "where": "rat, collagen-induced arthritis"
+    },
+    {
+      "confidence": 0.55,
+      "flags": [],
+      "from": "t3",
+      "hedged": true,
+      "how": "treats",
+      "id": "f8",
+      "is_own_result": true,
+      "paper": "p2",
+      "quote": "These data demonstrate that inhibition of IRAK4 kinase activity can reduce levels of inflammation markers in humans and provide confidence in the rationale for clinical development of IRAK4 inhibitors for rheumatologic indications.",
+      "quote_verified": true,
+      "round": 1,
+      "says": "yes",
+      "section": "discussion",
+      "to": "t2",
+      "where": "human, phase i trial"
+    },
+    {
+      "confidence": 0.8,
+      "flags": [],
+      "from": "t3",
+      "hedged": false,
+      "how": "decreases",
+      "id": "f2",
+      "is_own_result": true,
+      "paper": "p1",
+      "quote": "We developed a dual IRAK4/PIM1 inhibitor KIC-0101 that potently suppresses the NF- κ B pathway and proinflammatory cytokine induction  in vitro  and  in vivo .",
+      "quote_verified": true,
+      "round": 1,
+      "says": "yes",
+      "section": "abstract",
+      "to": "t4",
+      "where": "in vitro"
+    },
+    {
+      "confidence": 0.85,
+      "flags": [],
+      "from": "t3",
+      "hedged": false,
+      "how": "decreases",
+      "id": "f6_1",
+      "is_own_result": true,
+      "line": 7,
+      "paper": "p1",
+      "quote": "We developed a dual IRAK4/PIM1 inhibitor KIC-0101 that potently suppresses the NF- κ B pathway and proinflammatory cytokine induction",
+      "quote_verified": true,
+      "round": 2,
+      "says": "yes",
+      "section": "abstract",
+      "to": "t4",
+      "where": "in vitro and in vivo"
+    },
+    {
+      "confidence": 0.8,
+      "flags": [
+        "conditions_unstated"
+      ],
+      "from": "t3",
+      "hedged": false,
+      "how": "suppresses",
+      "id": "f6",
+      "is_own_result": true,
+      "paper": "p2",
+      "quote": "In vitro, PF‐06650833 inhibited human primary cell inflammatory responses to physiologically relevant stimuli generated with RA and SLE patient plasma.",
+      "quote_verified": true,
+      "round": 1,
+      "says": "yes",
+      "section": "abstract",
+      "to": "t4",
+      "where": "human primary cells"
+    },
+    {
+      "confidence": 0.75,
+      "flags": [],
+      "from": "t3",
+      "hedged": false,
+      "how": "suppresses",
+      "id": "f10",
+      "is_own_result": true,
+      "paper": "p3",
+      "quote": "Unexpectedly, although both compounds had excellent IC 50  on IRAK4 kinase activity, only BAY-1834845 but not PF-06650833 or high dose dexamethasone could significantly prevent lung injury according to a blinded pathology scoring.",
+      "quote_verified": true,
+      "round": 1,
+      "says": "yes",
+      "section": "abstract",
+      "to": "t5",
+      "where": "BAY-1834845, LPS-induced ARDS mouse model"
+    },
+    {
+      "confidence": 0.75,
+      "flags": [],
+      "from": "t3",
+      "hedged": false,
+      "how": "suppresses",
+      "id": "f11",
+      "is_own_result": true,
+      "paper": "p3",
+      "quote": "Unexpectedly, although both compounds had excellent IC 50  on IRAK4 kinase activity, only BAY-1834845 but not PF-06650833 or high dose dexamethasone could significantly prevent lung injury according to a blinded pathology scoring.",
+      "quote_verified": true,
+      "round": 1,
+      "says": "no",
+      "section": "abstract",
+      "to": "t5",
+      "where": "PF-06650833, LPS-induced ARDS mouse model"
+    },
+    {
+      "confidence": 0.8,
+      "flags": [],
+      "from": "t3",
+      "hedged": false,
+      "how": "decreases",
+      "id": "f12",
+      "is_own_result": true,
+      "paper": "p3",
+      "quote": "Compared with PF-06650833 and high dose dexamethasone, BAY-1834845 remarkably decreased inflammatory cells infiltrating lung tissue and neutrophil count in BALF.",
+      "quote_verified": true,
+      "round": 1,
+      "says": "yes",
+      "section": "abstract",
+      "to": "t6",
+      "where": "BAY-1834845, LPS-induced ARDS mouse model, BALF"
+    },
+    {
+      "confidence": 0.7,
+      "flags": [
+        "direction_from_context"
+      ],
+      "from": "t3",
+      "hedged": false,
+      "how": "suppresses",
+      "id": "f2_1",
+      "is_own_result": true,
+      "line": 24,
+      "paper": "p2",
+      "quote": "In vitro, PF‐06650833 inhibited human primary cell inflammatory responses to physiologically relevant stimuli generated with RA and SLE patient plasma.",
+      "quote_verified": true,
+      "round": 2,
+      "says": "yes",
+      "section": "abstract",
+      "to": "t7",
+      "where": "primary human macrophages, ra fls, cocultures"
+    },
+    {
+      "confidence": 0.6,
+      "flags": [],
+      "from": "t3",
+      "hedged": true,
+      "how": "decreases",
+      "id": "f4_1",
+      "is_own_result": true,
+      "line": 26,
+      "paper": "p2",
+      "quote": "These data demonstrate that inhibition of IRAK4 kinase activity can reduce levels of inflammation markers in humans and provide confidence in the rationale for clinical development of IRAK4 inhibitors for rheumatologic indications.",
+      "quote_verified": true,
+      "round": 2,
+      "says": "yes",
+      "section": "abstract",
+      "to": "t9",
+      "where": "human phase i trial"
+    },
+    {
+      "confidence": 0.8,
+      "flags": [
+        "effect_size_dropped"
+      ],
+      "from": "t3",
+      "hedged": false,
+      "how": "decreases",
+      "id": "f11_1",
+      "is_own_result": true,
+      "line": 10,
+      "paper": "p5",
+      "quote": "There was a sustained decrease in serum high-sensitivity C-reactive protein for IR",
+      "quote_verified": true,
+      "round": 2,
+      "says": "yes",
+      "section": "abstract",
+      "to": "t9",
+      "where": "human phase 1, healthy subjects"
+    }
+  ],
+  "gaps": [
+    {
+      "confidence": 0.1009,
+      "id": "g2",
+      "implied_by": [
+        "L2",
+        "L6"
+      ],
+      "missing": [
+        "t4",
+        "t5"
+      ],
+      "note": "both connect to t3; no direct link reported",
+      "searched_in_round": null
+    },
+    {
+      "confidence": 0.1009,
+      "id": "g3",
+      "implied_by": [
+        "L2",
+        "L3"
+      ],
+      "missing": [
+        "t4",
+        "t6"
+      ],
+      "note": "both connect to t3; no direct link reported",
+      "searched_in_round": null
+    },
+    {
+      "confidence": 0.0858,
+      "id": "g4",
+      "implied_by": [
+        "L6",
+        "L7"
+      ],
+      "missing": [
+        "t2",
+        "t5"
+      ],
+      "note": "both connect to t3; no direct link reported",
+      "searched_in_round": null
+    },
+    {
+      "confidence": 0.0858,
+      "id": "g5",
+      "implied_by": [
+        "L3",
+        "L7"
+      ],
+      "missing": [
+        "t2",
+        "t6"
+      ],
+      "note": "both connect to t3; no direct link reported",
+      "searched_in_round": null
+    },
+    {
+      "confidence": 0.0909,
+      "id": "g6",
+      "implied_by": [
+        "L2",
+        "L7"
+      ],
+      "missing": [
+        "t2",
+        "t4"
+      ],
+      "note": "both connect to t3; no direct link reported (implied via 2 intermediates)",
+      "searched_in_round": null
+    },
+    {
+      "confidence": 0.0656,
+      "id": "g7",
+      "implied_by": [
+        "L4",
+        "L6"
+      ],
+      "missing": [
+        "t1",
+        "t5"
+      ],
+      "note": "both connect to t3; no direct link reported",
+      "searched_in_round": null
+    },
+    {
+      "confidence": 0.0656,
+      "id": "g8",
+      "implied_by": [
+        "L3",
+        "L4"
+      ],
+      "missing": [
+        "t1",
+        "t6"
+      ],
+      "note": "both connect to t3; no direct link reported",
+      "searched_in_round": null
+    },
+    {
+      "confidence": 0.0656,
+      "id": "g9",
+      "implied_by": [
+        "L3",
+        "L6"
+      ],
+      "missing": [
+        "t5",
+        "t6"
+      ],
+      "note": "both connect to t3; no direct link reported",
+      "searched_in_round": null
+    },
+    {
+      "confidence": 0.1285,
+      "id": "g10",
+      "implied_by": [
+        "L11",
+        "L2"
+      ],
+      "missing": [
+        "t4",
+        "t7"
+      ],
+      "note": "both connect to t3; no direct link reported",
+      "searched_in_round": null
+    },
+    {
+      "confidence": 0.1248,
+      "id": "g11",
+      "implied_by": [
+        "L10",
+        "L2"
+      ],
+      "missing": [
+        "t4",
+        "t9"
+      ],
+      "note": "both connect to t3; no direct link reported",
+      "searched_in_round": null
+    },
+    {
+      "confidence": 0.1126,
+      "id": "g12",
+      "implied_by": [
+        "L10",
+        "L4"
+      ],
+      "missing": [
+        "t1",
+        "t9"
+      ],
+      "note": "both connect to t3; no direct link reported",
+      "searched_in_round": null
+    },
+    {
+      "confidence": 0.1009,
+      "id": "g13",
+      "implied_by": [
+        "L11",
+        "L6"
+      ],
+      "missing": [
+        "t5",
+        "t7"
+      ],
+      "note": "both connect to t3; no direct link reported",
+      "searched_in_round": null
+    },
+    {
+      "confidence": 0.1009,
+      "id": "g14",
+      "implied_by": [
+        "L11",
+        "L3"
+      ],
+      "missing": [
+        "t6",
+        "t7"
+      ],
+      "note": "both connect to t3; no direct link reported",
+      "searched_in_round": null
+    },
+    {
+      "confidence": 0.0991,
+      "id": "g15",
+      "implied_by": [
+        "L10",
+        "L7"
+      ],
+      "missing": [
+        "t2",
+        "t9"
+      ],
+      "note": "both connect to t3; no direct link reported",
+      "searched_in_round": null
+    },
+    {
+      "confidence": 0.0858,
+      "id": "g16",
+      "implied_by": [
+        "L10",
+        "L6"
+      ],
+      "missing": [
+        "t5",
+        "t9"
+      ],
+      "note": "both connect to t3; no direct link reported",
+      "searched_in_round": null
+    },
+    {
+      "confidence": 0.0858,
+      "id": "g17",
+      "implied_by": [
+        "L10",
+        "L3"
+      ],
+      "missing": [
+        "t6",
+        "t9"
+      ],
+      "note": "both connect to t3; no direct link reported",
+      "searched_in_round": null
+    },
+    {
+      "confidence": 0.0835,
+      "id": "g18",
+      "implied_by": [
+        "L11",
+        "L4"
+      ],
+      "missing": [
+        "t1",
+        "t7"
+      ],
+      "note": "both connect to t3; no direct link reported",
+      "searched_in_round": null
+    },
+    {
+      "confidence": 0.071,
+      "id": "g19",
+      "implied_by": [
+        "L11",
+        "L7"
+      ],
+      "missing": [
+        "t2",
+        "t7"
+      ],
+      "note": "both connect to t3; no direct link reported",
+      "searched_in_round": null
+    },
+    {
+      "confidence": 0.071,
+      "id": "g20",
+      "implied_by": [
+        "L10",
+        "L11"
+      ],
+      "missing": [
+        "t7",
+        "t9"
+      ],
+      "note": "both connect to t3; no direct link reported",
+      "searched_in_round": null
+    },
+    {
+      "confidence": 0.0136,
+      "id": "g21",
+      "implied_by": [
+        "L4",
+        "L9"
+      ],
+      "missing": [
+        "t3",
+        "t8"
+      ],
+      "note": "both connect to t1; no direct link reported",
+      "searched_in_round": null
+    },
+    {
+      "confidence": 0.0048,
+      "id": "g22",
+      "implied_by": [
+        "L8",
+        "L9"
+      ],
+      "missing": [
+        "t2",
+        "t8"
+      ],
+      "note": "both connect to t1; no direct link reported",
+      "searched_in_round": null
+    },
+    {
+      "confidence": 0.0048,
+      "id": "g23",
+      "implied_by": [
+        "L1",
+        "L9"
+      ],
+      "missing": [
+        "t4",
+        "t8"
+      ],
+      "note": "both connect to t1; no direct link reported",
+      "searched_in_round": null
+    }
+  ],
+  "generated_at": "2026-08-16T09:00:00Z",
+  "graph_id": "g_40f9",
+  "interpretability": {
+    "assumptions": [
+      {
+        "basis": "Depth tier requested by the caller; it sets the paper budget for the round. null means the caller did not state one.",
+        "id": "assumption.depth",
+        "path": "input.depth",
+        "synthetic": false,
+        "unit": "tier",
+        "value": "quick"
+      },
+      {
+        "basis": "Hard ceiling on papers read this round. Every coverage count is bounded by it, so an absent relationship may be a budget artefact.",
+        "id": "assumption.limits.max_papers",
+        "path": "input.coverage.limits.max_papers",
+        "synthetic": false,
+        "unit": "papers",
+        "value": 10
+      },
+      {
+        "basis": "Hard ceiling on distinct corpus queries issued this round.",
+        "id": "assumption.limits.max_queries",
+        "path": "input.coverage.limits.max_queries",
+        "synthetic": false,
+        "unit": "queries",
+        "value": 2
+      },
+      {
+        "basis": "Publication window the search was restricted to. null means no window was requested, NOT that the corpus is complete.",
+        "id": "assumption.years",
+        "path": "input.years",
+        "synthetic": false,
+        "unit": "year range",
+        "value": null
+      },
+      {
+        "basis": "Fixed weights in score_link. Chosen, not fitted: no labelled corpus exists to fit them against.",
+        "id": "assumption.confidence_weights",
+        "path": "code.score_link",
+        "synthetic": false,
+        "unit": "weight",
+        "value": {
+          "agreement": 0.4,
+          "evidence_quality": 0.4,
+          "independence": 0.2
+        }
+      },
+      {
+        "basis": "Study-design quality prior. An out-of-vocabulary study_type scores as `unknown` (0.4) rather than silently matching something close.",
+        "id": "assumption.study_quality_table",
+        "path": "code._STUDY_QUALITY",
+        "synthetic": false,
+        "unit": "score",
+        "value": {
+          "animal": 0.6,
+          "clinical_trial": 0.9,
+          "computational": 0.4,
+          "human_cohort": 0.8,
+          "meta_analysis": 1.0,
+          "review": 0.3,
+          "test_tube": 0.5,
+          "unknown": 0.4
+        }
+      },
+      {
+        "basis": "Multiplier applied to a preprint's design score, for absence of peer review.",
+        "id": "assumption.preprint_penalty",
+        "path": "code.evidence_quality",
+        "synthetic": false,
+        "unit": "factor",
+        "value": 0.8
+      },
+      {
+        "basis": "Only a paper's own results count toward a link's STATE, its agreement term and its independence term -- a review restating forty studies is one paper, and is not independent evidence for any of them. Note the exception: `evidence_quality` averages over every finding on the link, cited background included.",
+        "id": "assumption.own_result_only",
+        "path": "code._own",
+        "synthetic": false,
+        "unit": "flag",
+        "value": true
+      },
+      {
+        "basis": "Constants in the open-triangle gap ranking, including the 0.6 ceiling that keeps a gap a proposal rather than a finding.",
+        "id": "assumption.gap_ranking",
+        "path": "code.find_gaps",
+        "synthetic": false,
+        "unit": "constants",
+        "value": {
+          "cap": 50,
+          "confidence_ceiling": 0.6,
+          "degree_cap": 24,
+          "route_bonus_coefficient": 0.12,
+          "shared_paper_penalty": 0.65
+        }
+      },
+      {
+        "basis": "The caller did not supply this field and a default was substituted. Recorded by the round as: reason: not supplied (null)",
+        "id": "assumption.default.reason",
+        "path": "input.reason",
+        "synthetic": true,
+        "unit": null,
+        "value": null
+      },
+      {
+        "basis": "The caller did not supply this field and a default was substituted. Recorded by the round as: years: no time limit (not supplied)",
+        "id": "assumption.default.years",
+        "path": "input.years",
+        "synthetic": true,
+        "unit": null,
+        "value": null
+      }
+    ],
+    "counterfactuals": [
+      {
+        "change": "One further clinical_trial study by a different group reports the opposite direction for L10 (IRAK4 inhibition --decreases--> systemic inflammatory biomarkers).",
+        "meaning": "The strongest relationship in the graph is not robust to a single contradicting primary result; it is a claim about the literature, not about the biology.",
+        "result": "state agreed -> disagreed, heuristic confidence 0.96 -> 0.8267"
+      },
+      {
+        "change": "One independent replication of L11 (IRAK4 inhibition --suppresses--> RA fibroblast-like synoviocyte (FLS) activation) by a different first author.",
+        "meaning": "Shows how much of this relationship's score is the independence term rather than the evidence itself.",
+        "result": "state single_source -> agreed, heuristic confidence 0.56 -> 0.96"
+      },
+      {
+        "change": "The literature search is re-run without the corpus limits in `coverage.limits`.",
+        "meaning": "Absence of a relationship in this graph is evidence about what was read, not about what exists. Only `stop_reason: complete` means the literature was exhausted rather than the budget.",
+        "result": "unknown -- 4 of 20 papers found were read this round"
+      }
+    ],
+    "evidence": [
+      {
+        "claim": "IRAK4 inhibition inhibits IRAK4",
+        "grade": "MODERATE",
+        "id": "evidence.f1",
+        "locator": "abstract",
+        "quote": "We developed a dual IRAK4/PIM1 inhibitor KIC-0101 that potently suppresses the NF- κ B pathway and proinflammatory cytokine induction  in vitro  and  in vivo .",
+        "source_id": "doi:10.1016/j.apsb.2022.12.001",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1016/j.apsb.2022.12.001",
+        "synthetic": false
+      },
+      {
+        "claim": "IRAK4 inhibition suppresses acute lung injury (BAY-1834845, LPS-induced ARDS mouse model)",
+        "grade": "MODERATE",
+        "id": "evidence.f10",
+        "locator": "abstract",
+        "quote": "Unexpectedly, although both compounds had excellent IC 50  on IRAK4 kinase activity, only BAY-1834845 but not PF-06650833 or high dose dexamethasone could significantly prevent lung injury according to a blinded pathology scoring.",
+        "source_id": "doi:10.1016/j.biopha.2022.113459",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1016/j.biopha.2022.113459",
+        "synthetic": false
+      },
+      {
+        "claim": "IRAK4 inhibition inhibits IRAK4",
+        "grade": "HIGH",
+        "id": "evidence.f10_1",
+        "locator": "abstract",
+        "quote": "PF-06650833 is a potent, selective inhibitor of interleukin-1 receptor-associated kinase 4 (IRAK4).",
+        "source_id": "doi:10.1186/s13075-019-2008-6",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1186/s13075-019-2008-6",
+        "synthetic": false
+      },
+      {
+        "claim": "IRAK4 inhibition does not suppresses acute lung injury (PF-06650833, LPS-induced ARDS mouse model)",
+        "grade": "MODERATE",
+        "id": "evidence.f11",
+        "locator": "abstract",
+        "quote": "Unexpectedly, although both compounds had excellent IC 50  on IRAK4 kinase activity, only BAY-1834845 but not PF-06650833 or high dose dexamethasone could significantly prevent lung injury according to a blinded pathology scoring.",
+        "source_id": "doi:10.1016/j.biopha.2022.113459",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1016/j.biopha.2022.113459",
+        "synthetic": false
+      },
+      {
+        "claim": "IRAK4 inhibition decreases systemic inflammatory biomarkers (human phase 1, healthy subjects)",
+        "grade": "HIGH",
+        "id": "evidence.f11_1",
+        "locator": "abstract",
+        "quote": "There was a sustained decrease in serum high-sensitivity C-reactive protein for IR",
+        "source_id": "doi:10.1186/s13075-019-2008-6",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1186/s13075-019-2008-6",
+        "synthetic": false
+      },
+      {
+        "claim": "IRAK4 inhibition decreases neutrophil infiltration (BAY-1834845, LPS-induced ARDS mouse model, BALF)",
+        "grade": "MODERATE",
+        "id": "evidence.f12",
+        "locator": "abstract",
+        "quote": "Compared with PF-06650833 and high dose dexamethasone, BAY-1834845 remarkably decreased inflammatory cells infiltrating lung tissue and neutrophil count in BALF.",
+        "source_id": "doi:10.1016/j.biopha.2022.113459",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1016/j.biopha.2022.113459",
+        "synthetic": false
+      },
+      {
+        "claim": "IRAK4 drives proinflammatory cytokine production",
+        "grade": "LOW",
+        "id": "evidence.f13",
+        "locator": "abstract",
+        "quote": "Given the critical role of IRAK-4 in inflammatory processes, modulation of IRAK-4 kinase activity presents an attractive therapeutic approach for the treatment of immune and inflammatory diseases.",
+        "source_id": "doi:10.2174/156802609789044407",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.2174/156802609789044407",
+        "synthetic": false
+      },
+      {
+        "claim": "IRAK4 inhibition decreases proinflammatory cytokine production (in vitro)",
+        "grade": "MODERATE",
+        "id": "evidence.f2",
+        "locator": "abstract",
+        "quote": "We developed a dual IRAK4/PIM1 inhibitor KIC-0101 that potently suppresses the NF- κ B pathway and proinflammatory cytokine induction  in vitro  and  in vivo .",
+        "source_id": "doi:10.1016/j.apsb.2022.12.001",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1016/j.apsb.2022.12.001",
+        "synthetic": false
+      },
+      {
+        "claim": "IRAK4 inhibition suppresses RA fibroblast-like synoviocyte (FLS) activation (primary human macrophages, ra fls, cocultures)",
+        "grade": "HIGH",
+        "id": "evidence.f2_1",
+        "locator": "abstract",
+        "quote": "In vitro, PF‐06650833 inhibited human primary cell inflammatory responses to physiologically relevant stimuli generated with RA and SLE patient plasma.",
+        "source_id": "doi:10.1002/art.41953",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1002/art.41953",
+        "synthetic": false
+      },
+      {
+        "claim": "IRAK4 inhibition treats rheumatoid arthritis (mouse)",
+        "grade": "MODERATE",
+        "id": "evidence.f4",
+        "locator": "abstract",
+        "quote": "In rheumatoid arthritis mouse models, treatment with KIC-0101 significantly ameliorated cartilage damage and inflammation.",
+        "source_id": "doi:10.1016/j.apsb.2022.12.001",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1016/j.apsb.2022.12.001",
+        "synthetic": false
+      },
+      {
+        "claim": "IRAK4 inhibition decreases systemic inflammatory biomarkers (human phase i trial)",
+        "grade": "HIGH",
+        "id": "evidence.f4_1",
+        "locator": "abstract",
+        "quote": "These data demonstrate that inhibition of IRAK4 kinase activity can reduce levels of inflammation markers in humans and provide confidence in the rationale for clinical development of IRAK4 inhibitors for rheumatologic indications.",
+        "source_id": "doi:10.1002/art.41953",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1002/art.41953",
+        "synthetic": false
+      },
+      {
+        "claim": "IRAK4 inhibition inhibits IRAK4",
+        "grade": "HIGH",
+        "id": "evidence.f5",
+        "locator": "abstract",
+        "quote": "To investigate the role of PF‐06650833, a highly potent and selective small‐molecule inhibitor of interleukin‐1–associated kinase 4 (IRAK4), in autoimmune pathophysiology in vitro, in vivo, and in the clinical setting.",
+        "source_id": "doi:10.1002/art.41953",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1002/art.41953",
+        "synthetic": false
+      },
+      {
+        "claim": "IRAK4 inhibition inhibits IRAK4",
+        "grade": "MODERATE",
+        "id": "evidence.f5_1",
+        "locator": "abstract",
+        "quote": "We developed a dual IRAK4/PIM1 inhibitor KIC-0101 that potently suppresses the NF- κ B pathway and proinflammatory cytokine induction",
+        "source_id": "doi:10.1016/j.apsb.2022.12.001",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1016/j.apsb.2022.12.001",
+        "synthetic": false
+      },
+      {
+        "claim": "IRAK4 inhibition suppresses proinflammatory cytokine production (human primary cells)",
+        "grade": "HIGH",
+        "id": "evidence.f6",
+        "locator": "abstract",
+        "quote": "In vitro, PF‐06650833 inhibited human primary cell inflammatory responses to physiologically relevant stimuli generated with RA and SLE patient plasma.",
+        "source_id": "doi:10.1002/art.41953",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1002/art.41953",
+        "synthetic": false
+      },
+      {
+        "claim": "IRAK4 inhibition decreases proinflammatory cytokine production (in vitro and in vivo)",
+        "grade": "MODERATE",
+        "id": "evidence.f6_1",
+        "locator": "abstract",
+        "quote": "We developed a dual IRAK4/PIM1 inhibitor KIC-0101 that potently suppresses the NF- κ B pathway and proinflammatory cytokine induction",
+        "source_id": "doi:10.1016/j.apsb.2022.12.001",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1016/j.apsb.2022.12.001",
+        "synthetic": false
+      },
+      {
+        "claim": "IRAK4 inhibition treats rheumatoid arthritis (rat, collagen-induced arthritis)",
+        "grade": "HIGH",
+        "id": "evidence.f7",
+        "locator": "abstract",
+        "quote": "In vivo, PF‐06650833 reduced circulating autoantibody levels in the pristane‐induced and MRL/ lpr  murine models of lupus and protected against CIA in rats.",
+        "source_id": "doi:10.1002/art.41953",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1002/art.41953",
+        "synthetic": false
+      },
+      {
+        "claim": "IRAK4 inhibition treats rheumatoid arthritis (human, phase i trial)",
+        "grade": "HIGH",
+        "id": "evidence.f8",
+        "locator": "discussion",
+        "quote": "These data demonstrate that inhibition of IRAK4 kinase activity can reduce levels of inflammation markers in humans and provide confidence in the rationale for clinical development of IRAK4 inhibitors for rheumatologic indications.",
+        "source_id": "doi:10.1002/art.41953",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1002/art.41953",
+        "synthetic": false
+      },
+      {
+        "claim": "IRAK4 associated_with rheumatoid arthritis (ra tissue)",
+        "grade": "MODERATE",
+        "id": "evidence.f8_1",
+        "locator": "abstract",
+        "quote": "Interleukin-1 receptor-associated kinase 4 (IRAK4) is a pivotal enzyme in the Toll-like receptor (TLR)/MYD88 dependent signaling pathway, which is highly activated in rheumatoid arthritis tissues and activated B cell-like diffuse large B-cell lymphoma (ABC-DLBCL).",
+        "source_id": "doi:10.1016/j.apsb.2022.12.001",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1016/j.apsb.2022.12.001",
+        "synthetic": false
+      },
+      {
+        "claim": "IRAK4 inhibition inhibits IRAK4",
+        "grade": "MODERATE",
+        "id": "evidence.f9",
+        "locator": "abstract",
+        "quote": "Unexpectedly, although both compounds had excellent IC 50  on IRAK4 kinase activity, only BAY-1834845 but not PF-06650833 or high dose dexamethasone could significantly prevent lung injury according to a blinded pathology scoring.",
+        "source_id": "doi:10.1016/j.biopha.2022.113459",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1016/j.biopha.2022.113459",
+        "synthetic": false
+      },
+      {
+        "claim": "IRAK4 drives TLR/IL-1R signaling",
+        "grade": "LOW",
+        "id": "evidence.f9_1",
+        "locator": "abstract",
+        "quote": "Out of four members in the mammalian IRAK family, IRAK-4 is considered to be the “master IRAK”, the only family member indispensable for IL-1R/TLR signaling.",
+        "source_id": "doi:10.2174/156802609789044407",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.2174/156802609789044407",
+        "synthetic": false
+      }
+    ],
+    "extensions": {
+      "confidence_decomposition": {
+        "heuristic": true,
+        "is_probability": false,
+        "labels": {
+          "high": ">= 0.7",
+          "low": "< 0.4",
+          "medium": ">= 0.4"
+        },
+        "terms": [
+          "agreement",
+          "evidence_quality",
+          "independence"
+        ],
+        "weights": {
+          "agreement": 0.4,
+          "evidence_quality": 0.4,
+          "independence": 0.2
+        }
+      },
+      "gaps": [
+        {
+          "id": "g2",
+          "missing_labels": [
+            "proinflammatory cytokine production",
+            "acute lung injury"
+          ]
+        },
+        {
+          "id": "g3",
+          "missing_labels": [
+            "proinflammatory cytokine production",
+            "neutrophil infiltration"
+          ]
+        },
+        {
+          "id": "g4",
+          "missing_labels": [
+            "rheumatoid arthritis",
+            "acute lung injury"
+          ]
+        },
+        {
+          "id": "g5",
+          "missing_labels": [
+            "rheumatoid arthritis",
+            "neutrophil infiltration"
+          ]
+        },
+        {
+          "id": "g6",
+          "missing_labels": [
+            "rheumatoid arthritis",
+            "proinflammatory cytokine production"
+          ]
+        },
+        {
+          "id": "g7",
+          "missing_labels": [
+            "IRAK4",
+            "acute lung injury"
+          ]
+        },
+        {
+          "id": "g8",
+          "missing_labels": [
+            "IRAK4",
+            "neutrophil infiltration"
+          ]
+        },
+        {
+          "id": "g9",
+          "missing_labels": [
+            "acute lung injury",
+            "neutrophil infiltration"
+          ]
+        },
+        {
+          "id": "g10",
+          "missing_labels": [
+            "proinflammatory cytokine production",
+            "RA fibroblast-like synoviocyte (FLS) activation"
+          ]
+        },
+        {
+          "id": "g11",
+          "missing_labels": [
+            "proinflammatory cytokine production",
+            "systemic inflammatory biomarkers"
+          ]
+        },
+        {
+          "id": "g12",
+          "missing_labels": [
+            "IRAK4",
+            "systemic inflammatory biomarkers"
+          ]
+        },
+        {
+          "id": "g13",
+          "missing_labels": [
+            "acute lung injury",
+            "RA fibroblast-like synoviocyte (FLS) activation"
+          ]
+        },
+        {
+          "id": "g14",
+          "missing_labels": [
+            "neutrophil infiltration",
+            "RA fibroblast-like synoviocyte (FLS) activation"
+          ]
+        },
+        {
+          "id": "g15",
+          "missing_labels": [
+            "rheumatoid arthritis",
+            "systemic inflammatory biomarkers"
+          ]
+        },
+        {
+          "id": "g16",
+          "missing_labels": [
+            "acute lung injury",
+            "systemic inflammatory biomarkers"
+          ]
+        },
+        {
+          "id": "g17",
+          "missing_labels": [
+            "neutrophil infiltration",
+            "systemic inflammatory biomarkers"
+          ]
+        },
+        {
+          "id": "g18",
+          "missing_labels": [
+            "IRAK4",
+            "RA fibroblast-like synoviocyte (FLS) activation"
+          ]
+        },
+        {
+          "id": "g19",
+          "missing_labels": [
+            "rheumatoid arthritis",
+            "RA fibroblast-like synoviocyte (FLS) activation"
+          ]
+        },
+        {
+          "id": "g20",
+          "missing_labels": [
+            "RA fibroblast-like synoviocyte (FLS) activation",
+            "systemic inflammatory biomarkers"
+          ]
+        },
+        {
+          "id": "g21",
+          "missing_labels": [
+            "IRAK4 inhibition",
+            "TLR/IL-1R signaling"
+          ]
+        },
+        {
+          "id": "g22",
+          "missing_labels": [
+            "rheumatoid arthritis",
+            "TLR/IL-1R signaling"
+          ]
+        },
+        {
+          "id": "g23",
+          "missing_labels": [
+            "proinflammatory cytokine production",
+            "TLR/IL-1R signaling"
+          ]
+        }
+      ],
+      "graph": {
+        "graph_id": "g_40f9",
+        "round": 2,
+        "rounds": [
+          {
+            "ask": "new_question",
+            "depth": "quick",
+            "n": 1,
+            "outcome": "new_evidence",
+            "papers_added": 4,
+            "target": null
+          },
+          {
+            "ask": "new_question",
+            "depth": "quick",
+            "n": 2,
+            "outcome": "promoted",
+            "papers_added": 4,
+            "target": null
+          }
+        ],
+        "schema_version": "1.1"
+      },
+      "id_conventions": {
+        "evidence": "evidence.<finding id, any character outside [A-Za-z0-9_.:-] replaced by _>",
+        "gaps": "the gap id in output.gaps[]",
+        "note": "Every id here resolves into the graph beside it. The block annotates the graph; it does not restate it.",
+        "relationships": "the link id in output.links[]"
+      },
+      "module": "research-evidence-mapper",
+      "quote_verification": {
+        "by_evidence": {
+          "evidence.f1": true,
+          "evidence.f10": true,
+          "evidence.f10_1": true,
+          "evidence.f11": true,
+          "evidence.f11_1": true,
+          "evidence.f12": true,
+          "evidence.f13": true,
+          "evidence.f2": true,
+          "evidence.f2_1": true,
+          "evidence.f4": true,
+          "evidence.f4_1": true,
+          "evidence.f5": true,
+          "evidence.f5_1": true,
+          "evidence.f6": true,
+          "evidence.f6_1": true,
+          "evidence.f7": true,
+          "evidence.f8": true,
+          "evidence.f8_1": true,
+          "evidence.f9": true,
+          "evidence.f9_1": true
+        },
+        "discarded": 0,
+        "fails_closed": true,
+        "method": "verbatim substring match after NFKC and typographic folding; mechanical, not a model judgement",
+        "mismatched": 0,
+        "unchecked": 0,
+        "verified": 20
+      },
+      "quote_verified": true,
+      "relationships": [
+        {
+          "contradicting": [],
+          "id": "L1",
+          "label": "IRAK4 --drives--> proinflammatory cytokine production",
+          "no_effect": [],
+          "supporting": []
+        },
+        {
+          "contradicting": [],
+          "id": "L10",
+          "label": "IRAK4 inhibition --decreases--> systemic inflammatory biomarkers",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f11_1",
+            "evidence.f4_1"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L11",
+          "label": "IRAK4 inhibition --suppresses--> RA fibroblast-like synoviocyte (FLS) activation",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f2_1"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L2",
+          "label": "IRAK4 inhibition --decreases--> proinflammatory cytokine production",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f2",
+            "evidence.f6_1"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L3",
+          "label": "IRAK4 inhibition --decreases--> neutrophil infiltration",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f12"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L4",
+          "label": "IRAK4 inhibition --inhibits--> IRAK4",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f1",
+            "evidence.f5",
+            "evidence.f5_1",
+            "evidence.f9"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L5",
+          "label": "IRAK4 inhibition --suppresses--> proinflammatory cytokine production",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f6"
+          ]
+        },
+        {
+          "contradicting": [
+            "evidence.f11"
+          ],
+          "id": "L6",
+          "label": "IRAK4 inhibition --suppresses--> acute lung injury",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f10"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L7",
+          "label": "IRAK4 inhibition --treats--> rheumatoid arthritis",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f4",
+            "evidence.f7",
+            "evidence.f8"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L8",
+          "label": "IRAK4 --associated_with--> rheumatoid arthritis",
+          "no_effect": [],
+          "supporting": []
+        },
+        {
+          "contradicting": [],
+          "id": "L9",
+          "label": "IRAK4 --drives--> TLR/IL-1R signaling",
+          "no_effect": [],
+          "supporting": []
+        }
+      ],
+      "search": {
+        "depth": "quick",
+        "figures_read": 0,
+        "found": 20,
+        "limits": {
+          "max_papers": 10,
+          "max_queries": 2
+        },
+        "queries": [
+          {
+            "n_results": 10,
+            "q": "IRAK4 inhibitor synovial fibroblast cytokine release rheumatoid arthritis",
+            "search_id": "s_4d61d432",
+            "tool": "paperclip.search"
+          },
+          {
+            "n_results": 10,
+            "q": "PF-06650833 IRAK4 fibroblast-like synoviocytes IL-6 TNF cytokine",
+            "search_id": "s_8efdf7d7",
+            "tool": "paperclip.search"
+          }
+        ],
+        "read": 4,
+        "stop_reason": "queries_exhausted",
+        "truncated": true,
+        "used": 4,
+        "years": null
+      }
+    },
+    "headline": {
+      "basis": [
+        "OBSERVED",
+        "INFERRED",
+        "MODELED",
+        "SYNTHETIC"
+      ],
+      "plain_language": "Read 4 papers and mapped 11 relationships from 20 quote-backed findings; 4 are corroborated by more than one paper, 6 rest on a single paper, and 1 are disputed.",
+      "result": "EVIDENCE_MAPPED_DISPUTED",
+      "status": "QUALIFIED",
+      "title": "Evidence graph: 11 relationships from 5 papers"
+    },
+    "limitations": [
+      {
+        "code": "COVERAGE_INCOMPLETE",
+        "field_path": "output.coverage.stop_reason",
+        "message": "stop_reason=queries_exhausted. Only `complete` means the literature was exhausted rather than the budget.",
+        "severity": "WARNING"
+      },
+      {
+        "code": "DEFAULTS_APPLIED",
+        "field_path": "output.coverage.defaults_applied",
+        "message": "The caller omitted reason: not supplied (null), years: no time limit (not supplied); defaults were substituted.",
+        "severity": "WARNING"
+      },
+      {
+        "code": "SINGLE_SOURCE_LINKS",
+        "field_path": "output.links[].state",
+        "message": "6 of 11 relationships rest on exactly one paper.",
+        "severity": "WARNING"
+      },
+      {
+        "code": "TRUNCATED_SEARCH",
+        "field_path": "output.coverage.truncated",
+        "message": "The search was truncated (stop_reason=queries_exhausted). Absence of a relationship is evidence about what was read, not about what exists.",
+        "severity": "WARNING"
+      },
+      {
+        "code": "UNTAGGED_VALUE",
+        "field_path": "interpretability.metrics",
+        "message": "These metrics are structural counts of the graph itself and reference neither evidence nor an assumption: metric.findings_unverified, metric.findings_quote_mismatch, metric.entities.",
+        "severity": "WARNING"
+      },
+      {
+        "code": "DISPUTED_LINKS",
+        "field_path": "output.links[].why",
+        "message": "1 relationships have primary papers reporting opposite directions; `why` names the differing conditions where they could be identified.",
+        "severity": "INFO"
+      },
+      {
+        "code": "HEURISTIC_CONFIDENCE",
+        "field_path": "output.links[].confidence.overall",
+        "message": "link.confidence.overall is a heuristic score (0.4*agreement + 0.4*evidence_quality + 0.2*independence), not a probability. Do not threshold it as one.",
+        "severity": "INFO"
+      },
+      {
+        "code": "UNKNOWN_VALUE",
+        "field_path": "interpretability",
+        "message": "3 values in this block are null because they were never recorded or could not be computed. Null is not zero and not false. Full list: assumption.default.reason, assumption.default.years, assumption.years.",
+        "severity": "INFO"
+      },
+      {
+        "code": "YEARS_NOT_SPECIFIED",
+        "field_path": "input.years",
+        "message": "No publication window was requested, so a windowed absence cannot be distinguished from a real one.",
+        "severity": "INFO"
+      }
+    ],
+    "lineage": [
+      {
+        "input_paths": [
+          "input.findings[]",
+          "input.papers[].source_text"
+        ],
+        "output_path": "output.findings[]",
+        "transformation": "Kept only when the quote matches the paper's source text verbatim after NFKC and whitespace folding; deduplicated by (paper, relationship, folded quote) so a retried round cannot double-count."
+      },
+      {
+        "input_paths": [
+          "input.papers[].source_text"
+        ],
+        "output_path": "output.papers[].source_sha256",
+        "transformation": "SHA-256 of the exact source text the quotes were checked against. null when none was supplied."
+      },
+      {
+        "input_paths": [
+          "input.things[]"
+        ],
+        "output_path": "output.things[]",
+        "transformation": "Merged on UniProt accession first, then on normalized name; a conflicting accession blocks a name merge."
+      },
+      {
+        "input_paths": [
+          "output.links[].from",
+          "output.links[].how",
+          "output.links[].to",
+          "prior.links[].id"
+        ],
+        "output_path": "output.links[].id",
+        "transformation": "Bound to the (from, how, to) triple the round it first appears and carried forward through entity merges, so delta and changed_in_round keep naming the same relationship across rounds."
+      },
+      {
+        "input_paths": [
+          "output.findings[].says",
+          "output.findings[].is_own_result"
+        ],
+        "output_path": "output.links[].state",
+        "transformation": "Counts of yes/no/no_effect over own-result findings only."
+      },
+      {
+        "input_paths": [
+          "output.findings[].says",
+          "output.papers[].study_type",
+          "output.papers[].is_preprint",
+          "output.papers[].first_author"
+        ],
+        "output_path": "output.links[].confidence.overall",
+        "transformation": "0.4*agreement + 0.4*evidence_quality + 0.2*independence."
+      },
+      {
+        "input_paths": [
+          "output.findings[].where"
+        ],
+        "output_path": "output.links[].why",
+        "transformation": "Emitted only for a disagreed link whose supporting and contradicting findings report non-overlapping conditions."
+      },
+      {
+        "input_paths": [
+          "output.links[]",
+          "output.things[]"
+        ],
+        "output_path": "output.gaps[]",
+        "transformation": "Open triangles ranked multiplicatively; ids keyed on the missing pair so test_gap can target one by id across rounds."
+      },
+      {
+        "input_paths": [
+          "prior graph",
+          "output.links[].changed_in_round"
+        ],
+        "output_path": "output.delta",
+        "transformation": "Diff against the stored prior round. Derived, never stored."
+      }
+    ],
+    "metrics": [
+      {
+        "assumption_ids": [
+          "assumption.depth",
+          "assumption.limits.max_queries"
+        ],
+        "direction": "neutral",
+        "display": "20 found",
+        "evidence_ids": [],
+        "id": "metric.papers_found",
+        "label": "Papers matched by search",
+        "meaning": "How many papers the corpus returned before any reading. Bounded by the query budget, not by what exists.",
+        "unit": "papers",
+        "value": 20
+      },
+      {
+        "assumption_ids": [
+          "assumption.depth",
+          "assumption.limits.max_papers"
+        ],
+        "direction": "neutral",
+        "display": "4 read",
+        "evidence_ids": [],
+        "id": "metric.papers_read",
+        "label": "Papers read",
+        "meaning": "How many matched papers were actually opened this round.",
+        "unit": "papers",
+        "value": 4
+      },
+      {
+        "assumption_ids": [
+          "assumption.limits.max_papers",
+          "assumption.own_result_only"
+        ],
+        "direction": "neutral",
+        "display": "4 used",
+        "evidence_ids": [],
+        "id": "metric.papers_used",
+        "label": "Papers contributing evidence",
+        "meaning": "Papers that produced at least one quote-backed finding. The gap between read and used is the screening loss.",
+        "unit": "papers",
+        "value": 4
+      },
+      {
+        "assumption_ids": [],
+        "direction": "positive",
+        "display": "20 verified",
+        "evidence_ids": [
+          "evidence.f1",
+          "evidence.f10",
+          "evidence.f10_1",
+          "evidence.f11",
+          "evidence.f11_1",
+          "evidence.f12",
+          "evidence.f13",
+          "evidence.f2",
+          "evidence.f2_1",
+          "evidence.f4",
+          "evidence.f4_1",
+          "evidence.f5",
+          "evidence.f5_1",
+          "evidence.f6",
+          "evidence.f6_1",
+          "evidence.f7",
+          "evidence.f8",
+          "evidence.f8_1",
+          "evidence.f9",
+          "evidence.f9_1"
+        ],
+        "id": "metric.findings_verified",
+        "label": "Quote-verified findings",
+        "meaning": "Findings whose quote was matched verbatim against the paper's source text. This is a string match, not a judgement.",
+        "unit": "findings",
+        "value": 20
+      },
+      {
+        "assumption_ids": [],
+        "direction": "negative",
+        "display": "0 unchecked",
+        "evidence_ids": [],
+        "id": "metric.findings_unverified",
+        "label": "Findings with unchecked quotes",
+        "meaning": "Findings kept without source text to check their quote against. Never counted as verified.",
+        "unit": "findings",
+        "value": 0
+      },
+      {
+        "assumption_ids": [],
+        "direction": "negative",
+        "display": "0 mismatched",
+        "evidence_ids": [],
+        "id": "metric.findings_quote_mismatch",
+        "label": "Findings whose quote did not match",
+        "meaning": "Findings whose quote was checked against source text and was not found in it. Treat as unsourced.",
+        "unit": "findings",
+        "value": 0
+      },
+      {
+        "assumption_ids": [
+          "assumption.own_result_only"
+        ],
+        "direction": "neutral",
+        "display": "11 relationships",
+        "evidence_ids": [],
+        "id": "metric.relationships",
+        "label": "Relationships",
+        "meaning": "Distinct (subject, predicate, object) triples supported by at least one paper's own result.",
+        "unit": "relationships",
+        "value": 11
+      },
+      {
+        "assumption_ids": [
+          "assumption.own_result_only"
+        ],
+        "direction": "mixed",
+        "display": "1 disputed",
+        "evidence_ids": [
+          "evidence.f10",
+          "evidence.f11"
+        ],
+        "id": "metric.relationships_disputed",
+        "label": "Disputed relationships",
+        "meaning": "Relationships where primary papers report opposite directions. These are the ones worth reading by hand.",
+        "unit": "relationships",
+        "value": 1
+      },
+      {
+        "assumption_ids": [
+          "assumption.own_result_only"
+        ],
+        "direction": "positive",
+        "display": "4 corroborated",
+        "evidence_ids": [
+          "evidence.f1",
+          "evidence.f11_1",
+          "evidence.f2",
+          "evidence.f4",
+          "evidence.f4_1",
+          "evidence.f5",
+          "evidence.f5_1",
+          "evidence.f6_1",
+          "evidence.f7",
+          "evidence.f8",
+          "evidence.f9"
+        ],
+        "id": "metric.relationships_agreed",
+        "label": "Corroborated relationships",
+        "meaning": "Relationships where two or more papers agree on direction.",
+        "unit": "relationships",
+        "value": 4
+      },
+      {
+        "assumption_ids": [
+          "assumption.own_result_only"
+        ],
+        "direction": "negative",
+        "display": "6 single-source",
+        "evidence_ids": [
+          "evidence.f12",
+          "evidence.f2_1",
+          "evidence.f6"
+        ],
+        "id": "metric.relationships_single_source",
+        "label": "Single-source relationships",
+        "meaning": "Relationships resting on exactly one paper. Uncorroborated, not wrong.",
+        "unit": "relationships",
+        "value": 6
+      },
+      {
+        "assumption_ids": [
+          "assumption.own_result_only"
+        ],
+        "direction": "neutral",
+        "display": "0 null results",
+        "evidence_ids": [],
+        "id": "metric.relationships_no_effect",
+        "label": "Reported-null relationships",
+        "meaning": "Relationships where the only primary evidence is an explicit no-effect result. Kept separately so a null is never read as an absence of evidence.",
+        "unit": "relationships",
+        "value": 0
+      },
+      {
+        "assumption_ids": [
+          "assumption.gap_ranking"
+        ],
+        "direction": "neutral",
+        "display": "22 open gaps",
+        "evidence_ids": [],
+        "id": "metric.gaps_open",
+        "label": "Untested relationships proposed",
+        "meaning": "Pairs connected through an intermediate but with no direct link reported. Proposals for the next round, not findings.",
+        "unit": "gaps",
+        "value": 22
+      },
+      {
+        "assumption_ids": [
+          "assumption.confidence_weights",
+          "assumption.preprint_penalty",
+          "assumption.study_quality_table"
+        ],
+        "direction": "unknown",
+        "display": "0.5353 mean",
+        "evidence_ids": [],
+        "id": "metric.mean_link_confidence",
+        "label": "Mean heuristic confidence",
+        "meaning": "Mean of the per-relationship heuristic score. A ranking aid, NOT a probability that any relationship is true.",
+        "unit": "score",
+        "value": 0.5353
+      },
+      {
+        "assumption_ids": [],
+        "direction": "neutral",
+        "display": "9 entities",
+        "evidence_ids": [],
+        "id": "metric.entities",
+        "label": "Distinct entities",
+        "meaning": "Nodes after accession-first merging of synonyms.",
+        "unit": "entities",
+        "value": 9
+      }
+    ],
+    "schema_version": "1.0.0",
+    "steps": [
+      {
+        "assumption_ids": [
+          "assumption.limits.max_queries",
+          "assumption.depth",
+          "assumption.years"
+        ],
+        "evidence_ids": [],
+        "formula": null,
+        "id": "step.search",
+        "inputs": [
+          {
+            "path": "input.coverage.queries",
+            "unit": null,
+            "value": [
+              "IRAK4 inhibitor synovial fibroblast cytokine release rheumatoid arthritis",
+              "PF-06650833 IRAK4 fibroblast-like synoviocytes IL-6 TNF cytokine"
+            ]
+          },
+          {
+            "path": "input.coverage.limits.max_queries",
+            "unit": "queries",
+            "value": 2
+          },
+          {
+            "path": "input.depth",
+            "unit": "tier",
+            "value": "quick"
+          }
+        ],
+        "label": "Search the corpus",
+        "method": "Paperclip full-text search over the biomedical corpus",
+        "result": {
+          "unit": "papers",
+          "value": 20
+        }
+      },
+      {
+        "assumption_ids": [
+          "assumption.limits.max_papers"
+        ],
+        "evidence_ids": [],
+        "formula": "papers_found -> papers_read -> papers_used",
+        "id": "step.screen",
+        "inputs": [
+          {
+            "path": "output.coverage.found",
+            "unit": "papers",
+            "value": 20
+          },
+          {
+            "path": "output.coverage.limits.max_papers",
+            "unit": "papers",
+            "value": 10
+          }
+        ],
+        "label": "Read and screen",
+        "method": "Full-text read, then keep papers that yield a quote-backed finding",
+        "result": {
+          "unit": "papers",
+          "value": 4
+        }
+      },
+      {
+        "assumption_ids": [],
+        "evidence_ids": [],
+        "formula": "fold(NFKC(quote)) is a substring of fold(NFKC(source_text)); non-matching findings are discarded, findings with no source text are retained and marked quote_verified=null",
+        "id": "step.quote_verification",
+        "inputs": [
+          {
+            "path": "input.findings[].quote",
+            "unit": "findings",
+            "value": 20
+          },
+          {
+            "path": "input.papers[].source_text",
+            "unit": "papers",
+            "value": 5
+          }
+        ],
+        "label": "Verify every quote against source text",
+        "method": "Mechanical substring match, not a model judgement",
+        "result": {
+          "unit": "findings",
+          "value": 20
+        }
+      },
+      {
+        "assumption_ids": [],
+        "evidence_ids": [],
+        "formula": "a conflicting accession BLOCKS a name merge, so human Q9NWZ3 and mouse Q8R4K2 stay distinct",
+        "id": "step.entity_resolution",
+        "inputs": [
+          {
+            "path": "input.things",
+            "unit": "entities",
+            "value": 9
+          }
+        ],
+        "label": "Merge synonymous entities",
+        "method": "UniProt accession first, then separator-insensitive normalized name",
+        "result": {
+          "unit": "entities",
+          "value": 9
+        }
+      },
+      {
+        "assumption_ids": [
+          "assumption.own_result_only"
+        ],
+        "evidence_ids": [],
+        "formula": "state = disagreed if yes and no; agreed if >=2 one way; single_source if exactly one; no_effect if only explicit nulls",
+        "id": "step.link_assembly",
+        "inputs": [
+          {
+            "path": "output.findings",
+            "unit": "findings",
+            "value": 20
+          }
+        ],
+        "label": "Group findings into relationships",
+        "method": "Group by (from, how, to) over own-result findings only",
+        "result": {
+          "unit": "relationships",
+          "value": 11
+        }
+      },
+      {
+        "assumption_ids": [
+          "assumption.own_result_only"
+        ],
+        "evidence_ids": [],
+        "formula": "0.5 + (yes - no) / (2 * (yes + no)); a lone source is 0.5, never 1.0",
+        "id": "step.confidence.agreement",
+        "inputs": [
+          {
+            "path": "output.links[].yes|no",
+            "unit": "relationships",
+            "value": 11
+          }
+        ],
+        "label": "Agreement term",
+        "method": "Direction balance across a relationship's own results",
+        "result": {
+          "unit": "score",
+          "value": 0.5455
+        }
+      },
+      {
+        "assumption_ids": [
+          "assumption.study_quality_table",
+          "assumption.preprint_penalty"
+        ],
+        "evidence_ids": [],
+        "formula": "mean(_STUDY_QUALITY[study_type]), x0.8 per preprint",
+        "id": "step.confidence.evidence_quality",
+        "inputs": [
+          {
+            "path": "output.papers[].study_type",
+            "unit": "papers",
+            "value": 5
+          }
+        ],
+        "label": "Evidence-quality term",
+        "method": "Study-design prior, averaged over the relationship's findings",
+        "result": {
+          "unit": "score",
+          "value": 0.6564
+        }
+      },
+      {
+        "assumption_ids": [],
+        "evidence_ids": [],
+        "formula": "(distinct first authors - 1) / (papers - 1); one group is not a consensus, so a single group scores 0.0",
+        "id": "step.confidence.independence",
+        "inputs": [
+          {
+            "path": "output.papers[].first_author",
+            "unit": "authors",
+            "value": 5
+          }
+        ],
+        "label": "Independence term",
+        "method": "Distinct first authors behind a relationship",
+        "result": {
+          "unit": "score",
+          "value": 0.2727
+        }
+      },
+      {
+        "assumption_ids": [
+          "assumption.confidence_weights"
+        ],
+        "evidence_ids": [],
+        "formula": "0.4*agreement + 0.4*evidence_quality + 0.2*independence; label high >=0.7, medium >=0.4, else low",
+        "id": "step.confidence.overall",
+        "inputs": [
+          {
+            "path": "code.CONFIDENCE_WEIGHTS.agreement",
+            "unit": "weight",
+            "value": 0.4
+          },
+          {
+            "path": "code.CONFIDENCE_WEIGHTS.evidence_quality",
+            "unit": "weight",
+            "value": 0.4
+          },
+          {
+            "path": "code.CONFIDENCE_WEIGHTS.independence",
+            "unit": "weight",
+            "value": 0.2
+          }
+        ],
+        "label": "Combine into a heuristic confidence score",
+        "method": "Fixed-weight linear combination. HEURISTIC -- not a probability, not calibrated against any outcome",
+        "result": {
+          "unit": "score",
+          "value": 0.5353
+        }
+      },
+      {
+        "assumption_ids": [
+          "assumption.gap_ranking"
+        ],
+        "evidence_ids": [],
+        "formula": "min(conf_AB, conf_BC) * basis_AB * basis_BC * independence * (1/sqrt(gaps spawned by the hub)) * (1 + 0.12*log2(routes)), capped at 0.6",
+        "id": "step.gap_ranking",
+        "inputs": [
+          {
+            "path": "output.links",
+            "unit": "relationships",
+            "value": 11
+          },
+          {
+            "path": "code.GAP_RANKING_CONSTANTS",
+            "unit": null,
+            "value": {
+              "cap": 50,
+              "confidence_ceiling": 0.6,
+              "degree_cap": 24,
+              "route_bonus_coefficient": 0.12,
+              "shared_paper_penalty": 0.65
+            }
+          }
+        ],
+        "label": "Rank untested relationships",
+        "method": "Open triangles (A-B and B-C exist, A-C does not), ranked multiplicatively to break the ties a min() score produces",
+        "result": {
+          "unit": "gaps",
+          "value": 22
+        }
+      },
+      {
+        "assumption_ids": [
+          "assumption.limits.max_papers",
+          "assumption.limits.max_queries"
+        ],
+        "evidence_ids": [],
+        "formula": null,
+        "id": "step.stop",
+        "inputs": [
+          {
+            "path": "output.coverage.stop_reason",
+            "unit": null,
+            "value": "queries_exhausted"
+          },
+          {
+            "path": "output.coverage.truncated",
+            "unit": null,
+            "value": true
+          }
+        ],
+        "label": "Stop the round",
+        "method": "Stopping rule: queries_exhausted",
+        "result": {
+          "unit": "papers",
+          "value": 4
+        }
+      }
+    ],
+    "uncertainty": {
+      "draws": null,
+      "intervals": [
+        {
+          "central": 0.5353,
+          "confidence_level": null,
+          "high": 0.96,
+          "interval_type": "observed_range",
+          "low": 0.12,
+          "metric_id": "metric.mean_link_confidence",
+          "unit": "score"
+        }
+      ],
+      "limitations": [
+        "low/central/high are the observed minimum, mean and maximum of the per-relationship heuristic score across the 11 relationships in this graph. They are an observed range -- NOT percentiles, NOT a confidence interval, and NOT a sampling distribution.",
+        "The score is a ranking aid over what was read. It is not a probability that a relationship is true, and it is not calibrated against any outcome.",
+        "seed and draws are null because assembly is deterministic: the same round bundle produces byte-identical output.",
+        "The dominant uncertainty is not in the score, it is in coverage: 4 of 20 matched papers were read this round."
+      ],
+      "method": "Heuristic confidence decomposition (agreement, evidence quality, independence). No sampling, no model fitting and no statistical inference is performed.",
+      "seed": null
+    }
+  },
+  "links": [
+    {
+      "basis": "background_only",
+      "changed_in_round": 2,
+      "confidence": {
+        "agreement": 0.0,
+        "evidence_quality": 0.6,
+        "independence": 0.0,
+        "label": "low",
+        "overall": 0.24
+      },
+      "from": "t1",
+      "how": "associated_with",
+      "id": "L8",
+      "no": [],
+      "no_effect": [],
+      "state": "single_source",
+      "to": "t2",
+      "why": null,
+      "yes": []
+    },
+    {
+      "basis": "background_only",
+      "changed_in_round": 1,
+      "confidence": {
+        "agreement": 0.0,
+        "evidence_quality": 0.3,
+        "independence": 0.0,
+        "label": "low",
+        "overall": 0.12
+      },
+      "from": "t1",
+      "how": "drives",
+      "id": "L1",
+      "no": [],
+      "no_effect": [],
+      "state": "single_source",
+      "to": "t4",
+      "why": null,
+      "yes": []
+    },
+    {
+      "basis": "background_only",
+      "changed_in_round": 2,
+      "confidence": {
+        "agreement": 0.0,
+        "evidence_quality": 0.3,
+        "independence": 0.0,
+        "label": "low",
+        "overall": 0.12
+      },
+      "from": "t1",
+      "how": "drives",
+      "id": "L9",
+      "no": [],
+      "no_effect": [],
+      "state": "single_source",
+      "to": "t8",
+      "why": null,
+      "yes": []
+    },
+    {
+      "basis": "primary",
+      "changed_in_round": 2,
+      "confidence": {
+        "agreement": 1.0,
+        "evidence_quality": 0.6,
+        "independence": 0.0,
+        "label": "medium",
+        "overall": 0.64
+      },
+      "from": "t3",
+      "how": "decreases",
+      "id": "L2",
+      "no": [],
+      "no_effect": [],
+      "state": "agreed",
+      "to": "t4",
+      "why": null,
+      "yes": [
+        "f2",
+        "f6_1"
+      ]
+    },
+    {
+      "basis": "primary",
+      "changed_in_round": 1,
+      "confidence": {
+        "agreement": 0.5,
+        "evidence_quality": 0.6,
+        "independence": 0.0,
+        "label": "medium",
+        "overall": 0.44
+      },
+      "from": "t3",
+      "how": "decreases",
+      "id": "L3",
+      "no": [],
+      "no_effect": [],
+      "state": "single_source",
+      "to": "t6",
+      "why": null,
+      "yes": [
+        "f12"
+      ]
+    },
+    {
+      "basis": "mixed",
+      "changed_in_round": 2,
+      "confidence": {
+        "agreement": 1.0,
+        "evidence_quality": 0.9,
+        "independence": 1.0,
+        "label": "high",
+        "overall": 0.96
+      },
+      "from": "t3",
+      "how": "decreases",
+      "id": "L10",
+      "no": [],
+      "no_effect": [],
+      "state": "agreed",
+      "to": "t9",
+      "why": null,
+      "yes": [
+        "f11_1",
+        "f4_1"
+      ]
+    },
+    {
+      "basis": "primary",
+      "changed_in_round": 2,
+      "confidence": {
+        "agreement": 1.0,
+        "evidence_quality": 0.72,
+        "independence": 1.0,
+        "label": "high",
+        "overall": 0.888
+      },
+      "from": "t3",
+      "how": "inhibits",
+      "id": "L4",
+      "no": [],
+      "no_effect": [],
+      "state": "agreed",
+      "to": "t1",
+      "why": null,
+      "yes": [
+        "f1",
+        "f5",
+        "f5_1",
+        "f9"
+      ]
+    },
+    {
+      "basis": "primary",
+      "changed_in_round": 1,
+      "confidence": {
+        "agreement": 0.5,
+        "evidence_quality": 0.9,
+        "independence": 0.0,
+        "label": "medium",
+        "overall": 0.56
+      },
+      "from": "t3",
+      "how": "suppresses",
+      "id": "L5",
+      "no": [],
+      "no_effect": [],
+      "state": "single_source",
+      "to": "t4",
+      "why": null,
+      "yes": [
+        "f6"
+      ]
+    },
+    {
+      "basis": "primary",
+      "changed_in_round": 1,
+      "confidence": {
+        "agreement": 0.5,
+        "evidence_quality": 0.6,
+        "independence": 0.0,
+        "label": "medium",
+        "overall": 0.44
+      },
+      "from": "t3",
+      "how": "suppresses",
+      "id": "L6",
+      "no": [
+        "f11"
+      ],
+      "no_effect": [],
+      "state": "disagreed",
+      "to": "t5",
+      "why": "conditions differ: {BAY-1834845, LPS-induced ARDS mouse model} vs {PF-06650833, LPS-induced ARDS mouse model}",
+      "yes": [
+        "f10"
+      ]
+    },
+    {
+      "basis": "primary",
+      "changed_in_round": 2,
+      "confidence": {
+        "agreement": 0.5,
+        "evidence_quality": 0.9,
+        "independence": 0.0,
+        "label": "medium",
+        "overall": 0.56
+      },
+      "from": "t3",
+      "how": "suppresses",
+      "id": "L11",
+      "no": [],
+      "no_effect": [],
+      "state": "single_source",
+      "to": "t7",
+      "why": null,
+      "yes": [
+        "f2_1"
+      ]
+    },
+    {
+      "basis": "mixed",
+      "changed_in_round": 1,
+      "confidence": {
+        "agreement": 1.0,
+        "evidence_quality": 0.8,
+        "independence": 1.0,
+        "label": "high",
+        "overall": 0.92
+      },
+      "from": "t3",
+      "how": "treats",
+      "id": "L7",
+      "no": [],
+      "no_effect": [],
+      "state": "agreed",
+      "to": "t2",
+      "why": null,
+      "yes": [
+        "f4",
+        "f7",
+        "f8"
+      ]
+    }
+  ],
+  "papers": [
+    {
+      "doi": "10.1016/j.apsb.2022.12.001",
+      "first_author": "Sae-Bom Yoon",
+      "id": "p1",
+      "is_preprint": false,
+      "journal": "Acta Pharmaceutica Sinica. B",
+      "pmid": "36970199",
+      "retracted": false,
+      "round": 1,
+      "source_sha256": "122a7af3da0279cb299460c2eb2c435f9daa501dd9f906068459d8c43b8ae5d3",
+      "study_type": "animal",
+      "title": "A novel IRAK4/PIM1 inhibitor ameliorates rheumatoid arthritis and lymphoid malignancy by blocking the TLR/MYD88-mediated NF-κB pathway",
+      "year": 2022
+    },
+    {
+      "doi": "10.1002/art.41953",
+      "first_author": "Aaron Winkler",
+      "id": "p2",
+      "is_preprint": false,
+      "journal": "Arthritis & Rheumatology (Hoboken, N.j.)",
+      "pmid": "34423919",
+      "retracted": false,
+      "round": 1,
+      "source_sha256": "4bde8248a49eb3c4c7f27027eb4982a34774f21ee213d2ddffbad6e20841a6e6",
+      "study_type": "clinical_trial",
+      "title": "The Interleukin‐1 Receptor–Associated Kinase 4 Inhibitor PF‐06650833 Blocks Inflammation in Preclinical Models of Rheumatic Disease and in Humans Enrolled in a Randomized Clinical Trial",
+      "year": 2021
+    },
+    {
+      "doi": "10.1016/j.biopha.2022.113459",
+      "first_author": "Qianqian Li",
+      "id": "p3",
+      "is_preprint": false,
+      "journal": "Biomedicine & Pharmacotherapy",
+      "pmid": "36076574",
+      "retracted": false,
+      "round": 1,
+      "source_sha256": "0993708252b163f54b9b78b3e6ba69849a48d24ce51c1baee32034792c1361a5",
+      "study_type": "animal",
+      "title": "Oral IRAK4 inhibitor BAY-1834845 prevents acute respiratory distress syndrome",
+      "year": 2022
+    },
+    {
+      "doi": "10.2174/156802609789044407",
+      "first_author": "Zhulun Wang",
+      "id": "p4",
+      "is_preprint": false,
+      "journal": "Current Topics in Medicinal Chemistry",
+      "pmid": "19689377",
+      "retracted": false,
+      "round": 1,
+      "source_sha256": "a08988871b980b323686fb4f4d18f630693e554e65028e348275e6b44e21554f",
+      "study_type": "review",
+      "title": "IRAK-4 Inhibitors for Inflammation",
+      "year": 2009
+    },
+    {
+      "doi": "10.1186/s13075-019-2008-6",
+      "first_author": "Spencer I. Danto",
+      "id": "p5",
+      "is_preprint": false,
+      "journal": "Arthritis Research & Therapy",
+      "pmid": "31805989",
+      "retracted": false,
+      "round": 2,
+      "source_sha256": "26ddabaee70a32048a71daf4af4a70614887f50ef47d01617fb3ce4e3ab89b16",
+      "study_type": "clinical_trial",
+      "title": "Safety, tolerability, pharmacokinetics, and pharmacodynamics of PF-06650833, a selective interleukin-1 receptor-associated kinase 4 (IRAK4) inhibitor, in single and multiple ascending dose randomized phase 1 studies in healthy subjects",
+      "year": 2019
+    }
+  ],
+  "question": "Does IRAK4 inhibition reduce inflammatory cytokine release from synovial fibroblasts in rheumatoid arthritis?",
+  "round": 2,
+  "rounds": [
+    {
+      "ask": "new_question",
+      "depth": "quick",
+      "n": 1,
+      "outcome": "new_evidence",
+      "papers_added": 4,
+      "target": null
+    },
+    {
+      "ask": "new_question",
+      "depth": "quick",
+      "n": 2,
+      "outcome": "promoted",
+      "papers_added": 4,
+      "target": null
+    }
+  ],
+  "schema_version": "1.1",
+  "status": "ok",
+  "things": [
+    {
+      "aliases": [
+        "IRAK-4",
+        "Interleukin‐1 Receptor–Associated Kinase 4",
+        "interleukin-1 receptor-associated kinase 4"
+      ],
+      "ambiguity": [],
+      "gene_symbol": "IRAK4",
+      "id": "t1",
+      "kind": "gene",
+      "mentions": 2,
+      "merged_from": [
+        {
+          "name": "IRAK4",
+          "via": "accession"
+        }
+      ],
+      "name": "IRAK4",
+      "resolved_by": "f5 quote names PF-06650833 as 'a highly potent and selective small‐molecule inhibitor of interleukin‐1–associated kinase 4 (IRAK4)', human pharmacology is the paper's stated target",
+      "round": 1,
+      "uniprot_accession": "Q9NWZ3"
+    },
+    {
+      "aliases": [
+        "RA"
+      ],
+      "id": "t2",
+      "kind": "disease",
+      "mentions": 2,
+      "merged_from": [
+        {
+          "name": "rheumatoid arthritis",
+          "via": "name"
+        }
+      ],
+      "name": "rheumatoid arthritis",
+      "round": 1
+    },
+    {
+      "aliases": [
+        "BAY-1834845",
+        "IRAK4/PIM1 inhibitor KIC-0101",
+        "KIC-0101",
+        "PF-06650833",
+        "PF06650833",
+        "PF‐06650833",
+        "dual IRAK4/PIM1 inhibitor",
+        "inhibition of IRAK4 kinase activity"
+      ],
+      "id": "t3",
+      "kind": "process",
+      "mentions": 4,
+      "merged_from": [
+        {
+          "name": "IRAK4 inhibition",
+          "via": "name"
+        },
+        {
+          "name": "KIC-0101",
+          "via": "name"
+        },
+        {
+          "name": "PF-06650833",
+          "via": "name"
+        }
+      ],
+      "name": "IRAK4 inhibition",
+      "round": 1
+    },
+    {
+      "aliases": [
+        "cytokine induction",
+        "inflammatory response",
+        "proinflammatory cytokine induction",
+        "proinflammatory cytokine release"
+      ],
+      "id": "t4",
+      "kind": "process",
+      "mentions": 2,
+      "merged_from": [
+        {
+          "name": "proinflammatory cytokine production",
+          "via": "name"
+        }
+      ],
+      "name": "proinflammatory cytokine production",
+      "round": 1
+    },
+    {
+      "aliases": [
+        "ARDS",
+        "acute respiratory distress syndrome"
+      ],
+      "id": "t5",
+      "kind": "process",
+      "mentions": 1,
+      "name": "acute lung injury",
+      "round": 1
+    },
+    {
+      "aliases": [
+        "inflammatory cell infiltration lung"
+      ],
+      "id": "t6",
+      "kind": "process",
+      "mentions": 1,
+      "name": "neutrophil infiltration",
+      "round": 1
+    },
+    {
+      "aliases": [
+        "FLS",
+        "RA FLS cultures",
+        "fibroblast-like synoviocytes",
+        "synovial fibroblast activation"
+      ],
+      "id": "t7",
+      "kind": "process",
+      "mentions": 1,
+      "name": "RA fibroblast-like synoviocyte (FLS) activation",
+      "round": 2
+    },
+    {
+      "aliases": [
+        "IL-1R/TLR signaling"
+      ],
+      "id": "t8",
+      "kind": "process",
+      "mentions": 1,
+      "name": "TLR/IL-1R signaling",
+      "round": 2
+    },
+    {
+      "aliases": [
+        "high-sensitivity C-reactive protein (hsCRP)",
+        "inflammation markers"
+      ],
+      "id": "t9",
+      "kind": "process",
+      "mentions": 1,
+      "name": "systemic inflammatory biomarkers",
+      "round": 2
+    }
+  ]
+}

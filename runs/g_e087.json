@@ -2931,7 +2931,7 @@
         "INFERRED",
         "MODELED"
       ],
-      "plain_language": "Read 2 papers and mapped 37 relationships from 44 quote-backed findings; 1 are corroborated by more than one paper, 28 rest on a single paper, and 1 are disputed.",
+      "plain_language": "Read 2 papers and mapped 37 relationships from 44 quote-backed findings; 1 is corroborated by more than one paper, 28 rest on a single paper, and 1 is disputed.",
       "result": "EVIDENCE_MAPPED_DISPUTED",
       "status": "QUALIFIED",
       "title": "Evidence graph: 37 relationships from 20 papers"

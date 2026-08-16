@@ -275,10 +275,25 @@ Paperclip cannot supply something, that is a `coverage` fact to report — not a
 licence to go around it, because a graph built partly from elsewhere breaks the
 guarantee that every quote is verifiable against a Paperclip document id.
 
-Auth rides in a platform credential vault; the credential id goes in
-`manifest.vault_ids`. Provisioning is manual — nothing in `scripts/` automates
-it. Which header the MCP accepts for a **long-lived API key** is still untested;
-`Bearer` is proven with a session token.
+Auth rides in a platform credential vault as a `static_bearer`; the credential
+id goes in `manifest.vault_ids`. Creating the vault is still manual, but keeping
+it alive is not:
+
+```bash
+bun run rotate      # refresh the local Paperclip login, push the token to the vault
+```
+
+**Run it immediately before any deployed call.** The stored bearer is a copy of
+Paperclip's OAuth `id_token`, which lives about an hour, and when the copy goes
+stale the platform exposes **no paperclip tool to the agent at all** — which the
+agent then reads as an empty corpus rather than an expired credential. The order
+inside the script is the trap it exists to close: refresh *first*, then rotate.
+Rotating without refreshing copies an already-expiring token into the vault and
+looks like it worked.
+
+Which header the MCP accepts for a **long-lived API key** is still untested;
+`Bearer` is proven with a session token. A long-lived key would retire this
+script entirely.
 
 ### Memory
 
@@ -604,6 +619,7 @@ the actual reason those two labs disagree.
 | [`fixtures/`](./fixtures) | three corpus-validated questions, each grading something specific |
 | [`runs/`](./runs) | `g_e087.json`, a real two-round graph from the deployed agent, plus `g_minimal.json`, regenerated offline from `fixtures/round-minimal.json` and asserted byte-identical on every `bun run validate`. Excluded from the formatter for the same reason `manifest.json` is: it is generated |
 | [`SCHEMA.md`](./SCHEMA.md) | **the authoritative data contract** — input first, then output. Root-level on purpose: it is the file consumers integrate against |
+| [`scripts/rotate-paperclip-credential.ts`](./scripts/rotate-paperclip-credential.ts) | `bun run rotate` — refresh the Paperclip login and push the token into the vault. Required before any deployed call |
 | [`schema/`](./schema) | the same contract as a validator. `graph.schema.json` is the module output; `interpretability.schema.json` is the **shared LABrador block**, `$ref`d from it and reusable by any other LABrador module |
 | [`docs/CONTRACT.md`](./docs/CONTRACT.md) | deliverables, MCP details, `assemble.py` spec |
 | [`docs/BUILD.md`](./docs/BUILD.md) | build plan and its six blocking acceptance facts |

@@ -117,6 +117,28 @@ python3 skills/graph-assembly/assemble.py --input fixtures/round-minimal.json \
 to the committed file, so the example can never drift from its generator. It is
 also the checked-in case where `quote_verified` is `true` throughout.
 
+## `g_40f9-smoke.json` — the deploy smoke test
+
+Two rounds from the **deployed** agent on v13, produced by
+`bun run console -- --once '{"ask":"new_question","target":"Does IRAK4
+inhibition reduce inflammatory cytokine release from synovial fibroblasts in
+rheumatoid arthritis?","depth":"quick"}'`. Kept because it is the first
+artifact from production under the interpretability contract, and because it
+exercised two things no fixture reaches:
+
+- **`coverage.queries` carries Paperclip's own `search_id` handles**
+  (`s_4d61d432`, `s_8efdf7d7`) alongside the query strings, so the search is
+  reproducible from the output. `QUERIES_NOT_RECORDED` is correctly absent.
+- **`defaults_applied` arrived as prose** — `"reason: not supplied (null)"`,
+  `"years: no time limit (not supplied)"` — which is the documented format and
+  the exact input that used to mint a schema-invalid assumption id and sink the
+  whole graph. Ids came out `assumption.default.reason` /
+  `assumption.default.years`, and `SYNTHETIC` reached `headline.basis`.
+
+All 20 quotes verified (`quotes_unverified: 0`), all 5 papers carry a
+`source_sha256`, and the round-2 entry shows a `new_question` re-issue loading
+the stored graph and continuing its numbering rather than overwriting it.
+
 ## Caveat
 
 Produced on agent **v10**, so it predates the `delta` block (v11). For a round-1

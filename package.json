@@ -21,6 +21,7 @@
     "typecheck": "tsc --noEmit",
     "check": "ultracite check",
     "validate": "bun scripts/validate.ts",
+    "rotate": "bun scripts/rotate-paperclip-credential.ts",
     "test": "python3 skills/graph-assembly/assemble.py --selftest && bun scripts/validate.ts",
     "fix": "ultracite fix"
   },

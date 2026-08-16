@@ -947,6 +947,13 @@ def _plain(text, limit=400):
     return out[:limit - 1] + "\u2026" if len(out) > limit else out
 
 
+def _plural(n, noun):
+    """"1 relationship", not "1 relationships". plain_language is a sentence a
+    non-specialist reads, and a count of one is the common case in a thin graph.
+    """
+    return "%d %s%s" % (n, noun, "" if n == 1 else "s")
+
+
 def _count(n, unit=""):
     """A count that was never recorded reads as 'not recorded', never as the
     Python token None and never as 0."""
@@ -1892,11 +1899,15 @@ def build_interpretability(graph):
         plain = ("No paper in the corpus produced a quote-backed finding for "
                  "this question, so nothing was mapped.")
     else:
-        plain = ("Read %s papers and mapped %d relationships from %d "
-                 "quote-backed findings; %d are corroborated by more than one "
-                 "paper, %d rest on a single paper, and %d are disputed."
-                 % (_count(cov.get("used")), len(links), len(findings),
-                    len(agreed), len(single), len(disputed)))
+        plain = ("Read %s papers and mapped %s from %s; %d %s corroborated by "
+                 "more than one paper, %d %s on a single paper, and %d %s "
+                 "disputed."
+                 % (_count(cov.get("used")),
+                    _plural(len(links), "relationship"),
+                    _plural(len(findings), "quote-backed finding"),
+                    len(agreed), "is" if len(agreed) == 1 else "are",
+                    len(single), "rests" if len(single) == 1 else "rest",
+                    len(disputed), "is" if len(disputed) == 1 else "are"))
 
     headline = {
         "title": ("Evidence graph: %d relationships from %d papers"
@@ -2866,6 +2877,18 @@ def selftest():
           sorted(set(_second.values()) - set(_first.values())))
 
     # A caller cannot vouch for its own quote.
+    check("the headline sentence agrees in number",
+          "1 relationship " in main(
+              None,
+              [{"id": "f1", "paper": "p1", "from": "t1", "how": "inhibits",
+                "to": "t2", "says": "yes", "is_own_result": True,
+                "quote": "Alpha inhibits Beta in cultured cells."}],
+              [{"id": "p1", "doi": "10.1/a", "study_type": "animal",
+                "is_preprint": False, "source_text": text}],
+              1, "new_question", question="q", graph_id="g_pl",
+              generated_at="T", new_things=things
+          )["interpretability"]["headline"]["plain_language"])
+
     _asserted = main(None,
                      [{"id": "f1", "paper": "p1", "from": "t1", "how": "inhibits",
                        "to": "t2", "says": "yes", "is_own_result": True,
