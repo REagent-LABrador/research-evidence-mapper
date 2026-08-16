@@ -34,7 +34,7 @@ export type CustomToolSpec = {
 };
 
 /**
- * Shape of `managed/<name>/manifest.json`, validated on load.
+ * Shape of `manifest.json` at the repo root, validated on load.
  * Loose objects throughout: `scripts/deploy.ts` round-trips the manifest back
  * to disk, so unknown keys must survive a parse.
  */
@@ -626,17 +626,17 @@ async function executeCustomTool(
 /**
  * The source-tree location works when running from tsx CLIs; when eve bundles
  * this module, import.meta.url points into the build output, so fall back to
- * walking up from cwd to the repo root (the dir holding managed/ + package.json).
+ * walking up from cwd to the repo root (the dir holding manifest.json + package.json).
  */
 function findRepoRoot(): string {
   const fromSource = join(dirname(fileURLToPath(import.meta.url)), "..");
-  if (existsSync(join(fromSource, "managed"))) {
+  if (existsSync(join(fromSource, "manifest.json"))) {
     return fromSource;
   }
   let dir = process.cwd();
   for (;;) {
     if (
-      existsSync(join(dir, "managed")) &&
+      existsSync(join(dir, "manifest.json")) &&
       existsSync(join(dir, "package.json"))
     ) {
       return dir;
@@ -666,37 +666,35 @@ export type ManagedAgent = {
 };
 
 /**
- * Load an agent from `managed/<name>/` (manifest, CLAUDE.md, rubric, skills,
- * tools.ts — one dir per agent). The dir lives outside `agent/` on purpose:
- * eve requires every module under `agent/tools/**` to BE a tool, so the
- * agent dir — tools.ts included — sits beyond eve's discovery, and only the
- * thin wrapper `agent/tools/<name>.ts` is authored.
+ * Load the agent from the repo root: manifest.json, CLAUDE.md, an optional
+ * rubric.md, and tools.ts if present.
  *
- * `skipToolImport`: the eve tool wrappers import their `tools.ts` statically
- * (so the bundler sees it) and pass handlers via `runTask`; they set this to
- * avoid a runtime dynamic import inside the bundled app. CLIs (bun) leave it
- * unset and get handlers loaded dynamically.
+ * One repo, one agent -- there is no <name> indirection. `name` is accepted so
+ * existing callers keep working, and is checked against manifest.name rather
+ * than used to build a path: passing the wrong one should say so, not silently
+ * load a different agent.
  */
 export async function loadManagedAgent(
-  name: string,
+  name?: string,
   opts?: { skipToolImport?: boolean }
 ): Promise<ManagedAgent> {
-  const dir = join(repoRoot, "managed", name);
+  const dir = repoRoot;
   const manifestPath = join(dir, "manifest.json");
   if (!existsSync(manifestPath)) {
-    throw new Error(
-      `no managed agent at managed/${name}/ (missing manifest.json)`
-    );
+    throw new Error(`no agent at ${repoRoot} (missing manifest.json)`);
   }
   const parsed = AgentManifest.safeParse(
     JSON.parse(await readFile(manifestPath, "utf8"))
   );
   if (!parsed.success) {
-    throw new Error(
-      `invalid manifest at managed/${name}/manifest.json:\n${z.prettifyError(parsed.error)}`
-    );
+    throw new Error(`invalid manifest.json:\n${z.prettifyError(parsed.error)}`);
   }
   const manifest = parsed.data;
+  if (name && name !== manifest.name) {
+    throw new Error(
+      `asked for agent ${name}, but this repo holds ${manifest.name}`
+    );
+  }
   const instructions = await readFile(join(dir, "CLAUDE.md"), "utf8");
   const rubricPath = join(dir, "rubric.md");
   const rubric = existsSync(rubricPath)

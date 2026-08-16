@@ -1,8 +1,8 @@
 import { defineState } from "eve/context";
 import { defineDynamic, defineTool } from "eve/tools";
+import { acl } from "@/acl.ts";
 import { allowed } from "@/lib/access.ts";
 import { loadManagedAgent, runTask } from "@/lib/claude-managed-agent.ts";
-import { acl } from "@/managed/research-evidence-mapper/acl.ts";
 
 const sessionIdState = defineState<string | undefined>(
   "research-evidence-mapper-session",

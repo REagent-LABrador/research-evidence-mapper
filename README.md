@@ -30,20 +30,20 @@ on.
 
 ## Start here
 
-**[`managed/research-evidence-mapper/README.md`](./managed/research-evidence-mapper/README.md)**
+**[`docs/AGENT.md`](./docs/AGENT.md)**
 is the agent's own documentation: what it guarantees and how each guarantee is
 enforced, the full input/output schema, what it needs, how to deploy and call
 it, and its known limits.
 
 | file | what it is |
 |---|---|
-| [`CLAUDE.md`](./managed/research-evidence-mapper/CLAUDE.md) | the deployed system prompt, uploaded verbatim |
-| [`SCHEMA.md`](./managed/research-evidence-mapper/SCHEMA.md) | the authoritative data contract |
-| [`CONTRACT.md`](./managed/research-evidence-mapper/CONTRACT.md) | deliverables, MCP details, `assemble.py` spec |
-| [`BUILD.md`](./managed/research-evidence-mapper/BUILD.md) | build plan and its six blocking acceptance facts |
-| [`.claude/skills/`](./managed/research-evidence-mapper/.claude/skills) | three skills, uploaded to the Skills API unchanged |
-| [`fixtures/`](./managed/research-evidence-mapper/fixtures) | three corpus-validated questions, each grading something specific |
-| [`runs/g_e087`](./managed/research-evidence-mapper/runs) | a real two-round graph from the deployed agent |
+| [`CLAUDE.md`](./CLAUDE.md) | the deployed system prompt, uploaded verbatim |
+| [`SCHEMA.md`](./docs/SCHEMA.md) | the authoritative data contract |
+| [`CONTRACT.md`](./docs/CONTRACT.md) | deliverables, MCP details, `assemble.py` spec |
+| [`BUILD.md`](./docs/BUILD.md) | build plan and its six blocking acceptance facts |
+| [`skills/`](./skills) | three skills, uploaded to the Skills API unchanged |
+| [`fixtures/`](./fixtures) | three corpus-validated questions, each grading something specific |
+| [`runs/g_e087`](./runs) | a real two-round graph from the deployed agent |
 
 ## What makes it trustworthy
 
@@ -71,14 +71,14 @@ bun install
 cp .env.example .env          # add ANTHROPIC_API_KEY
 
 bun run typecheck && bun run check
-bun run deploy research-evidence-mapper
-bun run console research-evidence-mapper -- --once "$(cat managed/research-evidence-mapper/fixtures/q-disputed.txt)"
+bun run deploy
+bun run console -- --once "$(cat fixtures/q-disputed.txt)"
 ```
 
 Check the deterministic assembler on its own, no API key needed:
 
 ```bash
-python3 managed/research-evidence-mapper/.claude/skills/graph-assembly/assemble.py --selftest
+python3 skills/graph-assembly/assemble.py --selftest
 ```
 
 ## Provenance

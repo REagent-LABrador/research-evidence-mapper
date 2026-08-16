@@ -57,5 +57,7 @@
     "Renamed literature-graph -> research-evidence-mapper to match main. The memory store name sets the /mnt/memory/<slug> mount path, so the old store (memstore_018xqMb7h2CYpj6nWcS2oCvC, named literature-graph) was detached and a new one provisioned; keeping it would have left CLAUDE.md pointing at a mount that no longer matched."
   ],
   "session_policy": "fresh",
-  "vault_ids": ["vlt_011Ce5SbT8uAxY9LgM3eTZpS"]
+  "vault_ids": [
+    "vlt_011Ce5SbT8uAxY9LgM3eTZpS"
+  ]
 }

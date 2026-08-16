@@ -4,7 +4,7 @@
  *   bun run deploy <name>
  *
  * Thin Anthropic SDK wrapper, idempotent by content hash:
- *   1. zip + upload each .claude/skills/<dir>/ bundle that changed → Skills API
+ *   1. zip + upload each skills/<dir>/ bundle that changed → Skills API
  *   2. create the agent, or update it (new version) if config changed
  *   3. write agent_id / versions / hashes back into manifest.json
  *
@@ -24,11 +24,9 @@ import {
   makeClient,
 } from "@/lib/claude-managed-agent.ts";
 
+// One repo, one agent: the name is optional and only checked against
+// manifest.name if given, so a wrong one errors instead of loading silently.
 const [name] = process.argv.slice(2);
-if (!name) {
-  console.error("usage: bun run deploy <name>");
-  process.exit(1);
-}
 
 const { dir, manifest, instructions, tools } = await loadManagedAgent(name);
 const client = makeClient();
@@ -47,7 +45,7 @@ const sha = (text: string | Buffer) =>
 
 // --- 1. skills ------------------------------------------------------------
 
-const skillsRoot = join(dir, ".claude", "skills");
+const skillsRoot = join(dir, "skills");
 const skillDirs: string[] = [];
 if (existsSync(skillsRoot)) {
   for (const entry of await readdir(skillsRoot, { withFileTypes: true })) {
@@ -58,7 +56,7 @@ if (existsSync(skillsRoot)) {
       )
     ) {
       console.error(
-        `skill ${entry.name}: skipped — only skill dirs (containing SKILL.md) belong under .claude/skills/`
+        `skill ${entry.name}: skipped — only skill dirs (containing SKILL.md) belong under skills/`
       );
       continue;
     }
@@ -237,10 +235,10 @@ async function persistManifest(): Promise<void> {
   const manifestPath = join(dir, "manifest.json");
   const nextManifest = `${JSON.stringify(manifest, null, 2)}\n`;
   if (nextManifest === (await readFile(manifestPath, "utf8"))) {
-    console.log(`manifest unchanged: managed/${name}/manifest.json`);
+    console.log("manifest unchanged: manifest.json");
   } else {
     await writeFile(manifestPath, nextManifest);
-    console.log(`manifest updated: managed/${name}/manifest.json`);
+    console.log("manifest updated: manifest.json");
   }
 }
 

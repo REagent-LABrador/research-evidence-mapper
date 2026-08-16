@@ -46,9 +46,9 @@ request {graph_id?, ask, target, depth}
 | file | holds |
 |---|---|
 | `CLAUDE.md` | role, 4 ask types, pipeline, tier table, memory layout, JSON skeleton |
-| `.claude/skills/literature-search/SKILL.md` | Paperclip interface + normalization; the transport seam |
-| `.claude/skills/claim-extraction/SKILL.md` | two modes (abstract batch / full text), quote fidelity |
-| `.claude/skills/graph-assembly/SKILL.md` + `assemble.py` | dedup, scoring, gaps — deterministic, in code |
+| `skills/literature-search/SKILL.md` | Paperclip interface + normalization; the transport seam |
+| `skills/claim-extraction/SKILL.md` | two modes (abstract batch / full text), quote fidelity |
+| `skills/graph-assembly/SKILL.md` + `assemble.py` | dedup, scoring, gaps — deterministic, in code |
 | `fixtures/` | 3 questions: well-studied, sparse, genuinely disputed |
 
 **Compiled by `/managed-agent-deploy`:** `manifest.json` (sonnet-5, `message`,
@@ -73,7 +73,7 @@ stdio — then one handler wraps it.
 `bun run typecheck && bun run check`, then blocking:
 
 ```
-bun run console research-evidence-mapper -- --once "$(cat managed/research-evidence-mapper/fixtures/q-disputed.txt)"
+bun run console -- --once "$(cat fixtures/q-disputed.txt)"
 ```
 
 Six facts, each independently checked:

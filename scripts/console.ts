@@ -21,13 +21,9 @@ import {
 } from "@/lib/claude-managed-agent.ts";
 
 const args = process.argv.slice(2);
-const [name] = args;
-if (!name) {
-  console.error(
-    'usage: bun run console <name> [-- --once "task"] [--quiet] [--timeout <seconds>] [--mcp-silence <seconds>]'
-  );
-  process.exit(1);
-}
+// One repo, one agent: name is optional, and verified against manifest.name.
+const [maybeName] = args;
+const name = maybeName && !maybeName.startsWith("--") ? maybeName : undefined;
 const onceIndex = args.indexOf("--once");
 if (onceIndex !== -1 && !args[onceIndex + 1]?.trim()) {
   // Catches `--once "$(cat wrong/path)"` expanding to "" — without this the

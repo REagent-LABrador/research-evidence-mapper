@@ -3,7 +3,7 @@
 Nothing gets built until this is agreed. Every row below is a thing someone can
 pick up and own.
 
-Contract for the data itself is `managed/research-evidence-mapper/SCHEMA.md` (input JSON,
+Contract for the data itself is `docs/SCHEMA.md` (input JSON,
 output JSON, guarantees, memory layout). Not repeated here.
 
 ---
@@ -253,7 +253,7 @@ API key. `Authorization: Bearer <token>` is proven; `X-API-Key` is what the CLI
 uses against the REST API and may or may not be accepted by the MCP. Needs a real
 key to settle. Everything else is green, so steps 1–3 are no longer gated.
 
-**Smoke facts** (`bun run console research-evidence-mapper -- --once "$(cat fixtures/q-disputed.txt)"`):
+**Smoke facts** (`bun run console -- --once "$(cat fixtures/q-disputed.txt)"`):
 1. Paperclip called at event level, not claimed in prose
 2. reply carries full graph JSON, not a summary
 3. disputed fixture yields ≥1 `state: "disagreed"` — zero is failure, not cleanliness

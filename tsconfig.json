@@ -13,10 +13,5 @@
     "verbatimModuleSyntax": true,
     "paths": { "@/*": ["./*"] }
   },
-  "include": [
-    "lib/**/*.ts",
-    "scripts/**/*.ts",
-    "agent/**/*.ts",
-    "managed/**/*.ts"
-  ]
+  "include": ["lib/**/*.ts", "scripts/**/*.ts", "agent/**/*.ts", "*.ts"]
 }

@@ -314,7 +314,7 @@ Requirements:
 - `ANTHROPIC_API_KEY` in `.env` at the repo root
 - a Paperclip credential in a platform vault, id in `manifest.vault_ids`
 
-Re-deploy any time with `bun run deploy research-evidence-mapper` — idempotent, and a
+Re-deploy any time with `bun run deploy` — idempotent, and a
 no-op when nothing changed.
 
 ### B. Call the deployed agent (what everyone else does)
@@ -322,8 +322,8 @@ no-op when nothing changed.
 Nothing to install. It is a server-side agent with an HTTP endpoint.
 
 ```bash
-bun run console research-evidence-mapper              # opens it in the Claude Console
-bun run console research-evidence-mapper -- --once "$(cat fixtures/q-disputed.txt)"
+bun run console              # opens it in the Claude Console
+bun run console -- --once "$(cat fixtures/q-disputed.txt)"
 ```
 
 Any backend can drive it with three HTTP calls — create a session, send the
@@ -360,7 +360,7 @@ downloading; `pip install gxl-paperclip` fails because the PyPI index returns
 so on Python 3.13+ it tries a Rust source build and fails.
 
 The agent's own skills are **not loadable** while prototyping — the session's
-cwd is the repo root, so `managed/research-evidence-mapper/.claude/skills/` is outside
+cwd is the repo root, so `skills/` is outside
 what the Skill tool discovers. Read the SKILL.md files and follow them by hand;
 the deploy smoke test is what proves real skill loading.
 
@@ -451,9 +451,9 @@ the actual reason those two labs disagree.
 
 ```
 CLAUDE.md                                  SOURCE — the deployed system prompt, verbatim
-.claude/skills/literature-search/          SOURCE — uploaded unchanged
-.claude/skills/claim-extraction/           SOURCE
-.claude/skills/graph-assembly/             SOURCE — SKILL.md + assemble.py
+skills/literature-search/          SOURCE — uploaded unchanged
+skills/claim-extraction/           SOURCE
+skills/graph-assembly/             SOURCE — SKILL.md + assemble.py
 SCHEMA.md                                  the data contract
 CONTRACT.md                                deliverables, MCP details, assemble.py spec
 BUILD.md                                   build plan and risks
