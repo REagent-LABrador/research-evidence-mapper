@@ -623,6 +623,7 @@ the actual reason those two labs disagree.
 | [`schema/`](./schema) | the same contract as a validator. `graph.schema.json` is the module output; `interpretability.schema.json` is the **shared LABrador block**, `$ref`d from it and reusable by any other LABrador module |
 | [`docs/CONTRACT.md`](./docs/CONTRACT.md) | deliverables, MCP details, `assemble.py` spec |
 | [`docs/BUILD.md`](./docs/BUILD.md) | build plan and its six blocking acceptance facts |
+| [`agent/tools/research-evidence-mapper.ts`](./agent/tools/research-evidence-mapper.ts) | the eve router wrapper. **Its filename is the router-facing tool name**, and `agent/instructions.md` dispatches to that name — rename the file and the dispatch entry silently points at a tool that does not exist |
 | `lib/`, `scripts/`, `agent/` | session runtime, deploy/console CLIs, eve router wrapper |
 
 This README is the entry point; [`SCHEMA.md`](./SCHEMA.md) — **at the repository
