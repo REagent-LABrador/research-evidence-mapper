@@ -13,6 +13,87 @@ other by `id`. Nothing nested.
 
 `findings` is the raw evidence, `links` is the summary of it. Same data, two levels.
 
+## Input — the request (also called: the task string)
+
+One ask per request. Point at a row **by id** — never describe it in prose.
+
+**The canonical first call — seeding a graph from a question:**
+
+```jsonc
+{
+  // no graph_id — new_question is the only ask that doesn't extend
+  "ask": "new_question",
+  "target": "can a small-molecule IRAK4 inhibitor suppress synovial fibroblast-driven inflammation in rheumatoid arthritis, or is its effect confined to the myeloid compartment?",
+  "depth": "standard",   // 25 papers; enough to seed things + links, not to claim absence
+  "years": 5,            // optional: only papers from the last 5 years
+  "reason": "seeding the hypothesis-generation graph for the RA / IRAK4 track"
+}
+```
+
+**Every field, and what it does:**
+
+```jsonc
+{
+  "graph_id": "g_7f2a",     // omit for new_question
+  "ask": "resolve_link",    // new_question | expand_node | resolve_link | test_gap
+  "target": "L2",           // an id from that graph; the QUESTION for new_question
+  "depth": "deep",          // quick | standard | deep | exhaustive
+  "years": 5,               // only papers from the last 5 years. omit = no limit
+  "reason": "blocking a downstream decision"   // logged, not acted on
+}
+```
+
+**Only `target` is required.** Every other field defaults, and a missing field
+never refuses a round — `{"target": "does X affect Y"}` is a valid request.
+
+| omitted or unusable | default |
+|---|---|
+| `ask` | `new_question` |
+| `depth`, or not one of the four tiers | `standard` |
+| `years`, or not a positive number | unbounded — all years |
+| `reason` | `null` |
+| `graph_id` | treated as `new_question` |
+| the string is not JSON at all | the whole text becomes the question |
+
+Every substitution is listed in `coverage.defaults_applied`, so two different
+requests never produce indistinguishable output and a caller who wanted `deep`
+can see they got `standard`.
+
+**The one hard failure is the question.** A missing or empty `target` on
+`new_question`, or a `target` naming an id that does not exist on an extending
+ask, returns `status: "failed"` with `error` set and every list empty. Nothing
+is guessed.
+
+**`years` is a minimum publication year, applied as `--year-min`.** Note for
+implementers: `--since` is accepted by the search and then does not filter
+(a `--since 2025-06-01` query returned 2024 and 2018 papers), and some sources
+reject the flag outright. `coverage.years` records the window and must never
+claim a bound the search did not apply. A windowed absence is also a weaker
+claim than an unbounded one — "nothing in 5 years" is not "nothing".
+
+- **`expand_node`** — `target` is a `things` id (`"t1"`). *What else connects to
+  this?* Searches that thing's `name` + `aliases`. Returns new links touching it,
+  plus any new things those links introduce. Use when a node is central
+  (high `mentions`) but has few links.
+- **`resolve_link`** — `target` is a `links` id (`"L2"`). *Get more evidence on
+  this exact relationship.* Searches the `from`/`how`/`to` triple, biased toward
+  the under-represented side (`yes` vs `no`) and toward conditions not yet seen in
+  `where`. Use when `state` is `disagreed` or `single_source`.
+- **`test_gap`** — `target` is a `gaps` id (`"g1"`). *Has anyone actually stated
+  this?* Searches the missing pair directly. Two outcomes: the gap is promoted to
+  a real `link`, or it survives with `searched_in_round` set. A pair that has been
+  **looked for** and not found is a much stronger claim than one nobody searched.
+- **`new_question`** — `target` is free text. The only ask that does **not**
+  extend: returns a **new** `graph_id` at `round: 1`. Omit `graph_id`.
+
+Rules:
+
+- One ask per request. Round accounting is per-request.
+- Unknown `graph_id` or `target` → error. No partial graph is returned.
+- The reply is always the **full graph**, never a delta — diff on `round`.
+- `expand_node`, `resolve_link`, `test_gap` all extend in place: same `graph_id`,
+  `round` increments, existing ids stay stable.
+
 ## Output
 
 ```jsonc
@@ -141,72 +222,6 @@ other by `id`. Nothing nested.
   }]
 }
 ```
-
-## Request — how Stage 2 asks for more
-
-One ask per request. Point at a row **by id** — never describe it in prose.
-
-```jsonc
-{
-  "graph_id": "g_7f2a",     // omit for new_question
-  "ask": "resolve_link",    // new_question | expand_node | resolve_link | test_gap
-  "target": "L2",           // an id from that graph; the QUESTION for new_question
-  "depth": "deep",          // quick | standard | deep | exhaustive
-  "years": 5,               // only papers from the last 5 years. omit = no limit
-  "reason": "blocking a downstream decision"   // logged, not acted on
-}
-```
-
-**Only `target` is required.** Every other field defaults, and a missing field
-never refuses a round — `{"target": "does X affect Y"}` is a valid request.
-
-| omitted or unusable | default |
-|---|---|
-| `ask` | `new_question` |
-| `depth`, or not one of the four tiers | `standard` |
-| `years`, or not a positive number | unbounded — all years |
-| `reason` | `null` |
-| `graph_id` | treated as `new_question` |
-| the string is not JSON at all | the whole text becomes the question |
-
-Every substitution is listed in `coverage.defaults_applied`, so two different
-requests never produce indistinguishable output and a caller who wanted `deep`
-can see they got `standard`.
-
-**The one hard failure is the question.** A missing or empty `target` on
-`new_question`, or a `target` naming an id that does not exist on an extending
-ask, returns `status: "failed"` with `error` set and every list empty. Nothing
-is guessed.
-
-**`years` is a minimum publication year, applied as `--year-min`.** Note for
-implementers: `--since` is accepted by the search and then does not filter
-(a `--since 2025-06-01` query returned 2024 and 2018 papers), and some sources
-reject the flag outright. `coverage.years` records the window and must never
-claim a bound the search did not apply. A windowed absence is also a weaker
-claim than an unbounded one — "nothing in 5 years" is not "nothing".
-
-- **`expand_node`** — `target` is a `things` id (`"t1"`). *What else connects to
-  this?* Searches that thing's `name` + `aliases`. Returns new links touching it,
-  plus any new things those links introduce. Use when a node is central
-  (high `mentions`) but has few links.
-- **`resolve_link`** — `target` is a `links` id (`"L2"`). *Get more evidence on
-  this exact relationship.* Searches the `from`/`how`/`to` triple, biased toward
-  the under-represented side (`yes` vs `no`) and toward conditions not yet seen in
-  `where`. Use when `state` is `disagreed` or `single_source`.
-- **`test_gap`** — `target` is a `gaps` id (`"g1"`). *Has anyone actually stated
-  this?* Searches the missing pair directly. Two outcomes: the gap is promoted to
-  a real `link`, or it survives with `searched_in_round` set. A pair that has been
-  **looked for** and not found is a much stronger claim than one nobody searched.
-- **`new_question`** — `target` is free text. The only ask that does **not**
-  extend: returns a **new** `graph_id` at `round: 1`. Omit `graph_id`.
-
-Rules:
-
-- One ask per request. Round accounting is per-request.
-- Unknown `graph_id` or `target` → error. No partial graph is returned.
-- The reply is always the **full graph**, never a delta — diff on `round`.
-- `expand_node`, `resolve_link`, `test_gap` all extend in place: same `graph_id`,
-  `round` increments, existing ids stay stable.
 
 ## Where the graph lives
 
