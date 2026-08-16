@@ -3,7 +3,7 @@
 Nothing gets built until this is agreed. Every row below is a thing someone can
 pick up and own.
 
-Contract for the data itself is `docs/SCHEMA.md` (input JSON,
+Contract for the data itself is `SCHEMA.md` (input JSON,
 output JSON, guarantees, memory layout). Not repeated here.
 
 ---

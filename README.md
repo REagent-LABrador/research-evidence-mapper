@@ -73,7 +73,7 @@ The distinguishing behaviours:
 
 ## Input / output schema
 
-Full contract in [`SCHEMA.md`](./docs/SCHEMA.md). Summary:
+Full contract in [`SCHEMA.md`](./SCHEMA.md). Summary:
 
 ### Input — the task string is one JSON object
 
@@ -478,12 +478,12 @@ the actual reason those two labs disagree.
 | [`skills/`](./skills) | three skills, uploaded to the Skills API unchanged. `graph-assembly` bundles `assemble.py` and `example-round.json` |
 | [`fixtures/`](./fixtures) | three corpus-validated questions, each grading something specific |
 | [`runs/`](./runs) | a real two-round graph from the deployed agent |
-| [`docs/SCHEMA.md`](./docs/SCHEMA.md) | the authoritative data contract — input first, then output |
+| [`SCHEMA.md`](./SCHEMA.md) | **the authoritative data contract** — input first, then output. Root-level on purpose: it is the file consumers integrate against |
 | [`docs/CONTRACT.md`](./docs/CONTRACT.md) | deliverables, MCP details, `assemble.py` spec |
 | [`docs/BUILD.md`](./docs/BUILD.md) | build plan and its six blocking acceptance facts |
 | `lib/`, `scripts/`, `agent/` | session runtime, deploy/console CLIs, eve router wrapper |
 
-This README is the entry point; [`docs/SCHEMA.md`](./docs/SCHEMA.md) is the
+This README is the entry point; [`SCHEMA.md`](./SCHEMA.md) is the
 reference. Where the two disagree, SCHEMA.md wins and the disagreement is a bug.
 
 ## Provenance
