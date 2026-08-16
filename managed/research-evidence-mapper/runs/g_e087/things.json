@@ -1,0 +1,292 @@
+[
+  {
+    "aliases": [
+      "N-acetyl-cysteine",
+      "N-acetylcystein",
+      "N-acetylcysteine",
+      "NAC"
+    ],
+    "id": "t1",
+    "kind": "small_molecule",
+    "mentions": 1,
+    "name": "N-acetylcysteine (NAC)"
+  },
+  {
+    "aliases": [
+      "Trolox",
+      "VE",
+      "alpha-tocopherol",
+      "vitamin E",
+      "vitamin E analogue",
+      "α-tocopherol"
+    ],
+    "id": "t2",
+    "kind": "small_molecule",
+    "mentions": 1,
+    "name": "Vitamin E"
+  },
+  {
+    "aliases": [
+      "AA",
+      "APM",
+      "Asc",
+      "IVC",
+      "L-ascorbic acid 2-phosphate sesquimagnesium (APM)",
+      "VitC",
+      "ascorbate",
+      "ascorbic acid",
+      "pharmacological ascorbate",
+      "sodium ascorbate",
+      "vitamin C"
+    ],
+    "id": "t3",
+    "kind": "small_molecule",
+    "mentions": 2,
+    "merged_from": [
+      {
+        "name": "Vitamin C",
+        "via": "name"
+      }
+    ],
+    "name": "Vitamin C"
+  },
+  {
+    "aliases": ["RES"],
+    "id": "t4",
+    "kind": "small_molecule",
+    "mentions": 1,
+    "name": "Resveratrol"
+  },
+  {
+    "aliases": ["provitamin A", "β-carotene"],
+    "id": "t5",
+    "kind": "small_molecule",
+    "mentions": 1,
+    "name": "beta-carotene"
+  },
+  {
+    "aliases": ["vitamin A palmitate"],
+    "id": "t6",
+    "kind": "small_molecule",
+    "mentions": 1,
+    "name": "retinyl palmitate"
+  },
+  {
+    "aliases": [],
+    "id": "t7",
+    "kind": "small_molecule",
+    "mentions": 1,
+    "name": "canthaxanthin"
+  },
+  {
+    "aliases": ["Bach1"],
+    "gene_symbol": "BACH1",
+    "id": "t8",
+    "kind": "gene",
+    "mentions": 1,
+    "name": "BACH1",
+    "resolved_by": "f Kashif et al. quote names BACH1 as the transcription factor activated by antioxidant administration and driving melanoma metastasis in xenograft models",
+    "uniprot_accession": "O14867"
+  },
+  {
+    "aliases": ["GSTP1", "glutathione-S-transferase-pi"],
+    "gene_symbol": "GSTP1",
+    "id": "t9",
+    "kind": "gene",
+    "mentions": 1,
+    "name": "GST-pi",
+    "resolved_by": "f Zhang et al. quote names GST-pi as upregulated and mediating antioxidant-driven HCC promotion",
+    "uniprot_accession": "P09211"
+  },
+  {
+    "aliases": [
+      "breast cancer",
+      "colorectal cancer",
+      "gastric cancer",
+      "hepatocellular carcinoma",
+      "lung cancer",
+      "malignant melanoma",
+      "ovarian cancer",
+      "pancreatic cancer",
+      "prostate cancer",
+      "renal cell carcinoma"
+    ],
+    "id": "t10",
+    "kind": "disease",
+    "mentions": 1,
+    "name": "cancer"
+  },
+  {
+    "aliases": [
+      "B16FO melanoma metastasis",
+      "distant metastasis by melanoma cells",
+      "malignant melanoma metastasis",
+      "melanoma metastatic spread"
+    ],
+    "id": "t11",
+    "kind": "process",
+    "mentions": 2,
+    "merged_from": [
+      {
+        "name": "melanoma metastasis",
+        "via": "name"
+      }
+    ],
+    "name": "melanoma metastasis"
+  },
+  {
+    "aliases": [
+      "B16-F10 melanoma tumor growth",
+      "melanoma xenograft growth",
+      "subcutaneous melanoma tumor growth"
+    ],
+    "id": "t12",
+    "kind": "process",
+    "mentions": 1,
+    "name": "melanoma primary tumor growth"
+  },
+  {
+    "aliases": [
+      "4T1 breast cancer metastasis",
+      "breast cancer lung metastasis",
+      "pulmonary metastasis"
+    ],
+    "id": "t13",
+    "kind": "process",
+    "mentions": 1,
+    "name": "breast cancer metastasis"
+  },
+  {
+    "aliases": ["4T1 tumor growth", "breast cancer tumor weight"],
+    "id": "t14",
+    "kind": "process",
+    "mentions": 1,
+    "name": "breast cancer primary tumor growth"
+  },
+  {
+    "aliases": [
+      "ApcMin tumor progression",
+      "colorectal tumor progression",
+      "intestinal tumor grade"
+    ],
+    "id": "t15",
+    "kind": "process",
+    "mentions": 1,
+    "name": "intestinal tumor progression"
+  },
+  {
+    "aliases": ["HCC formation", "HCC growth"],
+    "id": "t16",
+    "kind": "process",
+    "mentions": 1,
+    "name": "hepatocellular carcinoma (HCC) initiation and progression"
+  },
+  {
+    "aliases": ["prostate epithelial hyperplasia", "prostate tumorigenesis"],
+    "id": "t17",
+    "kind": "process",
+    "mentions": 1,
+    "name": "prostate epithelial proliferation"
+  },
+  {
+    "aliases": ["gastric tumor growth"],
+    "id": "t18",
+    "kind": "process",
+    "mentions": 1,
+    "name": "gastric cancer growth"
+  },
+  {
+    "aliases": ["pancreatic cancer metastases", "pancreatic tumor progress"],
+    "id": "t19",
+    "kind": "process",
+    "mentions": 1,
+    "name": "pancreatic cancer growth and metastasis"
+  },
+  {
+    "aliases": ["RCC bone metastasis", "bone metastatic RCC"],
+    "id": "t20",
+    "kind": "process",
+    "mentions": 1,
+    "name": "renal cancer bone metastasis"
+  },
+  {
+    "aliases": ["liver CSC tumor growth", "liver cancer metastasis"],
+    "id": "t21",
+    "kind": "process",
+    "mentions": 1,
+    "name": "liver cancer growth and metastasis"
+  },
+  {
+    "aliases": [
+      "ID8 ovarian cancer metastasis",
+      "epithelial ovarian cancer metastasis"
+    ],
+    "id": "t22",
+    "kind": "process",
+    "mentions": 1,
+    "name": "peritoneal tumor metastasis"
+  },
+  {
+    "aliases": ["lung tumor incidence", "lung tumor multiplicity"],
+    "id": "t23",
+    "kind": "process",
+    "mentions": 1,
+    "name": "smoking-induced lung tumor incidence"
+  },
+  {
+    "aliases": ["immunosuppressive neutrophil phenotype"],
+    "id": "t24",
+    "kind": "process",
+    "mentions": 1,
+    "name": "neutrophil immunosuppressive reprogramming"
+  },
+  {
+    "aliases": ["lung cancer incidence in RCTs"],
+    "id": "t25",
+    "kind": "process",
+    "mentions": 1,
+    "name": "lung cancer risk (human)"
+  },
+  {
+    "aliases": ["chronic liver disease mortality", "liver cancer incidence"],
+    "id": "t26",
+    "kind": "process",
+    "mentions": 1,
+    "name": "liver cancer incidence and CLD mortality (ATBC)"
+  },
+  {
+    "aliases": [],
+    "id": "t27",
+    "kind": "process",
+    "mentions": 1,
+    "name": "all-cause mortality (human antioxidant RCTs)"
+  },
+  {
+    "aliases": ["prostate cancer formation in SELECT trial"],
+    "id": "t28",
+    "kind": "process",
+    "mentions": 1,
+    "name": "prostate cancer risk (human, SELECT trial)"
+  },
+  {
+    "aliases": ["LL/2 tumor growth"],
+    "id": "t29",
+    "kind": "process",
+    "mentions": 1,
+    "name": "Lewis lung carcinoma tumor growth"
+  },
+  {
+    "aliases": ["MitoQ", "MitoTEMPO"],
+    "id": "t30",
+    "kind": "small_molecule",
+    "mentions": 1,
+    "name": "mitochondria-targeted antioxidants (MitoQ/MitoTEMPO)"
+  },
+  {
+    "aliases": ["lung cancer progression", "lung tumor burden"],
+    "id": "t31",
+    "kind": "process",
+    "mentions": 1,
+    "name": "KRAS-driven lung cancer progression"
+  }
+]

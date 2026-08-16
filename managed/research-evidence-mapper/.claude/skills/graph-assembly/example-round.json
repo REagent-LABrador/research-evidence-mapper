@@ -1,0 +1,95 @@
+{
+  "_comment": "Copy this, replace every value, delete the _comment keys. This is the ONLY input assemble.py needs. Do not re-derive the shape from the source.",
+
+  "graph_id": "g_7f2a",
+  "_comment_graph_id": "omit entirely for new_question — a stable id is minted from the question",
+
+  "question": "does IRAK4 inhibition affect synovial fibroblasts",
+  "round": 2,
+  "ask": "resolve_link",
+  "_comment_ask": "new_question | expand_node | resolve_link | test_gap",
+  "target": "L3",
+  "_comment_target": "null for new_question; a things/links/gaps id otherwise",
+  "depth": "standard",
+  "generated_at": "2026-08-16T02:05:00Z",
+  "status": "ok",
+  "_comment_status": "your judgement of THIS round: ok | empty | partial | failed",
+
+  "coverage": {
+    "depth": "standard",
+    "found": 46,
+    "read": 6,
+    "used": 2,
+    "truncated": true,
+    "stop_reason": "queries_exhausted",
+    "_comment_stop_reason": "max_papers | queries_exhausted | no_new_results | time_limit | complete | search_unavailable",
+    "limits": { "max_papers": 25, "max_queries": 4 },
+    "figures_read": 1
+  },
+  "_comment_coverage": "the REAL numbers. no_quote_discarded and duplicates_dropped are added by the script — do not set them.",
+
+  "things": [
+    {
+      "id": "t1",
+      "name": "IRAK4",
+      "kind": "gene",
+      "_comment_kind": "protein | small_molecule | gene | disease | process | method",
+      "aliases": ["IRAK-4", "interleukin-1 receptor-associated kinase 4"],
+      "uniprot_accession": "Q9NWZ3",
+      "_comment_uniprot_accession": "REQUIRED on every protein/gene node. Resolve it with `search -s proteins \"<name> human\"`. Species matters: IRAK4 also matches Q1RMT8 (bovine) and Q8R4K2 (mouse). Omit on diseases, processes, methods and small molecules.",
+      "gene_symbol": "IRAK4",
+      "resolved_by": "f1 quote names IRAK4 as the kinase inhibited",
+      "_comment_resolved_by": "resolve from the QUOTE, not the label. \"IL-6\" resolves to P05231 the ligand, but receptor-blockade evidence is P08887.",
+      "ambiguity": [],
+      "_comment_ambiguity": "rejected candidates + why. A node with a non-empty ambiguity is never used as a merge key."
+    },
+    {
+      "id": "t2",
+      "name": "rheumatoid arthritis",
+      "kind": "disease",
+      "_comment_t2": "The graph MUST carry the disease/indication as its own node when the question concerns one. Downstream consumers should not have to recover it from the question string."
+    }
+  ],
+  "_comment_things": "only NEW or newly-aliased entities. Existing ones keep their ids; the script merges by normalized name and alias.",
+
+  "papers": [
+    {
+      "id": "p1",
+      "doi": "10.1002/art.41953",
+      "pmid": "34423919",
+      "title": "The IRAK4 Inhibitor PF-06650833 Blocks Inflammation in Preclinical Models of Rheumatic Disease",
+      "year": 2021,
+      "journal": "Arthritis & Rheumatology",
+      "first_author": "Winkler",
+      "_comment_first_author": "the FIRST name in authors — not the last, not the corresponding author",
+      "study_type": "test_tube",
+      "_comment_study_type": "meta_analysis | clinical_trial | human_cohort | animal | test_tube | computational | review",
+      "is_preprint": false,
+      "retracted": false,
+      "source_text": "…the exact text you fetched, with its L<n> prefixes…",
+      "_comment_source_text": "REQUIRED for quote verification. Every quote is string-matched against it and dropped if it does not match. Stripped from the output."
+    }
+  ],
+
+  "findings": [
+    {
+      "id": "f1",
+      "paper": "p1",
+      "from": "t1",
+      "how": "suppresses",
+      "to": "t3",
+      "says": "yes",
+      "_comment_says": "yes | no | no_effect",
+      "quote": "PF-06650833 substantially reduced cytokine and matrix metalloproteinase (MMP) release in response to all ligands profiled.",
+      "_comment_quote": "VERBATIM. Not paraphrased, not cleaned up, not stitched across an ellipsis.",
+      "where": "RA FLS, TLR ligands Pam3Cys/LPS/flagellin, 100 nM",
+      "_comment_where": "the experimental conditions. explain_disagreement compares these, so this field is load-bearing, not decoration.",
+      "section": "results",
+      "_comment_section": "abstract | introduction | results | methods | discussion | figure_caption",
+      "is_own_result": true,
+      "_comment_is_own_result": "false for a claim the paper CITES rather than shows. A review restating forty studies is one paper, not forty.",
+      "hedged": false,
+      "confidence": 0.9
+    }
+  ]
+}

@@ -1,0 +1,402 @@
+[
+  {
+    "confidence": 0.4642,
+    "id": "g1",
+    "implied_by": ["L14", "L33"],
+    "missing": ["t2", "t5"],
+    "note": "both connect to t27; no direct link reported (implied via 3 intermediates)",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.3203,
+    "id": "g2",
+    "implied_by": ["L13", "L6"],
+    "missing": ["t1", "t2"],
+    "note": "both connect to t15; no direct link reported (implied via 2 intermediates)",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.3203,
+    "id": "g3",
+    "implied_by": ["L28", "L7"],
+    "missing": ["t1", "t4"],
+    "note": "both connect to t16; no direct link reported (implied via 2 intermediates)",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.3024,
+    "id": "g4",
+    "implied_by": ["L16", "L3"],
+    "missing": ["t1", "t3"],
+    "note": "both connect to t12; no direct link reported (implied via 3 intermediates)",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.2449,
+    "id": "g5",
+    "implied_by": ["L32", "L33"],
+    "missing": ["t25", "t27"],
+    "note": "both connect to t5; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.2012,
+    "id": "g6",
+    "implied_by": ["L31", "L33"],
+    "missing": ["t11", "t27"],
+    "note": "both connect to t5; no direct link reported (implied via 2 intermediates)",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.1796,
+    "id": "g7",
+    "implied_by": ["L31", "L32"],
+    "missing": ["t11", "t25"],
+    "note": "both connect to t5; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.1646,
+    "id": "g8",
+    "implied_by": ["L30", "L31"],
+    "missing": ["t11", "t26"],
+    "note": "both connect to t5; no direct link reported (implied via 2 intermediates)",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.1646,
+    "id": "g9",
+    "implied_by": ["L30", "L33"],
+    "missing": ["t26", "t27"],
+    "note": "both connect to t5; no direct link reported (implied via 2 intermediates)",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.1552,
+    "id": "g10",
+    "implied_by": ["L26", "L3"],
+    "missing": ["t1", "t30"],
+    "note": "both connect to t12; no direct link reported (implied via 2 intermediates)",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.1552,
+    "id": "g11",
+    "implied_by": ["L16", "L26"],
+    "missing": ["t3", "t30"],
+    "note": "both connect to t12; no direct link reported (implied via 2 intermediates)",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.147,
+    "id": "g12",
+    "implied_by": ["L30", "L32"],
+    "missing": ["t25", "t26"],
+    "note": "both connect to t5; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.1272,
+    "id": "g13",
+    "implied_by": ["L10", "L13"],
+    "missing": ["t11", "t15"],
+    "note": "both connect to t2; no direct link reported (implied via 2 intermediates)",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.1136,
+    "id": "g14",
+    "implied_by": ["L10", "L11"],
+    "missing": ["t11", "t23"],
+    "note": "both connect to t2; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.1136,
+    "id": "g15",
+    "implied_by": ["L11", "L13"],
+    "missing": ["t15", "t23"],
+    "note": "both connect to t2; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.1136,
+    "id": "g16",
+    "implied_by": ["L13", "L14"],
+    "missing": ["t15", "t27"],
+    "note": "both connect to t2; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.1136,
+    "id": "g17",
+    "implied_by": ["L11", "L14"],
+    "missing": ["t23", "t27"],
+    "note": "both connect to t2; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.1072,
+    "id": "g18",
+    "implied_by": ["L25", "L26"],
+    "missing": ["t11", "t12"],
+    "note": "both connect to t30; no direct link reported (implied via 3 intermediates)",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0933,
+    "id": "g19",
+    "implied_by": ["L19", "L21"],
+    "missing": ["t11", "t19"],
+    "note": "both connect to t3; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.093,
+    "id": "g20",
+    "implied_by": ["L12", "L13"],
+    "missing": ["t15", "t26"],
+    "note": "both connect to t2; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.093,
+    "id": "g21",
+    "implied_by": ["L11", "L12"],
+    "missing": ["t23", "t26"],
+    "note": "both connect to t2; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0901,
+    "id": "g22",
+    "implied_by": ["L25", "L27"],
+    "missing": ["t11", "t31"],
+    "note": "both connect to t30; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0901,
+    "id": "g23",
+    "implied_by": ["L26", "L27"],
+    "missing": ["t12", "t31"],
+    "note": "both connect to t30; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0832,
+    "id": "g24",
+    "implied_by": ["L10", "L21"],
+    "missing": ["t2", "t3"],
+    "note": "both connect to t11; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0832,
+    "id": "g25",
+    "implied_by": ["L10", "L34"],
+    "missing": ["t2", "t6"],
+    "note": "both connect to t11; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0832,
+    "id": "g26",
+    "implied_by": ["L10", "L35"],
+    "missing": ["t2", "t7"],
+    "note": "both connect to t11; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0832,
+    "id": "g27",
+    "implied_by": ["L10", "L36"],
+    "missing": ["t2", "t8"],
+    "note": "both connect to t11; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0821,
+    "id": "g28",
+    "implied_by": ["L16", "L17"],
+    "missing": ["t12", "t14"],
+    "note": "both connect to t3; no direct link reported (implied via 2 intermediates)",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0744,
+    "id": "g29",
+    "implied_by": ["L3", "L4"],
+    "missing": ["t12", "t13"],
+    "note": "both connect to t1; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0744,
+    "id": "g30",
+    "implied_by": ["L3", "L6"],
+    "missing": ["t12", "t15"],
+    "note": "both connect to t1; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0744,
+    "id": "g31",
+    "implied_by": ["L3", "L7"],
+    "missing": ["t12", "t16"],
+    "note": "both connect to t1; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0744,
+    "id": "g32",
+    "implied_by": ["L3", "L8"],
+    "missing": ["t12", "t17"],
+    "note": "both connect to t1; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0744,
+    "id": "g33",
+    "implied_by": ["L1", "L3"],
+    "missing": ["t12", "t24"],
+    "note": "both connect to t1; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0744,
+    "id": "g34",
+    "implied_by": ["L3", "L9"],
+    "missing": ["t12", "t9"],
+    "note": "both connect to t1; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0744,
+    "id": "g35",
+    "implied_by": ["L4", "L6"],
+    "missing": ["t13", "t15"],
+    "note": "both connect to t1; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0744,
+    "id": "g36",
+    "implied_by": ["L4", "L7"],
+    "missing": ["t13", "t16"],
+    "note": "both connect to t1; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0744,
+    "id": "g37",
+    "implied_by": ["L4", "L8"],
+    "missing": ["t13", "t17"],
+    "note": "both connect to t1; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0744,
+    "id": "g38",
+    "implied_by": ["L4", "L9"],
+    "missing": ["t13", "t9"],
+    "note": "both connect to t1; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0744,
+    "id": "g39",
+    "implied_by": ["L6", "L7"],
+    "missing": ["t15", "t16"],
+    "note": "both connect to t1; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0744,
+    "id": "g40",
+    "implied_by": ["L6", "L8"],
+    "missing": ["t15", "t17"],
+    "note": "both connect to t1; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0744,
+    "id": "g41",
+    "implied_by": ["L1", "L6"],
+    "missing": ["t15", "t24"],
+    "note": "both connect to t1; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0744,
+    "id": "g42",
+    "implied_by": ["L6", "L9"],
+    "missing": ["t15", "t9"],
+    "note": "both connect to t1; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0744,
+    "id": "g43",
+    "implied_by": ["L7", "L8"],
+    "missing": ["t16", "t17"],
+    "note": "both connect to t1; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0744,
+    "id": "g44",
+    "implied_by": ["L1", "L7"],
+    "missing": ["t16", "t24"],
+    "note": "both connect to t1; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0744,
+    "id": "g45",
+    "implied_by": ["L1", "L8"],
+    "missing": ["t17", "t24"],
+    "note": "both connect to t1; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0744,
+    "id": "g46",
+    "implied_by": ["L8", "L9"],
+    "missing": ["t17", "t9"],
+    "note": "both connect to t1; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0744,
+    "id": "g47",
+    "implied_by": ["L1", "L9"],
+    "missing": ["t24", "t9"],
+    "note": "both connect to t1; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0733,
+    "id": "g48",
+    "implied_by": ["L18", "L21"],
+    "missing": ["t11", "t18"],
+    "note": "both connect to t3; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0733,
+    "id": "g49",
+    "implied_by": ["L21", "L22"],
+    "missing": ["t11", "t20"],
+    "note": "both connect to t3; no direct link reported",
+    "searched_in_round": null
+  },
+  {
+    "confidence": 0.0733,
+    "id": "g50",
+    "implied_by": ["L21", "L23"],
+    "missing": ["t11", "t21"],
+    "note": "both connect to t3; no direct link reported",
+    "searched_in_round": null
+  }
+]

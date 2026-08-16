@@ -1,0 +1,1 @@
+{"ask":"new_question","target":"Does the gut microbiome influence heterotopic ossification in fibrodysplasia ossificans progressiva (FOP)?","depth":"deep","reason":"fixture: exactly one primary study exists corpus-wide — the graph must report thin honestly rather than pad"}

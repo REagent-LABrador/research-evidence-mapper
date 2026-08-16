@@ -1,0 +1,8 @@
+node_modules/
+.env
+.eve/
+.output/
+*.log
+.DS_Store
+__pycache__/
+*.pyc

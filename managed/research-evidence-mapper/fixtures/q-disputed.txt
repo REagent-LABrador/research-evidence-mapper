@@ -1,0 +1,1 @@
+{"ask":"new_question","target":"Do antioxidant supplements (N-acetylcysteine, vitamin E, vitamin C) accelerate or suppress cancer progression and metastasis?","depth":"standard","reason":"fixture: two labs publish directly opposing in vivo results — the graph must yield at least one disagreed link"}

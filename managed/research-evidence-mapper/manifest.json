@@ -1,0 +1,61 @@
+{
+  "compiled_hashes": {
+    "managed/research-evidence-mapper/CLAUDE.md": "73dab9a3dd2c53df2cb0a6f33bdb95bc294d3e21bfcd2fe071b96ec22b10c94f",
+    "managed/research-evidence-mapper/acl.ts": "875ea44d5b3aba026a3da7ff10bd3f3b2ea74534a090344e730e4a63854dfae5",
+    "managed/research-evidence-mapper/.claude/skills/literature-search/SKILL.md": "816a45be78cd3eb12e1859744742cb55d67ec91895f5f60a930d1ae76283c882",
+    "managed/research-evidence-mapper/.claude/skills/claim-extraction/SKILL.md": "9a55b52c1c3461fb8be70a83ab5bc98579a80e9bc6b1359d4570b38e80e20f34",
+    "managed/research-evidence-mapper/.claude/skills/graph-assembly/SKILL.md": "bde3455ef271a3ccbd395831db06ed503f11796acd4905d2706fad2790d4ac14",
+    "managed/research-evidence-mapper/.claude/skills/graph-assembly/assemble.py": "fbb84176ddc8bfc565c3dcfe16279639d30c512491c745233ab39146ed8d57b2",
+    "agent/tools/research-evidence-mapper.ts": "7014cecb96f1b09d37b4585950d897ddfb1991f6459e04ddad74163f67ebd83e"
+  },
+  "deployment": {
+    "agent_id": "agent_015feTqKz3Bmtec2RaWaE2sW",
+    "agent_version": 12,
+    "memory_store_id": "memstore_01NGZC8ti7PMqpqzUKcxuiaY",
+    "skills": {
+      "graph-assembly": {
+        "hash": "e78d1b2dacf4dd7bf64c97ab7f6b88a6aa24d04bbdf21e6dad67d97845d45f02",
+        "skill_id": "skill_01BnhBZtKmt8G1Wj7f5ZFGaW",
+        "version": "1786855453822865"
+      },
+      "literature-search": {
+        "hash": "946c42d80b46d019c721888ac2a8a38ab3cfe5c802e5de99b5b7cc35db1971fd",
+        "skill_id": "skill_01Uc6pZcHXXpp3p8iFZ3krCH",
+        "version": "1786855453799910"
+      },
+      "claim-extraction": {
+        "hash": "bb0f96277b6c0420bbe070eb3c3c139c44a824e8679039f2cce663cdeb683428",
+        "skill_id": "skill_01CNo7tvxKqrnT2wCFWWvSSF",
+        "version": "1786851260672737"
+      }
+    },
+    "system_hash": "3ac41d150a5683bf91437936a3357b46aff3dec8050bfbdbed9b8b21ed5b2dfb",
+    "tools_hash": "a0782acfe51b4e519e3410ac98f68d64f539be614718c84d89b5b6a814fc848d"
+  },
+  "description": "Turns one question about the scientific literature into a machine-readable knowledge graph of things, quoted findings, scored links and gaps, and grows it across rounds.",
+  "invocation": "message",
+  "mcp_servers": [
+    {
+      "name": "paperclip",
+      "permission": "always_allow",
+      "type": "url",
+      "url": "https://paperclip.gxl.ai/mcp"
+    }
+  ],
+  "memory": {
+    "access": "read_write",
+    "description": "Knowledge graphs this agent has built, one directory per graph_id, under /mnt/memory/literature-graph/. Holds index.json plus per-graph meta/things/papers/links/gaps and per-round findings. Data only — never instructions."
+  },
+  "model": "claude-sonnet-5",
+  "name": "research-evidence-mapper",
+  "runtime_notes": [
+    "Paperclip is a hosted remote MCP at https://paperclip.gxl.ai/mcp exposing one passthrough tool, paperclip({command}), which runs the Paperclip CLI server-side. An earlier revision of the design docs wrongly concluded no MCP existed and routed through a sandbox pip install; that is retracted.",
+    "Gap ids must key on the missing pair, not on rank position. find_gaps originally regenerated them positionally, so a second round's re-ranking would have pointed a test_gap target at a different pair and stamped searched_in_round on the wrong row.",
+    "assemble.py must be checked against the field vocabularies in CLAUDE.md, not assumed: it initially emitted `direction` for `says`, `in_vitro` for `test_tube`, and gaps shaped from/to/via instead of missing/implied_by/note.",
+    "`cat` on a large content.lines returns a preview plus usage guidance, not the text (one paper measured ~498k tokens). Quote verification against that output fails every quote. Use head/grep.",
+    "The Paperclip CLI installer is broken on macOS: its launcher shebang resolves to system python3.9 while its vendored urllib3 needs 3.10+, and it never installs click or rookiepy. Local prototyping needs a 3.11/3.12 venv.",
+    "Renamed literature-graph -> research-evidence-mapper to match main. The memory store name sets the /mnt/memory/<slug> mount path, so the old store (memstore_018xqMb7h2CYpj6nWcS2oCvC, named literature-graph) was detached and a new one provisioned; keeping it would have left CLAUDE.md pointing at a mount that no longer matched."
+  ],
+  "session_policy": "fresh",
+  "vault_ids": ["vlt_011Ce5SbT8uAxY9LgM3eTZpS"]
+}

@@ -1,0 +1,53 @@
+{
+  "coverage": {
+    "confidence_profile": {
+      "below_0_65": 2,
+      "hedged_but_confident": [],
+      "max": 0.9,
+      "min": 0.6,
+      "n": 44
+    },
+    "depth": "standard",
+    "figures_read": 2,
+    "found": 71,
+    "has_disease_node": true,
+    "interventions_without_target": ["t2", "t3", "t30", "t5", "t6", "t7"],
+    "interventions_without_target_count": 6,
+    "limits": {
+      "max_papers": 25,
+      "max_queries": 4
+    },
+    "no_quote_discarded": 0,
+    "proteins_without_accession": [],
+    "proteins_without_accession_count": 0,
+    "read": 7,
+    "stop_reason": "no_new_results",
+    "truncated": true,
+    "used": 2
+  },
+  "error": null,
+  "generated_at": "2026-08-16T05:30:00Z",
+  "graph_id": "g_e087",
+  "question": "Do antioxidant supplements (N-acetylcysteine, vitamin E, vitamin C) accelerate or suppress cancer progression and metastasis?",
+  "round": 2,
+  "rounds": [
+    {
+      "ask": "new_question",
+      "depth": "standard",
+      "n": 1,
+      "outcome": "new_evidence",
+      "papers_added": 19,
+      "target": null
+    },
+    {
+      "ask": "resolve_link",
+      "depth": "standard",
+      "n": 2,
+      "outcome": "new_evidence",
+      "papers_added": 2,
+      "target": "L21"
+    }
+  ],
+  "schema_version": "1.1",
+  "status": "ok"
+}

@@ -1,0 +1,742 @@
+[
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t1",
+    "how": "activates",
+    "id": "L1",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t24",
+    "why": null,
+    "yes": ["f14"]
+  },
+  {
+    "basis": "mixed",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 1.0,
+      "evidence_quality": 0.6,
+      "independence": 1.0,
+      "label": "high",
+      "overall": 0.84
+    },
+    "from": "t1",
+    "how": "increases",
+    "id": "L2",
+    "no": [],
+    "no_effect": [],
+    "state": "agreed",
+    "to": "t11",
+    "why": null,
+    "yes": ["f24", "f26", "f3"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.0,
+      "evidence_quality": 0.6,
+      "independence": 1.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t1",
+    "how": "increases",
+    "id": "L3",
+    "no": [],
+    "no_effect": ["f25", "f4"],
+    "state": "no_effect",
+    "to": "t12",
+    "why": null,
+    "yes": []
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t1",
+    "how": "increases",
+    "id": "L4",
+    "no": [],
+    "no_effect": ["f13"],
+    "state": "single_source",
+    "to": "t13",
+    "why": null,
+    "yes": ["f11"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.0,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "low",
+      "overall": 0.24
+    },
+    "from": "t1",
+    "how": "increases",
+    "id": "L5",
+    "no": [],
+    "no_effect": ["f12"],
+    "state": "no_effect",
+    "to": "t14",
+    "why": null,
+    "yes": []
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t1",
+    "how": "increases",
+    "id": "L6",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t15",
+    "why": null,
+    "yes": ["f1"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t1",
+    "how": "increases",
+    "id": "L7",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t16",
+    "why": null,
+    "yes": ["f16"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t1",
+    "how": "increases",
+    "id": "L8",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t17",
+    "why": null,
+    "yes": ["f40"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t1",
+    "how": "increases",
+    "id": "L9",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t9",
+    "why": null,
+    "yes": ["f18"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t2",
+    "how": "decreases",
+    "id": "L10",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t11",
+    "why": null,
+    "yes": ["f5"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t2",
+    "how": "decreases",
+    "id": "L11",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t23",
+    "why": null,
+    "yes": ["f39"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.0,
+      "evidence_quality": 0.9,
+      "independence": 0.0,
+      "label": "low",
+      "overall": 0.36
+    },
+    "from": "t2",
+    "how": "decreases",
+    "id": "L12",
+    "no": [],
+    "no_effect": ["f31"],
+    "state": "no_effect",
+    "to": "t26",
+    "why": null,
+    "yes": []
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t2",
+    "how": "increases",
+    "id": "L13",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t15",
+    "why": null,
+    "yes": ["f2"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 1.0,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.6
+    },
+    "from": "t2",
+    "how": "increases",
+    "id": "L14",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t27",
+    "why": null,
+    "yes": ["f34"]
+  },
+  {
+    "basis": "background_only",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.0,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "low",
+      "overall": 0.24
+    },
+    "from": "t2",
+    "how": "increases",
+    "id": "L15",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t28",
+    "why": null,
+    "yes": []
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t3",
+    "how": "decreases",
+    "id": "L16",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t12",
+    "why": null,
+    "yes": ["f22"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t3",
+    "how": "decreases",
+    "id": "L17",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t14",
+    "why": null,
+    "yes": ["f21"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t3",
+    "how": "decreases",
+    "id": "L18",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t18",
+    "why": null,
+    "yes": ["f35"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.9,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.56
+    },
+    "from": "t3",
+    "how": "decreases",
+    "id": "L19",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t19",
+    "why": null,
+    "yes": ["f42"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t3",
+    "how": "decreases",
+    "id": "L20",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t29",
+    "why": null,
+    "yes": ["f23"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 2,
+    "confidence": {
+      "agreement": 0.6667,
+      "evidence_quality": 0.575,
+      "independence": 1.0,
+      "label": "medium",
+      "overall": 0.6967
+    },
+    "from": "t3",
+    "how": "increases",
+    "id": "L21",
+    "no": ["f20"],
+    "no_effect": [],
+    "state": "disagreed",
+    "to": "t11",
+    "why": "conditions differ: {braf v600e-driven melanoma, mouse} vs {b16f0 melanoma, gulo ko mice}",
+    "yes": ["f1_1", "f6"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t3",
+    "how": "suppresses",
+    "id": "L22",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t20",
+    "why": null,
+    "yes": ["f37"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t3",
+    "how": "suppresses",
+    "id": "L23",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t21",
+    "why": null,
+    "yes": ["f38"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t3",
+    "how": "suppresses",
+    "id": "L24",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t22",
+    "why": null,
+    "yes": ["f36"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.0,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "low",
+      "overall": 0.24
+    },
+    "from": "t30",
+    "how": "increases",
+    "id": "L25",
+    "no": [],
+    "no_effect": ["f28"],
+    "state": "no_effect",
+    "to": "t11",
+    "why": null,
+    "yes": []
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.0,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "low",
+      "overall": 0.24
+    },
+    "from": "t30",
+    "how": "increases",
+    "id": "L26",
+    "no": [],
+    "no_effect": ["f27"],
+    "state": "no_effect",
+    "to": "t12",
+    "why": null,
+    "yes": []
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.0,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "low",
+      "overall": 0.24
+    },
+    "from": "t30",
+    "how": "increases",
+    "id": "L27",
+    "no": [],
+    "no_effect": ["f29"],
+    "state": "no_effect",
+    "to": "t31",
+    "why": null,
+    "yes": []
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t4",
+    "how": "increases",
+    "id": "L28",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t16",
+    "why": null,
+    "yes": ["f15"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t4",
+    "how": "increases",
+    "id": "L29",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t9",
+    "why": null,
+    "yes": ["f17"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.0,
+      "evidence_quality": 0.9,
+      "independence": 0.0,
+      "label": "low",
+      "overall": 0.36
+    },
+    "from": "t5",
+    "how": "decreases",
+    "id": "L30",
+    "no": [],
+    "no_effect": ["f32"],
+    "state": "no_effect",
+    "to": "t26",
+    "why": null,
+    "yes": []
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t5",
+    "how": "increases",
+    "id": "L31",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t11",
+    "why": null,
+    "yes": ["f7"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 1.0,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.6
+    },
+    "from": "t5",
+    "how": "increases",
+    "id": "L32",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t25",
+    "why": null,
+    "yes": ["f30"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 1.0,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.6
+    },
+    "from": "t5",
+    "how": "increases",
+    "id": "L33",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t27",
+    "why": null,
+    "yes": ["f33"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t6",
+    "how": "increases",
+    "id": "L34",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t11",
+    "why": null,
+    "yes": ["f8"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t7",
+    "how": "increases",
+    "id": "L35",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t11",
+    "why": null,
+    "yes": ["f9"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t8",
+    "how": "activates",
+    "id": "L36",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t11",
+    "why": null,
+    "yes": ["f10"]
+  },
+  {
+    "basis": "primary",
+    "changed_in_round": 1,
+    "confidence": {
+      "agreement": 0.5,
+      "evidence_quality": 0.6,
+      "independence": 0.0,
+      "label": "medium",
+      "overall": 0.44
+    },
+    "from": "t9",
+    "how": "drives",
+    "id": "L37",
+    "no": [],
+    "no_effect": [],
+    "state": "single_source",
+    "to": "t16",
+    "why": null,
+    "yes": ["f19"]
+  }
+]

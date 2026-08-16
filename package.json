@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "@ai-sdk/anthropic": "^4.0.16",
+    "@anthropic-ai/sdk": "^0.112.4",
+    "@dotenvx/dotenvx": "^2.17.4",
+    "eve": "^0.26.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.3",
+    "@types/node": "^26.1.1",
+    "typescript": "^7.0.2",
+    "ultracite": "7.9.4"
+  },
+  "name": "mvp",
+  "scripts": {
+    "deploy": "bun scripts/deploy.ts",
+    "console": "bun scripts/console.ts",
+    "dev": "eve dev",
+    "typecheck": "tsc --noEmit",
+    "check": "ultracite check",
+    "fix": "ultracite fix"
+  },
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Prototype agents in Claude Code, ship them on the Claude Developer Platform.",
+  "private": true,
+  "author": "Cyrus Nouroozi",
+  "license": "MIT"
+}
