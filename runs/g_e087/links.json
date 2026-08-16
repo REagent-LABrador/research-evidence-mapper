@@ -17,7 +17,9 @@
     "state": "single_source",
     "to": "t24",
     "why": null,
-    "yes": ["f14"]
+    "yes": [
+      "f14"
+    ]
   },
   {
     "basis": "mixed",
@@ -37,7 +39,11 @@
     "state": "agreed",
     "to": "t11",
     "why": null,
-    "yes": ["f24", "f26", "f3"]
+    "yes": [
+      "f24",
+      "f26",
+      "f3"
+    ]
   },
   {
     "basis": "primary",
@@ -53,7 +59,10 @@
     "how": "increases",
     "id": "L3",
     "no": [],
-    "no_effect": ["f25", "f4"],
+    "no_effect": [
+      "f25",
+      "f4"
+    ],
     "state": "no_effect",
     "to": "t12",
     "why": null,
@@ -73,11 +82,15 @@
     "how": "increases",
     "id": "L4",
     "no": [],
-    "no_effect": ["f13"],
+    "no_effect": [
+      "f13"
+    ],
     "state": "single_source",
     "to": "t13",
     "why": null,
-    "yes": ["f11"]
+    "yes": [
+      "f11"
+    ]
   },
   {
     "basis": "primary",
@@ -93,7 +106,9 @@
     "how": "increases",
     "id": "L5",
     "no": [],
-    "no_effect": ["f12"],
+    "no_effect": [
+      "f12"
+    ],
     "state": "no_effect",
     "to": "t14",
     "why": null,
@@ -117,7 +132,9 @@
     "state": "single_source",
     "to": "t15",
     "why": null,
-    "yes": ["f1"]
+    "yes": [
+      "f1"
+    ]
   },
   {
     "basis": "primary",
@@ -137,7 +154,9 @@
     "state": "single_source",
     "to": "t16",
     "why": null,
-    "yes": ["f16"]
+    "yes": [
+      "f16"
+    ]
   },
   {
     "basis": "primary",
@@ -157,7 +176,9 @@
     "state": "single_source",
     "to": "t17",
     "why": null,
-    "yes": ["f40"]
+    "yes": [
+      "f40"
+    ]
   },
   {
     "basis": "primary",
@@ -177,7 +198,9 @@
     "state": "single_source",
     "to": "t9",
     "why": null,
-    "yes": ["f18"]
+    "yes": [
+      "f18"
+    ]
   },
   {
     "basis": "primary",
@@ -197,7 +220,9 @@
     "state": "single_source",
     "to": "t11",
     "why": null,
-    "yes": ["f5"]
+    "yes": [
+      "f5"
+    ]
   },
   {
     "basis": "primary",
@@ -217,7 +242,9 @@
     "state": "single_source",
     "to": "t23",
     "why": null,
-    "yes": ["f39"]
+    "yes": [
+      "f39"
+    ]
   },
   {
     "basis": "primary",
@@ -233,7 +260,9 @@
     "how": "decreases",
     "id": "L12",
     "no": [],
-    "no_effect": ["f31"],
+    "no_effect": [
+      "f31"
+    ],
     "state": "no_effect",
     "to": "t26",
     "why": null,
@@ -257,7 +286,9 @@
     "state": "single_source",
     "to": "t15",
     "why": null,
-    "yes": ["f2"]
+    "yes": [
+      "f2"
+    ]
   },
   {
     "basis": "primary",
@@ -277,7 +308,9 @@
     "state": "single_source",
     "to": "t27",
     "why": null,
-    "yes": ["f34"]
+    "yes": [
+      "f34"
+    ]
   },
   {
     "basis": "background_only",
@@ -317,7 +350,9 @@
     "state": "single_source",
     "to": "t12",
     "why": null,
-    "yes": ["f22"]
+    "yes": [
+      "f22"
+    ]
   },
   {
     "basis": "primary",
@@ -337,7 +372,9 @@
     "state": "single_source",
     "to": "t14",
     "why": null,
-    "yes": ["f21"]
+    "yes": [
+      "f21"
+    ]
   },
   {
     "basis": "primary",
@@ -357,7 +394,9 @@
     "state": "single_source",
     "to": "t18",
     "why": null,
-    "yes": ["f35"]
+    "yes": [
+      "f35"
+    ]
   },
   {
     "basis": "primary",
@@ -377,7 +416,9 @@
     "state": "single_source",
     "to": "t19",
     "why": null,
-    "yes": ["f42"]
+    "yes": [
+      "f42"
+    ]
   },
   {
     "basis": "primary",
@@ -397,7 +438,9 @@
     "state": "single_source",
     "to": "t29",
     "why": null,
-    "yes": ["f23"]
+    "yes": [
+      "f23"
+    ]
   },
   {
     "basis": "primary",
@@ -412,12 +455,17 @@
     "from": "t3",
     "how": "increases",
     "id": "L21",
-    "no": ["f20"],
+    "no": [
+      "f20"
+    ],
     "no_effect": [],
     "state": "disagreed",
     "to": "t11",
     "why": "conditions differ: {braf v600e-driven melanoma, mouse} vs {b16f0 melanoma, gulo ko mice}",
-    "yes": ["f1_1", "f6"]
+    "yes": [
+      "f1_1",
+      "f6"
+    ]
   },
   {
     "basis": "primary",
@@ -437,7 +485,9 @@
     "state": "single_source",
     "to": "t20",
     "why": null,
-    "yes": ["f37"]
+    "yes": [
+      "f37"
+    ]
   },
   {
     "basis": "primary",
@@ -457,7 +507,9 @@
     "state": "single_source",
     "to": "t21",
     "why": null,
-    "yes": ["f38"]
+    "yes": [
+      "f38"
+    ]
   },
   {
     "basis": "primary",
@@ -477,7 +529,9 @@
     "state": "single_source",
     "to": "t22",
     "why": null,
-    "yes": ["f36"]
+    "yes": [
+      "f36"
+    ]
   },
   {
     "basis": "primary",
@@ -493,7 +547,9 @@
     "how": "increases",
     "id": "L25",
     "no": [],
-    "no_effect": ["f28"],
+    "no_effect": [
+      "f28"
+    ],
     "state": "no_effect",
     "to": "t11",
     "why": null,
@@ -513,7 +569,9 @@
     "how": "increases",
     "id": "L26",
     "no": [],
-    "no_effect": ["f27"],
+    "no_effect": [
+      "f27"
+    ],
     "state": "no_effect",
     "to": "t12",
     "why": null,
@@ -533,7 +591,9 @@
     "how": "increases",
     "id": "L27",
     "no": [],
-    "no_effect": ["f29"],
+    "no_effect": [
+      "f29"
+    ],
     "state": "no_effect",
     "to": "t31",
     "why": null,
@@ -557,7 +617,9 @@
     "state": "single_source",
     "to": "t16",
     "why": null,
-    "yes": ["f15"]
+    "yes": [
+      "f15"
+    ]
   },
   {
     "basis": "primary",
@@ -577,7 +639,9 @@
     "state": "single_source",
     "to": "t9",
     "why": null,
-    "yes": ["f17"]
+    "yes": [
+      "f17"
+    ]
   },
   {
     "basis": "primary",
@@ -593,7 +657,9 @@
     "how": "decreases",
     "id": "L30",
     "no": [],
-    "no_effect": ["f32"],
+    "no_effect": [
+      "f32"
+    ],
     "state": "no_effect",
     "to": "t26",
     "why": null,
@@ -617,7 +683,9 @@
     "state": "single_source",
     "to": "t11",
     "why": null,
-    "yes": ["f7"]
+    "yes": [
+      "f7"
+    ]
   },
   {
     "basis": "primary",
@@ -637,7 +705,9 @@
     "state": "single_source",
     "to": "t25",
     "why": null,
-    "yes": ["f30"]
+    "yes": [
+      "f30"
+    ]
   },
   {
     "basis": "primary",
@@ -657,7 +727,9 @@
     "state": "single_source",
     "to": "t27",
     "why": null,
-    "yes": ["f33"]
+    "yes": [
+      "f33"
+    ]
   },
   {
     "basis": "primary",
@@ -677,7 +749,9 @@
     "state": "single_source",
     "to": "t11",
     "why": null,
-    "yes": ["f8"]
+    "yes": [
+      "f8"
+    ]
   },
   {
     "basis": "primary",
@@ -697,7 +771,9 @@
     "state": "single_source",
     "to": "t11",
     "why": null,
-    "yes": ["f9"]
+    "yes": [
+      "f9"
+    ]
   },
   {
     "basis": "primary",
@@ -717,7 +793,9 @@
     "state": "single_source",
     "to": "t11",
     "why": null,
-    "yes": ["f10"]
+    "yes": [
+      "f10"
+    ]
   },
   {
     "basis": "primary",
@@ -737,6 +815,8 @@
     "state": "single_source",
     "to": "t16",
     "why": null,
-    "yes": ["f19"]
+    "yes": [
+      "f19"
+    ]
   }
 ]

@@ -61,7 +61,7 @@ cp <skill-dir>/example-round.json /tmp/round.json   # then edit
   "depth": "standard",
   "generated_at": "2026-08-16T02:05:00Z",
   "status": "ok",              // your judgement of the round; ok|empty|partial|failed
-  "coverage": { "...": "the real numbers" },
+  "coverage": { "...": "the real numbers, including `queries` — see below" },
   "things":   [ /* new/proposed entities */ ],
   "papers":   [ /* include "source_text" — it is used to verify quotes, then stripped */ ],
   "findings": [ /* every one with its verbatim quote */ ]
@@ -70,6 +70,18 @@ cp <skill-dir>/example-round.json /tmp/round.json   # then edit
 
 `--save` writes state back under `--memory-dir` and updates `index.json`.
 Omit it to see what a round *would* produce without committing it.
+
+**`source_text` is what makes a quote verified.** Send it on every paper you
+read. Without it the script cannot check the quote, and it will not pretend it
+did: the finding is kept, `quote_verified` is set to `null` (never `true`), it
+is counted in `coverage.quotes_unverified`, its evidence grade is capped at
+`LOW`, and the reply carries an `UNVERIFIED_QUOTE` limitation at severity ERROR.
+A round that omits `source_text` therefore ships a graph that says, correctly,
+that nothing in it was checked.
+
+**`coverage.queries` is part of the output contract.** Pass through every query
+the search step recorded, `[{ "q", "tool", "search_id", "n_results" }]`. An
+empty list is legal and raises `QUERIES_NOT_RECORDED`.
 
 **To read a graph, never re-issue its question.** Use the read-only paths:
 
@@ -266,7 +278,9 @@ the findings file having been written but never passed. Reconcile
 ## What this skill does not do
 
 It does not search, does not read papers, does not judge truth, and does not
-filter by score. Nothing is dropped for being weak — a hedged claim marks an
+filter by score. It also does not *write* the `interpretability` block by hand —
+the script derives it from the finished graph, so there is nothing for you to
+author, and nothing you can put there that the graph does not already support. Nothing is dropped for being weak — a hedged claim marks an
 emerging area and a lone claim is a gap candidate. The only removal is a finding
 whose quote does not verbatim-match its source text, and that removal is a
 mechanical check inside the script, counted in `coverage.no_quote_discarded`.

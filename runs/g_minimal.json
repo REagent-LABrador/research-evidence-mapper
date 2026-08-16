@@ -1,0 +1,1112 @@
+{
+  "coverage": {
+    "confidence_profile": {
+      "below_0_65": 0,
+      "hedged_but_confident": [],
+      "max": null,
+      "min": null,
+      "n": 0
+    },
+    "depth": "quick",
+    "figures_read": 0,
+    "found": 71,
+    "has_disease_node": false,
+    "id_seq": {
+      "gap": 1,
+      "link": 2
+    },
+    "interventions_without_target": [
+      "t1",
+      "t2"
+    ],
+    "interventions_without_target_count": 2,
+    "limits": {
+      "max_papers": 10,
+      "max_queries": 2
+    },
+    "no_quote_discarded": 0,
+    "proteins_without_accession": [],
+    "proteins_without_accession_count": 0,
+    "queries": [
+      {
+        "n_results": 20,
+        "q": "antioxidant supplementation intestinal tumor progression mice",
+        "search_id": "s_734cb5b6",
+        "tool": "paperclip.search"
+      }
+    ],
+    "quotes_unverified": 0,
+    "read": 1,
+    "stop_reason": "max_papers",
+    "truncated": true,
+    "used": 1,
+    "years": [
+      2010,
+      2026
+    ]
+  },
+  "delta": {
+    "findings_added": [
+      "f1",
+      "f2"
+    ],
+    "gaps_added": [
+      "g1"
+    ],
+    "gaps_resolved": [],
+    "links_added": [
+      "L1",
+      "L2"
+    ],
+    "links_changed": [],
+    "papers_added": [
+      "p1"
+    ],
+    "round": 1,
+    "things_added": [
+      "t1",
+      "t2",
+      "t3"
+    ]
+  },
+  "error": null,
+  "findings": [
+    {
+      "flags": [],
+      "from": "t1",
+      "hedged": false,
+      "how": "increases",
+      "id": "f1",
+      "is_own_result": true,
+      "paper": "p1",
+      "quote": "Here, we show that supplementation with the antioxidants N-acetylcysteine (NAC) and vitamin E promotes intestinal tumor progression in the ApcMin mouse model for familial adenomatous polyposis, a hereditary form of colorectal cancer, driven by Wnt signaling.",
+      "quote_verified": true,
+      "round": 1,
+      "says": "yes",
+      "section": "abstract",
+      "to": "t3",
+      "where": "apcmin mice"
+    },
+    {
+      "flags": [],
+      "from": "t2",
+      "hedged": false,
+      "how": "increases",
+      "id": "f2",
+      "is_own_result": true,
+      "paper": "p1",
+      "quote": "Here, we show that supplementation with the antioxidants N-acetylcysteine (NAC) and vitamin E promotes intestinal tumor progression in the ApcMin mouse model for familial adenomatous polyposis, a hereditary form of colorectal cancer, driven by Wnt signaling.",
+      "quote_verified": true,
+      "round": 1,
+      "says": "yes",
+      "section": "abstract",
+      "to": "t3",
+      "where": "apcmin mice"
+    }
+  ],
+  "gaps": [
+    {
+      "confidence": 0.286,
+      "id": "g1",
+      "implied_by": [
+        "L1",
+        "L2"
+      ],
+      "missing": [
+        "t1",
+        "t2"
+      ],
+      "note": "both connect to t3; no direct link reported",
+      "searched_in_round": null
+    }
+  ],
+  "generated_at": "2026-08-16T00:00:00Z",
+  "graph_id": "g_min1",
+  "interpretability": {
+    "assumptions": [
+      {
+        "basis": "Depth tier requested by the caller; it sets the paper budget for the round. null means the caller did not state one.",
+        "id": "assumption.depth",
+        "path": "input.depth",
+        "synthetic": false,
+        "unit": "tier",
+        "value": "quick"
+      },
+      {
+        "basis": "Hard ceiling on papers read this round. Every coverage count is bounded by it, so an absent relationship may be a budget artefact.",
+        "id": "assumption.limits.max_papers",
+        "path": "input.coverage.limits.max_papers",
+        "synthetic": false,
+        "unit": "papers",
+        "value": 10
+      },
+      {
+        "basis": "Hard ceiling on distinct corpus queries issued this round.",
+        "id": "assumption.limits.max_queries",
+        "path": "input.coverage.limits.max_queries",
+        "synthetic": false,
+        "unit": "queries",
+        "value": 2
+      },
+      {
+        "basis": "Publication window the search was restricted to. null means no window was requested, NOT that the corpus is complete.",
+        "id": "assumption.years",
+        "path": "input.years",
+        "synthetic": false,
+        "unit": "year range",
+        "value": [
+          2010,
+          2026
+        ]
+      },
+      {
+        "basis": "Fixed weights in score_link. Chosen, not fitted: no labelled corpus exists to fit them against.",
+        "id": "assumption.confidence_weights",
+        "path": "code.score_link",
+        "synthetic": false,
+        "unit": "weight",
+        "value": {
+          "agreement": 0.4,
+          "evidence_quality": 0.4,
+          "independence": 0.2
+        }
+      },
+      {
+        "basis": "Study-design quality prior. An out-of-vocabulary study_type scores as `unknown` (0.4) rather than silently matching something close.",
+        "id": "assumption.study_quality_table",
+        "path": "code._STUDY_QUALITY",
+        "synthetic": false,
+        "unit": "score",
+        "value": {
+          "animal": 0.6,
+          "clinical_trial": 0.9,
+          "computational": 0.4,
+          "human_cohort": 0.8,
+          "meta_analysis": 1.0,
+          "review": 0.3,
+          "test_tube": 0.5,
+          "unknown": 0.4
+        }
+      },
+      {
+        "basis": "Multiplier applied to a preprint's design score, for absence of peer review.",
+        "id": "assumption.preprint_penalty",
+        "path": "code.evidence_quality",
+        "synthetic": false,
+        "unit": "factor",
+        "value": 0.8
+      },
+      {
+        "basis": "Only a paper's own results count toward a link's STATE, its agreement term and its independence term -- a review restating forty studies is one paper, and is not independent evidence for any of them. Note the exception: `evidence_quality` averages over every finding on the link, cited background included.",
+        "id": "assumption.own_result_only",
+        "path": "code._own",
+        "synthetic": false,
+        "unit": "flag",
+        "value": true
+      },
+      {
+        "basis": "Constants in the open-triangle gap ranking, including the 0.6 ceiling that keeps a gap a proposal rather than a finding.",
+        "id": "assumption.gap_ranking",
+        "path": "code.find_gaps",
+        "synthetic": false,
+        "unit": "constants",
+        "value": {
+          "cap": 50,
+          "confidence_ceiling": 0.6,
+          "degree_cap": 24,
+          "route_bonus_coefficient": 0.12,
+          "shared_paper_penalty": 0.65
+        }
+      }
+    ],
+    "counterfactuals": [
+      {
+        "change": "One further animal study by a different group reports the opposite direction for L1 (N-acetylcysteine (NAC) --increases--> intestinal tumor progression).",
+        "meaning": "The strongest relationship in the graph is not robust to a single contradicting primary result; it is a claim about the literature, not about the biology.",
+        "result": "state single_source -> disagreed, heuristic confidence 0.44 -> 0.64"
+      },
+      {
+        "change": "One independent replication of L1 (N-acetylcysteine (NAC) --increases--> intestinal tumor progression) by a different first author.",
+        "meaning": "Shows how much of this relationship's score is the independence term rather than the evidence itself.",
+        "result": "state single_source -> agreed, heuristic confidence 0.44 -> 0.84"
+      },
+      {
+        "change": "The literature search is re-run without the corpus limits in `coverage.limits`.",
+        "meaning": "Absence of a relationship in this graph is evidence about what was read, not about what exists. Only `stop_reason: complete` means the literature was exhausted rather than the budget.",
+        "result": "unknown -- 1 of 71 papers found were read this round"
+      }
+    ],
+    "evidence": [
+      {
+        "claim": "N-acetylcysteine (NAC) increases intestinal tumor progression (apcmin mice)",
+        "grade": "MODERATE",
+        "id": "evidence.f1",
+        "locator": "abstract",
+        "quote": "Here, we show that supplementation with the antioxidants N-acetylcysteine (NAC) and vitamin E promotes intestinal tumor progression in the ApcMin mouse model for familial adenomatous polyposis, a hereditary form of colorectal cancer, driven by Wnt signaling.",
+        "source_id": "doi:10.3390/antiox10020241",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3390/antiox10020241",
+        "synthetic": false
+      },
+      {
+        "claim": "Vitamin E increases intestinal tumor progression (apcmin mice)",
+        "grade": "MODERATE",
+        "id": "evidence.f2",
+        "locator": "abstract",
+        "quote": "Here, we show that supplementation with the antioxidants N-acetylcysteine (NAC) and vitamin E promotes intestinal tumor progression in the ApcMin mouse model for familial adenomatous polyposis, a hereditary form of colorectal cancer, driven by Wnt signaling.",
+        "source_id": "doi:10.3390/antiox10020241",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3390/antiox10020241",
+        "synthetic": false
+      }
+    ],
+    "extensions": {
+      "confidence_decomposition": {
+        "heuristic": true,
+        "is_probability": false,
+        "labels": {
+          "high": ">= 0.7",
+          "low": "< 0.4",
+          "medium": ">= 0.4"
+        },
+        "terms": [
+          "agreement",
+          "evidence_quality",
+          "independence"
+        ],
+        "weights": {
+          "agreement": 0.4,
+          "evidence_quality": 0.4,
+          "independence": 0.2
+        }
+      },
+      "gaps": [
+        {
+          "id": "g1",
+          "missing_labels": [
+            "N-acetylcysteine (NAC)",
+            "Vitamin E"
+          ]
+        }
+      ],
+      "graph": {
+        "graph_id": "g_min1",
+        "round": 1,
+        "rounds": [
+          {
+            "ask": "new_question",
+            "depth": "quick",
+            "n": 1,
+            "outcome": "new_evidence",
+            "papers_added": 1,
+            "target": null
+          }
+        ],
+        "schema_version": "1.1"
+      },
+      "id_conventions": {
+        "evidence": "evidence.<finding id, any character outside [A-Za-z0-9_.:-] replaced by _>",
+        "gaps": "the gap id in output.gaps[]",
+        "note": "Every id here resolves into the graph beside it. The block annotates the graph; it does not restate it.",
+        "relationships": "the link id in output.links[]"
+      },
+      "module": "research-evidence-mapper",
+      "quote_verification": {
+        "by_evidence": {
+          "evidence.f1": true,
+          "evidence.f2": true
+        },
+        "discarded": 0,
+        "fails_closed": true,
+        "method": "verbatim substring match after NFKC and typographic folding; mechanical, not a model judgement",
+        "mismatched": 0,
+        "unchecked": 0,
+        "verified": 2
+      },
+      "quote_verified": true,
+      "relationships": [
+        {
+          "contradicting": [],
+          "id": "L1",
+          "label": "N-acetylcysteine (NAC) --increases--> intestinal tumor progression",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f1"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L2",
+          "label": "Vitamin E --increases--> intestinal tumor progression",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f2"
+          ]
+        }
+      ],
+      "search": {
+        "depth": "quick",
+        "figures_read": 0,
+        "found": 71,
+        "limits": {
+          "max_papers": 10,
+          "max_queries": 2
+        },
+        "queries": [
+          {
+            "n_results": 20,
+            "q": "antioxidant supplementation intestinal tumor progression mice",
+            "search_id": "s_734cb5b6",
+            "tool": "paperclip.search"
+          }
+        ],
+        "read": 1,
+        "stop_reason": "max_papers",
+        "truncated": true,
+        "used": 1,
+        "years": [
+          2010,
+          2026
+        ]
+      }
+    },
+    "headline": {
+      "basis": [
+        "OBSERVED",
+        "INFERRED",
+        "MODELED"
+      ],
+      "plain_language": "Read 1 papers and mapped 2 relationships from 2 quote-backed findings; 0 are corroborated by more than one paper, 2 rest on a single paper, and 0 are disputed.",
+      "result": "EVIDENCE_MAPPED_SINGLE_SOURCE",
+      "status": "QUALIFIED",
+      "title": "Evidence graph: 2 relationships from 1 papers"
+    },
+    "limitations": [
+      {
+        "code": "COVERAGE_INCOMPLETE",
+        "field_path": "output.coverage.stop_reason",
+        "message": "stop_reason=max_papers. Only `complete` means the literature was exhausted rather than the budget.",
+        "severity": "WARNING"
+      },
+      {
+        "code": "INTERVENTIONS_WITHOUT_TARGET",
+        "field_path": "output.coverage.interventions_without_target",
+        "message": "2 intervention nodes have no molecular target in the graph.",
+        "severity": "WARNING"
+      },
+      {
+        "code": "NO_DISEASE_NODE",
+        "field_path": "output.things",
+        "message": "The graph contains no disease node, so no relationship reaches a clinical endpoint.",
+        "severity": "WARNING"
+      },
+      {
+        "code": "SINGLE_SOURCE_LINKS",
+        "field_path": "output.links[].state",
+        "message": "2 of 2 relationships rest on exactly one paper.",
+        "severity": "WARNING"
+      },
+      {
+        "code": "TRUNCATED_SEARCH",
+        "field_path": "output.coverage.truncated",
+        "message": "The search was truncated (stop_reason=max_papers). Absence of a relationship is evidence about what was read, not about what exists.",
+        "severity": "WARNING"
+      },
+      {
+        "code": "UNTAGGED_VALUE",
+        "field_path": "interpretability.metrics",
+        "message": "These metrics are structural counts of the graph itself and reference neither evidence nor an assumption: metric.findings_unverified, metric.findings_quote_mismatch, metric.entities.",
+        "severity": "WARNING"
+      },
+      {
+        "code": "HEURISTIC_CONFIDENCE",
+        "field_path": "output.links[].confidence.overall",
+        "message": "link.confidence.overall is a heuristic score (0.4*agreement + 0.4*evidence_quality + 0.2*independence), not a probability. Do not threshold it as one.",
+        "severity": "INFO"
+      }
+    ],
+    "lineage": [
+      {
+        "input_paths": [
+          "input.findings[]",
+          "input.papers[].source_text"
+        ],
+        "output_path": "output.findings[]",
+        "transformation": "Kept only when the quote matches the paper's source text verbatim after NFKC and whitespace folding; deduplicated by (paper, relationship, folded quote) so a retried round cannot double-count."
+      },
+      {
+        "input_paths": [
+          "input.papers[].source_text"
+        ],
+        "output_path": "output.papers[].source_sha256",
+        "transformation": "SHA-256 of the exact source text the quotes were checked against. null when none was supplied."
+      },
+      {
+        "input_paths": [
+          "input.things[]"
+        ],
+        "output_path": "output.things[]",
+        "transformation": "Merged on UniProt accession first, then on normalized name; a conflicting accession blocks a name merge."
+      },
+      {
+        "input_paths": [
+          "output.links[].from",
+          "output.links[].how",
+          "output.links[].to",
+          "prior.links[].id"
+        ],
+        "output_path": "output.links[].id",
+        "transformation": "Bound to the (from, how, to) triple the round it first appears and carried forward through entity merges, so delta and changed_in_round keep naming the same relationship across rounds."
+      },
+      {
+        "input_paths": [
+          "output.findings[].says",
+          "output.findings[].is_own_result"
+        ],
+        "output_path": "output.links[].state",
+        "transformation": "Counts of yes/no/no_effect over own-result findings only."
+      },
+      {
+        "input_paths": [
+          "output.findings[].says",
+          "output.papers[].study_type",
+          "output.papers[].is_preprint",
+          "output.papers[].first_author"
+        ],
+        "output_path": "output.links[].confidence.overall",
+        "transformation": "0.4*agreement + 0.4*evidence_quality + 0.2*independence."
+      },
+      {
+        "input_paths": [
+          "output.findings[].where"
+        ],
+        "output_path": "output.links[].why",
+        "transformation": "Emitted only for a disagreed link whose supporting and contradicting findings report non-overlapping conditions."
+      },
+      {
+        "input_paths": [
+          "output.links[]",
+          "output.things[]"
+        ],
+        "output_path": "output.gaps[]",
+        "transformation": "Open triangles ranked multiplicatively; ids keyed on the missing pair so test_gap can target one by id across rounds."
+      },
+      {
+        "input_paths": [
+          "prior graph",
+          "output.links[].changed_in_round"
+        ],
+        "output_path": "output.delta",
+        "transformation": "Diff against the stored prior round. Derived, never stored."
+      }
+    ],
+    "metrics": [
+      {
+        "assumption_ids": [
+          "assumption.depth",
+          "assumption.limits.max_queries"
+        ],
+        "direction": "neutral",
+        "display": "71 found",
+        "evidence_ids": [],
+        "id": "metric.papers_found",
+        "label": "Papers matched by search",
+        "meaning": "How many papers the corpus returned before any reading. Bounded by the query budget, not by what exists.",
+        "unit": "papers",
+        "value": 71
+      },
+      {
+        "assumption_ids": [
+          "assumption.depth",
+          "assumption.limits.max_papers"
+        ],
+        "direction": "neutral",
+        "display": "1 read",
+        "evidence_ids": [],
+        "id": "metric.papers_read",
+        "label": "Papers read",
+        "meaning": "How many matched papers were actually opened this round.",
+        "unit": "papers",
+        "value": 1
+      },
+      {
+        "assumption_ids": [
+          "assumption.limits.max_papers",
+          "assumption.own_result_only"
+        ],
+        "direction": "neutral",
+        "display": "1 used",
+        "evidence_ids": [],
+        "id": "metric.papers_used",
+        "label": "Papers contributing evidence",
+        "meaning": "Papers that produced at least one quote-backed finding. The gap between read and used is the screening loss.",
+        "unit": "papers",
+        "value": 1
+      },
+      {
+        "assumption_ids": [],
+        "direction": "positive",
+        "display": "2 verified",
+        "evidence_ids": [
+          "evidence.f1",
+          "evidence.f2"
+        ],
+        "id": "metric.findings_verified",
+        "label": "Quote-verified findings",
+        "meaning": "Findings whose quote was matched verbatim against the paper's source text. This is a string match, not a judgement.",
+        "unit": "findings",
+        "value": 2
+      },
+      {
+        "assumption_ids": [],
+        "direction": "negative",
+        "display": "0 unchecked",
+        "evidence_ids": [],
+        "id": "metric.findings_unverified",
+        "label": "Findings with unchecked quotes",
+        "meaning": "Findings kept without source text to check their quote against. Never counted as verified.",
+        "unit": "findings",
+        "value": 0
+      },
+      {
+        "assumption_ids": [],
+        "direction": "negative",
+        "display": "0 mismatched",
+        "evidence_ids": [],
+        "id": "metric.findings_quote_mismatch",
+        "label": "Findings whose quote did not match",
+        "meaning": "Findings whose quote was checked against source text and was not found in it. Treat as unsourced.",
+        "unit": "findings",
+        "value": 0
+      },
+      {
+        "assumption_ids": [
+          "assumption.own_result_only"
+        ],
+        "direction": "neutral",
+        "display": "2 relationships",
+        "evidence_ids": [],
+        "id": "metric.relationships",
+        "label": "Relationships",
+        "meaning": "Distinct (subject, predicate, object) triples supported by at least one paper's own result.",
+        "unit": "relationships",
+        "value": 2
+      },
+      {
+        "assumption_ids": [
+          "assumption.own_result_only"
+        ],
+        "direction": "mixed",
+        "display": "0 disputed",
+        "evidence_ids": [],
+        "id": "metric.relationships_disputed",
+        "label": "Disputed relationships",
+        "meaning": "Relationships where primary papers report opposite directions. These are the ones worth reading by hand.",
+        "unit": "relationships",
+        "value": 0
+      },
+      {
+        "assumption_ids": [
+          "assumption.own_result_only"
+        ],
+        "direction": "positive",
+        "display": "0 corroborated",
+        "evidence_ids": [],
+        "id": "metric.relationships_agreed",
+        "label": "Corroborated relationships",
+        "meaning": "Relationships where two or more papers agree on direction.",
+        "unit": "relationships",
+        "value": 0
+      },
+      {
+        "assumption_ids": [
+          "assumption.own_result_only"
+        ],
+        "direction": "negative",
+        "display": "2 single-source",
+        "evidence_ids": [
+          "evidence.f1",
+          "evidence.f2"
+        ],
+        "id": "metric.relationships_single_source",
+        "label": "Single-source relationships",
+        "meaning": "Relationships resting on exactly one paper. Uncorroborated, not wrong.",
+        "unit": "relationships",
+        "value": 2
+      },
+      {
+        "assumption_ids": [
+          "assumption.own_result_only"
+        ],
+        "direction": "neutral",
+        "display": "0 null results",
+        "evidence_ids": [],
+        "id": "metric.relationships_no_effect",
+        "label": "Reported-null relationships",
+        "meaning": "Relationships where the only primary evidence is an explicit no-effect result. Kept separately so a null is never read as an absence of evidence.",
+        "unit": "relationships",
+        "value": 0
+      },
+      {
+        "assumption_ids": [
+          "assumption.gap_ranking"
+        ],
+        "direction": "neutral",
+        "display": "1 open gaps",
+        "evidence_ids": [],
+        "id": "metric.gaps_open",
+        "label": "Untested relationships proposed",
+        "meaning": "Pairs connected through an intermediate but with no direct link reported. Proposals for the next round, not findings.",
+        "unit": "gaps",
+        "value": 1
+      },
+      {
+        "assumption_ids": [
+          "assumption.confidence_weights",
+          "assumption.preprint_penalty",
+          "assumption.study_quality_table"
+        ],
+        "direction": "unknown",
+        "display": "0.44 mean",
+        "evidence_ids": [],
+        "id": "metric.mean_link_confidence",
+        "label": "Mean heuristic confidence",
+        "meaning": "Mean of the per-relationship heuristic score. A ranking aid, NOT a probability that any relationship is true.",
+        "unit": "score",
+        "value": 0.44
+      },
+      {
+        "assumption_ids": [],
+        "direction": "neutral",
+        "display": "3 entities",
+        "evidence_ids": [],
+        "id": "metric.entities",
+        "label": "Distinct entities",
+        "meaning": "Nodes after accession-first merging of synonyms.",
+        "unit": "entities",
+        "value": 3
+      }
+    ],
+    "schema_version": "1.0.0",
+    "steps": [
+      {
+        "assumption_ids": [
+          "assumption.limits.max_queries",
+          "assumption.depth",
+          "assumption.years"
+        ],
+        "evidence_ids": [],
+        "formula": null,
+        "id": "step.search",
+        "inputs": [
+          {
+            "path": "input.coverage.queries",
+            "unit": null,
+            "value": [
+              "antioxidant supplementation intestinal tumor progression mice"
+            ]
+          },
+          {
+            "path": "input.coverage.limits.max_queries",
+            "unit": "queries",
+            "value": 2
+          },
+          {
+            "path": "input.depth",
+            "unit": "tier",
+            "value": "quick"
+          }
+        ],
+        "label": "Search the corpus",
+        "method": "Paperclip full-text search over the biomedical corpus",
+        "result": {
+          "unit": "papers",
+          "value": 71
+        }
+      },
+      {
+        "assumption_ids": [
+          "assumption.limits.max_papers"
+        ],
+        "evidence_ids": [],
+        "formula": "papers_found -> papers_read -> papers_used",
+        "id": "step.screen",
+        "inputs": [
+          {
+            "path": "output.coverage.found",
+            "unit": "papers",
+            "value": 71
+          },
+          {
+            "path": "output.coverage.limits.max_papers",
+            "unit": "papers",
+            "value": 10
+          }
+        ],
+        "label": "Read and screen",
+        "method": "Full-text read, then keep papers that yield a quote-backed finding",
+        "result": {
+          "unit": "papers",
+          "value": 1
+        }
+      },
+      {
+        "assumption_ids": [],
+        "evidence_ids": [],
+        "formula": "fold(NFKC(quote)) is a substring of fold(NFKC(source_text)); non-matching findings are discarded, findings with no source text are retained and marked quote_verified=null",
+        "id": "step.quote_verification",
+        "inputs": [
+          {
+            "path": "input.findings[].quote",
+            "unit": "findings",
+            "value": 2
+          },
+          {
+            "path": "input.papers[].source_text",
+            "unit": "papers",
+            "value": 1
+          }
+        ],
+        "label": "Verify every quote against source text",
+        "method": "Mechanical substring match, not a model judgement",
+        "result": {
+          "unit": "findings",
+          "value": 2
+        }
+      },
+      {
+        "assumption_ids": [],
+        "evidence_ids": [],
+        "formula": "a conflicting accession BLOCKS a name merge, so human Q9NWZ3 and mouse Q8R4K2 stay distinct",
+        "id": "step.entity_resolution",
+        "inputs": [
+          {
+            "path": "input.things",
+            "unit": "entities",
+            "value": 3
+          }
+        ],
+        "label": "Merge synonymous entities",
+        "method": "UniProt accession first, then separator-insensitive normalized name",
+        "result": {
+          "unit": "entities",
+          "value": 3
+        }
+      },
+      {
+        "assumption_ids": [
+          "assumption.own_result_only"
+        ],
+        "evidence_ids": [],
+        "formula": "state = disagreed if yes and no; agreed if >=2 one way; single_source if exactly one; no_effect if only explicit nulls",
+        "id": "step.link_assembly",
+        "inputs": [
+          {
+            "path": "output.findings",
+            "unit": "findings",
+            "value": 2
+          }
+        ],
+        "label": "Group findings into relationships",
+        "method": "Group by (from, how, to) over own-result findings only",
+        "result": {
+          "unit": "relationships",
+          "value": 2
+        }
+      },
+      {
+        "assumption_ids": [
+          "assumption.own_result_only"
+        ],
+        "evidence_ids": [],
+        "formula": "0.5 + (yes - no) / (2 * (yes + no)); a lone source is 0.5, never 1.0",
+        "id": "step.confidence.agreement",
+        "inputs": [
+          {
+            "path": "output.links[].yes|no",
+            "unit": "relationships",
+            "value": 2
+          }
+        ],
+        "label": "Agreement term",
+        "method": "Direction balance across a relationship's own results",
+        "result": {
+          "unit": "score",
+          "value": 0.5
+        }
+      },
+      {
+        "assumption_ids": [
+          "assumption.study_quality_table",
+          "assumption.preprint_penalty"
+        ],
+        "evidence_ids": [],
+        "formula": "mean(_STUDY_QUALITY[study_type]), x0.8 per preprint",
+        "id": "step.confidence.evidence_quality",
+        "inputs": [
+          {
+            "path": "output.papers[].study_type",
+            "unit": "papers",
+            "value": 1
+          }
+        ],
+        "label": "Evidence-quality term",
+        "method": "Study-design prior, averaged over the relationship's findings",
+        "result": {
+          "unit": "score",
+          "value": 0.6
+        }
+      },
+      {
+        "assumption_ids": [],
+        "evidence_ids": [],
+        "formula": "(distinct first authors - 1) / (papers - 1); one group is not a consensus, so a single group scores 0.0",
+        "id": "step.confidence.independence",
+        "inputs": [
+          {
+            "path": "output.papers[].first_author",
+            "unit": "authors",
+            "value": 1
+          }
+        ],
+        "label": "Independence term",
+        "method": "Distinct first authors behind a relationship",
+        "result": {
+          "unit": "score",
+          "value": 0.0
+        }
+      },
+      {
+        "assumption_ids": [
+          "assumption.confidence_weights"
+        ],
+        "evidence_ids": [],
+        "formula": "0.4*agreement + 0.4*evidence_quality + 0.2*independence; label high >=0.7, medium >=0.4, else low",
+        "id": "step.confidence.overall",
+        "inputs": [
+          {
+            "path": "code.CONFIDENCE_WEIGHTS.agreement",
+            "unit": "weight",
+            "value": 0.4
+          },
+          {
+            "path": "code.CONFIDENCE_WEIGHTS.evidence_quality",
+            "unit": "weight",
+            "value": 0.4
+          },
+          {
+            "path": "code.CONFIDENCE_WEIGHTS.independence",
+            "unit": "weight",
+            "value": 0.2
+          }
+        ],
+        "label": "Combine into a heuristic confidence score",
+        "method": "Fixed-weight linear combination. HEURISTIC -- not a probability, not calibrated against any outcome",
+        "result": {
+          "unit": "score",
+          "value": 0.44
+        }
+      },
+      {
+        "assumption_ids": [
+          "assumption.gap_ranking"
+        ],
+        "evidence_ids": [],
+        "formula": "min(conf_AB, conf_BC) * basis_AB * basis_BC * independence * (1/sqrt(gaps spawned by the hub)) * (1 + 0.12*log2(routes)), capped at 0.6",
+        "id": "step.gap_ranking",
+        "inputs": [
+          {
+            "path": "output.links",
+            "unit": "relationships",
+            "value": 2
+          },
+          {
+            "path": "code.GAP_RANKING_CONSTANTS",
+            "unit": null,
+            "value": {
+              "cap": 50,
+              "confidence_ceiling": 0.6,
+              "degree_cap": 24,
+              "route_bonus_coefficient": 0.12,
+              "shared_paper_penalty": 0.65
+            }
+          }
+        ],
+        "label": "Rank untested relationships",
+        "method": "Open triangles (A-B and B-C exist, A-C does not), ranked multiplicatively to break the ties a min() score produces",
+        "result": {
+          "unit": "gaps",
+          "value": 1
+        }
+      },
+      {
+        "assumption_ids": [
+          "assumption.limits.max_papers",
+          "assumption.limits.max_queries"
+        ],
+        "evidence_ids": [],
+        "formula": null,
+        "id": "step.stop",
+        "inputs": [
+          {
+            "path": "output.coverage.stop_reason",
+            "unit": null,
+            "value": "max_papers"
+          },
+          {
+            "path": "output.coverage.truncated",
+            "unit": null,
+            "value": true
+          }
+        ],
+        "label": "Stop the round",
+        "method": "Stopping rule: max_papers",
+        "result": {
+          "unit": "papers",
+          "value": 1
+        }
+      }
+    ],
+    "uncertainty": {
+      "draws": null,
+      "intervals": [
+        {
+          "central": 0.44,
+          "confidence_level": null,
+          "high": 0.44,
+          "interval_type": "observed_range",
+          "low": 0.44,
+          "metric_id": "metric.mean_link_confidence",
+          "unit": "score"
+        }
+      ],
+      "limitations": [
+        "low/central/high are the observed minimum, mean and maximum of the per-relationship heuristic score across the 2 relationships in this graph. They are an observed range -- NOT percentiles, NOT a confidence interval, and NOT a sampling distribution.",
+        "The score is a ranking aid over what was read. It is not a probability that a relationship is true, and it is not calibrated against any outcome.",
+        "seed and draws are null because assembly is deterministic: the same round bundle produces byte-identical output.",
+        "The dominant uncertainty is not in the score, it is in coverage: 1 of 71 matched papers were read this round."
+      ],
+      "method": "Heuristic confidence decomposition (agreement, evidence quality, independence). No sampling, no model fitting and no statistical inference is performed.",
+      "seed": null
+    }
+  },
+  "links": [
+    {
+      "basis": "primary",
+      "changed_in_round": 1,
+      "confidence": {
+        "agreement": 0.5,
+        "evidence_quality": 0.6,
+        "independence": 0.0,
+        "label": "medium",
+        "overall": 0.44
+      },
+      "from": "t1",
+      "how": "increases",
+      "id": "L1",
+      "no": [],
+      "no_effect": [],
+      "state": "single_source",
+      "to": "t3",
+      "why": null,
+      "yes": [
+        "f1"
+      ]
+    },
+    {
+      "basis": "primary",
+      "changed_in_round": 1,
+      "confidence": {
+        "agreement": 0.5,
+        "evidence_quality": 0.6,
+        "independence": 0.0,
+        "label": "medium",
+        "overall": 0.44
+      },
+      "from": "t2",
+      "how": "increases",
+      "id": "L2",
+      "no": [],
+      "no_effect": [],
+      "state": "single_source",
+      "to": "t3",
+      "why": null,
+      "yes": [
+        "f2"
+      ]
+    }
+  ],
+  "papers": [
+    {
+      "_comment_source_text": "A SHORT REAL EXCERPT, not the full paper: enough for the quote check and no more, so no paper full text is stored in this repository.",
+      "doi": "10.3390/antiox10020241",
+      "first_author": "Zhiyuan V. Zou",
+      "id": "p1",
+      "is_preprint": false,
+      "journal": "Antioxidants",
+      "pmid": "33557356",
+      "retracted": false,
+      "round": 1,
+      "source_sha256": "8a725d91968614a022d73b7d2e2ea0f6bac814a8361c16d73cce29d0562102f9",
+      "study_type": "animal",
+      "title": "Antioxidants Promote Intestinal Tumor Progression in Mice",
+      "year": 2021
+    }
+  ],
+  "question": "Do antioxidant supplements (N-acetylcysteine, vitamin E, vitamin C) accelerate or suppress cancer progression and metastasis?",
+  "round": 1,
+  "rounds": [
+    {
+      "ask": "new_question",
+      "depth": "quick",
+      "n": 1,
+      "outcome": "new_evidence",
+      "papers_added": 1,
+      "target": null
+    }
+  ],
+  "schema_version": "1.1",
+  "status": "ok",
+  "things": [
+    {
+      "aliases": [
+        "N-acetyl-cysteine",
+        "N-acetylcystein",
+        "N-acetylcysteine",
+        "NAC"
+      ],
+      "id": "t1",
+      "kind": "small_molecule",
+      "mentions": 1,
+      "name": "N-acetylcysteine (NAC)",
+      "round": 1
+    },
+    {
+      "aliases": [
+        "Trolox",
+        "VE",
+        "alpha-tocopherol",
+        "vitamin E",
+        "vitamin E analogue",
+        "α-tocopherol"
+      ],
+      "id": "t2",
+      "kind": "small_molecule",
+      "mentions": 1,
+      "name": "Vitamin E",
+      "round": 1
+    },
+    {
+      "aliases": [
+        "ApcMin tumor progression",
+        "colorectal tumor progression",
+        "intestinal tumor grade"
+      ],
+      "id": "t3",
+      "kind": "process",
+      "mentions": 1,
+      "name": "intestinal tumor progression",
+      "round": 1
+    }
+  ]
+}

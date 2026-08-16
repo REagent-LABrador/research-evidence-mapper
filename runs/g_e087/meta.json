@@ -11,7 +11,14 @@
     "figures_read": 2,
     "found": 71,
     "has_disease_node": true,
-    "interventions_without_target": ["t2", "t3", "t30", "t5", "t6", "t7"],
+    "interventions_without_target": [
+      "t2",
+      "t3",
+      "t30",
+      "t5",
+      "t6",
+      "t7"
+    ],
     "interventions_without_target_count": 6,
     "limits": {
       "max_papers": 25,
@@ -20,6 +27,8 @@
     "no_quote_discarded": 0,
     "proteins_without_accession": [],
     "proteins_without_accession_count": 0,
+    "queries": [],
+    "quotes_unverified": 9,
     "read": 7,
     "stop_reason": "no_new_results",
     "truncated": true,

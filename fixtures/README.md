@@ -7,6 +7,15 @@ is just a demo.
 Each `.txt` holds one task string: the JSON request exactly as the agent
 receives it.
 
+`round-minimal.json` is a different kind of fixture: not a question but a
+complete **round bundle** — the input `assemble.py` receives after search and
+extraction. One real paper, two real findings and a short real excerpt as
+`source_text`. It exists so the interpretability contract's verified path is
+checked in and reproducible with no network:
+`python3 skills/graph-assembly/assemble.py --input fixtures/round-minimal.json`
+must reproduce [`../runs/g_minimal.json`](../runs/g_minimal.json) byte for byte,
+and `bun run validate` asserts it.
+
 | fixture | question | depth | what it grades — why it is in the set |
 |---|---|---|---|
 | `q-well-studied.txt` | EGFR mutations predicting TKI response in advanced NSCLC | `deep` | **Dense consensus.** Should produce a rich graph, mostly `state: "agreed"`, with high `independence`. Grades whether scoring survives volume without collapsing everything to "yes". |

@@ -51,21 +51,28 @@
     "name": "Vitamin C"
   },
   {
-    "aliases": ["RES"],
+    "aliases": [
+      "RES"
+    ],
     "id": "t4",
     "kind": "small_molecule",
     "mentions": 1,
     "name": "Resveratrol"
   },
   {
-    "aliases": ["provitamin A", "β-carotene"],
+    "aliases": [
+      "provitamin A",
+      "β-carotene"
+    ],
     "id": "t5",
     "kind": "small_molecule",
     "mentions": 1,
     "name": "beta-carotene"
   },
   {
-    "aliases": ["vitamin A palmitate"],
+    "aliases": [
+      "vitamin A palmitate"
+    ],
     "id": "t6",
     "kind": "small_molecule",
     "mentions": 1,
@@ -79,7 +86,9 @@
     "name": "canthaxanthin"
   },
   {
-    "aliases": ["Bach1"],
+    "aliases": [
+      "Bach1"
+    ],
     "gene_symbol": "BACH1",
     "id": "t8",
     "kind": "gene",
@@ -89,7 +98,10 @@
     "uniprot_accession": "O14867"
   },
   {
-    "aliases": ["GSTP1", "glutathione-S-transferase-pi"],
+    "aliases": [
+      "GSTP1",
+      "glutathione-S-transferase-pi"
+    ],
     "gene_symbol": "GSTP1",
     "id": "t9",
     "kind": "gene",
@@ -157,7 +169,10 @@
     "name": "breast cancer metastasis"
   },
   {
-    "aliases": ["4T1 tumor growth", "breast cancer tumor weight"],
+    "aliases": [
+      "4T1 tumor growth",
+      "breast cancer tumor weight"
+    ],
     "id": "t14",
     "kind": "process",
     "mentions": 1,
@@ -175,42 +190,59 @@
     "name": "intestinal tumor progression"
   },
   {
-    "aliases": ["HCC formation", "HCC growth"],
+    "aliases": [
+      "HCC formation",
+      "HCC growth"
+    ],
     "id": "t16",
     "kind": "process",
     "mentions": 1,
     "name": "hepatocellular carcinoma (HCC) initiation and progression"
   },
   {
-    "aliases": ["prostate epithelial hyperplasia", "prostate tumorigenesis"],
+    "aliases": [
+      "prostate epithelial hyperplasia",
+      "prostate tumorigenesis"
+    ],
     "id": "t17",
     "kind": "process",
     "mentions": 1,
     "name": "prostate epithelial proliferation"
   },
   {
-    "aliases": ["gastric tumor growth"],
+    "aliases": [
+      "gastric tumor growth"
+    ],
     "id": "t18",
     "kind": "process",
     "mentions": 1,
     "name": "gastric cancer growth"
   },
   {
-    "aliases": ["pancreatic cancer metastases", "pancreatic tumor progress"],
+    "aliases": [
+      "pancreatic cancer metastases",
+      "pancreatic tumor progress"
+    ],
     "id": "t19",
     "kind": "process",
     "mentions": 1,
     "name": "pancreatic cancer growth and metastasis"
   },
   {
-    "aliases": ["RCC bone metastasis", "bone metastatic RCC"],
+    "aliases": [
+      "RCC bone metastasis",
+      "bone metastatic RCC"
+    ],
     "id": "t20",
     "kind": "process",
     "mentions": 1,
     "name": "renal cancer bone metastasis"
   },
   {
-    "aliases": ["liver CSC tumor growth", "liver cancer metastasis"],
+    "aliases": [
+      "liver CSC tumor growth",
+      "liver cancer metastasis"
+    ],
     "id": "t21",
     "kind": "process",
     "mentions": 1,
@@ -227,28 +259,38 @@
     "name": "peritoneal tumor metastasis"
   },
   {
-    "aliases": ["lung tumor incidence", "lung tumor multiplicity"],
+    "aliases": [
+      "lung tumor incidence",
+      "lung tumor multiplicity"
+    ],
     "id": "t23",
     "kind": "process",
     "mentions": 1,
     "name": "smoking-induced lung tumor incidence"
   },
   {
-    "aliases": ["immunosuppressive neutrophil phenotype"],
+    "aliases": [
+      "immunosuppressive neutrophil phenotype"
+    ],
     "id": "t24",
     "kind": "process",
     "mentions": 1,
     "name": "neutrophil immunosuppressive reprogramming"
   },
   {
-    "aliases": ["lung cancer incidence in RCTs"],
+    "aliases": [
+      "lung cancer incidence in RCTs"
+    ],
     "id": "t25",
     "kind": "process",
     "mentions": 1,
     "name": "lung cancer risk (human)"
   },
   {
-    "aliases": ["chronic liver disease mortality", "liver cancer incidence"],
+    "aliases": [
+      "chronic liver disease mortality",
+      "liver cancer incidence"
+    ],
     "id": "t26",
     "kind": "process",
     "mentions": 1,
@@ -262,28 +304,38 @@
     "name": "all-cause mortality (human antioxidant RCTs)"
   },
   {
-    "aliases": ["prostate cancer formation in SELECT trial"],
+    "aliases": [
+      "prostate cancer formation in SELECT trial"
+    ],
     "id": "t28",
     "kind": "process",
     "mentions": 1,
     "name": "prostate cancer risk (human, SELECT trial)"
   },
   {
-    "aliases": ["LL/2 tumor growth"],
+    "aliases": [
+      "LL/2 tumor growth"
+    ],
     "id": "t29",
     "kind": "process",
     "mentions": 1,
     "name": "Lewis lung carcinoma tumor growth"
   },
   {
-    "aliases": ["MitoQ", "MitoTEMPO"],
+    "aliases": [
+      "MitoQ",
+      "MitoTEMPO"
+    ],
     "id": "t30",
     "kind": "small_molecule",
     "mentions": 1,
     "name": "mitochondria-targeted antioxidants (MitoQ/MitoTEMPO)"
   },
   {
-    "aliases": ["lung cancer progression", "lung tumor burden"],
+    "aliases": [
+      "lung cancer progression",
+      "lung tumor burden"
+    ],
     "id": "t31",
     "kind": "process",
     "mentions": 1,

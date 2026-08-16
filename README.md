@@ -19,7 +19,10 @@ has a hole in it.
   "links": [ { "state": "disagreed",
                "why": "conditions differ: {braf v600e-driven melanoma, mouse}
                                       vs {b16f0 melanoma, gulo ko mice}" } ],
-  "gaps": [...], "coverage": {...}, "delta": {...} }
+  "gaps": [...], "coverage": {...}, "delta": {...},
+  "interpretability": {...} }        // required — headline, metrics, steps,
+                                     // evidence, assumptions, uncertainty,
+                                     // limitations, counterfactuals, lineage
 ```
 
 That `why` is the point of the system. Two labs published opposing in vivo
@@ -152,19 +155,26 @@ sources the window actually reached.
   "rounds":   [ { "n": 1, "ask": "...", "outcome": "new_evidence" } ],
   "coverage": { "depth": "deep", "found": 412, "read": 43, "used": 40,
                 "truncated": true, "no_quote_discarded": 6,
+                "quotes_unverified": 0, "queries": [ { "q": "..." } ],
                 "stop_reason": "max_papers" },
   "things":   [ { "id": "t1", "name": "...", "kind": "protein", "aliases": [] } ],
   "papers":   [ { "id": "p2", "doi": "...", "first_author": "...",
                   "study_type": "test_tube", "is_preprint": false } ],
   "findings": [ { "id": "f2", "from": "t2", "how": "binds", "to": "t3",
                   "says": "yes", "quote": "<verbatim>", "paper": "p2",
+                  "quote_verified": true,   // true | null; null NEVER means yes
                   "where": "<conditions>", "is_own_result": true } ],
   "links":    [ { "id": "L2", "from": "t2", "how": "binds", "to": "t3",
                   "state": "disagreed", "why": "conditions differ: ...",
                   "confidence": { "overall": 0.42, "agreement": 0.5,
                                   "evidence_quality": 0.4, "independence": 0.0 } } ],
   "gaps":     [ { "id": "g1", "missing": ["t1","t3"], "implied_by": ["L1","L2"],
-                  "confidence": 0.34, "searched_in_round": null } ]
+                  "confidence": 0.34, "searched_in_round": null } ],
+  "interpretability": { "schema_version": "1.0.0", "headline": {...},
+                        "metrics": [...], "steps": [...], "evidence": [...],
+                        "assumptions": [...], "uncertainty": {...},
+                        "limitations": [...], "counterfactuals": [...],
+                        "lineage": [...], "extensions": {...} }
 }
 ```
 
@@ -195,7 +205,52 @@ for one `(graph_id, round)` pair only** — a link at 0.81 can correctly drop to
 **Failure is still a graph.** There is no error blob, ever — one parser handles
 every reply. `status` is `ok` | `empty` | `partial` | `failed`; on anything but
 `ok` the lists are empty or short, `coverage` still reports real numbers, and
-`error` carries a one-line cause.
+`error` carries a one-line cause. A domain abstention — an extending ask against
+a graph that is not in memory — carries a full `interpretability` block too, with
+`headline.status: "FAILED"` and a `GRAPH_NOT_FOUND` limitation. Only an
+infrastructure failure that produces no reply at all falls outside the contract,
+and that is the orchestrator's to report.
+
+**`interpretability` — the shared LABrador block.** Required on every reply, and
+enforced by [`schema/graph.schema.json`](./schema/graph.schema.json): a graph
+without it does not validate, and `{"graph_id": "g"}` alone no longer satisfies
+the output contract. It lets a UI answer six questions without reading the graph
+— what was concluded, why, what backs each result, how each number was computed,
+what uncertainty remains, and what would falsify it.
+
+```jsonc
+"interpretability": {
+  "headline":    { "result": "EVIDENCE_MAPPED_DISPUTED", "status": "QUALIFIED",
+                   "basis": ["OBSERVED","INFERRED","MODELED"] },
+  "metrics":     [ { "id": "metric.papers_used", "value": 2, "unit": "papers",
+                     "evidence_ids": [], "assumption_ids": ["assumption.depth"] } ],
+  "steps":       [ { "id": "step.confidence.overall",
+                     "formula": "0.4*agreement + 0.4*evidence_quality + 0.2*independence" } ],
+  "evidence":    [ { "id": "evidence.f6", "source_id": "doi:10.1126/…",
+                     "locator": "results", "quote": "<verbatim>", "grade": "MODERATE" } ],
+  "uncertainty": { "intervals": [ { "interval_type": "observed_range",
+                                    "confidence_level": null } ] },
+  "limitations": [ { "code": "UNVERIFIED_QUOTE", "severity": "ERROR",
+                     "field_path": "output.findings[].quote_verified" } ],
+  "extensions":  { "quote_verified": true, "search": { "queries": [...] },
+                   "relationships": [ { "supporting": [], "contradicting": [],
+                                        "no_effect": [] } ] }
+}
+```
+
+It is **derived, never stored** — the same rule `delta` follows, and for the same
+reason. [`SCHEMA.md`](./SCHEMA.md) has the full field list, the
+`headline.result` vocabulary and every limitation code.
+
+Two contract rules worth knowing before you integrate:
+
+- **A heuristic score is never a probability.** `confidence.overall` is a ranking
+  aid over what was read. `HEURISTIC_CONFIDENCE` says so on every single reply,
+  and `uncertainty.intervals[].confidence_level` is `null` because there is no
+  confidence interval to report.
+- **Unknown is `null` plus a limitation, never `0`.** A count that was not
+  recorded does not become zero, and an absent year window does not become "all
+  years". `queries: []` is legal and raises `QUERIES_NOT_RECORDED`.
 
 ---
 
@@ -339,6 +394,42 @@ cwd is the repo root, so `skills/` is outside
 what the Skill tool discovers. Read the SKILL.md files and follow them by hand;
 the deploy smoke test is what proves real skill loading.
 
+### Verifying a change
+
+There is no test framework; these four are the verification story, and all four
+must be green before a change ships.
+
+```bash
+python3 skills/graph-assembly/assemble.py --selftest   # assembler properties
+bun run validate                                       # examples vs JSON Schema
+bun run typecheck
+bun run check                                          # ultracite/biome
+```
+
+`bun run test` runs the first two together. `bun run validate <graph.json>`
+checks any graph you have to hand.
+
+The assembler CLI, beyond `--input`:
+
+```bash
+# print or list stored graphs, read-only — never assembles, never writes
+python3 skills/graph-assembly/assemble.py --memory-dir runs --show g_e087
+python3 skills/graph-assembly/assemble.py --memory-dir runs --list
+
+# upgrade a graph assembled before the interpretability contract existed:
+# re-derives coverage defaults and rebuilds the block. Pure — no scores change.
+python3 skills/graph-assembly/assemble.py --rebuild runs/g_e087.json --out -
+
+# ...and, given re-fetched source text as <source-dir>/<paper_id>.txt, re-check
+# every quote. A paper with no file keeps quote_verified null, never true.
+python3 skills/graph-assembly/assemble.py --rebuild runs/g_e087.json \
+    --source-dir /tmp/src --memory-dir runs --save --out runs/g_e087.json
+```
+
+`--save` on a rebuild matters: without it the stored state keeps findings with
+no `quote_verified`, the next round fails them closed, and the verification is
+thrown away.
+
 ---
 
 ## What it guarantees, and how each one is enforced
@@ -349,6 +440,9 @@ code, that is said; where it is reported rather than enforced, that is said too.
 | guarantee | enforced by |
 |---|---|
 | Every finding carries a **verbatim quote** | `verify_quote` string-matches it against the fetched text. No match, the finding is dropped and counted in `coverage.no_quote_discarded`. Never repaired. |
+| **Quote verification fails closed** | The match only ever sets `quote_verified: true` on the branch where a real string match succeeded. A paper with no `source_text` means the check never *ran*: the finding is kept, marked `null`, counted in `coverage.quotes_unverified`, graded no higher than `LOW`, and raises `UNVERIFIED_QUOTE`. `null` is never presented as verified. |
+| **Relationship ids are stable across rounds** | A link id binds to its `(from, how, to)` triple the round it first appears and is carried through entity merges. Ids were previously positional (`L1…Ln` over the sorted triples), so one new relationship sorting early renumbered every link after it — and `delta` and `changed_in_round` both key on the id, so they reported movement for relationships that had not moved. |
+| **The output contract is machine-checked** | [`schema/graph.schema.json`](./schema/graph.schema.json), Draft 2020-12. `bun run validate` checks the checked-in examples, that every id resolves, that numeric metrics carry units — and that the schema *rejects* a graph with `interpretability` removed. |
 | **Nothing is filtered by score** | The only removals are a failed quote match and a content duplicate. Confidence is never a threshold anywhere. |
 | **A retried round is a no-op** | Findings dedupe on content — paper + relationship + normalized quote — not on id, because a retry re-extracts the same sentences under fresh ids. Reported in `coverage.duplicates_dropped`. |
 | **Assembly is deterministic** | `assemble.py` is stdlib-only and byte-identical across runs and `PYTHONHASHSEED` values. All arithmetic lives there; nothing is scored by hand. |
@@ -357,6 +451,8 @@ code, that is said; where it is reported rather than enforced, that is said too.
 | **The reply is machine-readable** | The first character is `{`, the last is `}`. No preamble, no fence — a downstream `JSON.parse` is the consumer. |
 | **Facts append, derivations recompute** | `findings/r<N>.json` holds only that round's findings. `links` and `gaps` are recomputed every round, because a link's confidence legitimately moves when new evidence arrives — appending a derived score would store one already known to be wrong. |
 | **Round ids are local, and never reach stored rows** | A round numbers its own papers `p1, p2…`; the assembler translates them. Stored findings take only the entity-coalesce remap, never the incoming round's map. |
+| **Ids are never reused** | A link or gap id is bound to what it names the round it first appears, and the high-water counter rides in `coverage.id_seq` so a row that later disappears does not free its number for something else. An id a consumer stored either still resolves or is gone — it never comes back meaning a different thing. |
+| **A caller cannot vouch for its own quote** | `quote_verified` on an incoming finding is discarded before assembly. Only the string match, or a value a prior round earned, may set it `true`. |
 | **Gaps are ranked, not just counted** | Basis of both supporting links, paper-independence, a hub penalty, and a bonus when several intermediates imply the same missing pair. |
 
 Reported rather than enforced, so a shortfall is visible instead of silent:
@@ -479,6 +575,19 @@ the actual reason those two labs disagree.
   lies. A negative finding needs the deepest tier that was actually run — a
   `standard` sweep once reported "nobody has tested this" and `deep` found the
   paper.
+- **The reference graph's quotes are only partly re-verified.** `runs/g_e087.json`
+  was assembled before `quote_verified` existed, and the artifact does not record
+  that assembly-time verification happened — so the contract refuses to infer it.
+  Re-fetching source text through Paperclip re-checked 35 of 44 findings; 3
+  papers could not be re-resolved in the corpus by exact title, leaving 9
+  findings at `null`, and 1 quote genuinely failed (it joins two sentences that
+  are not adjacent in the paper). Both are reported, not repaired.
+- **Quote matching ignores whitespace entirely.** Corpora render the same
+  sentence with different spacing around punctuation — Paperclip's
+  `content.lines` emits `( Figure 5F )` where the PDF reads `(Figure 5F)` — and
+  two real findings failed on that alone. The comparison now drops whitespace on
+  both sides. It cannot turn a paraphrase into a match: every non-space
+  character must still appear, in order, contiguously.
 - **The MCP watchdog and the outage report race each other.** With no server
   there is no MCP call to observe, so the client-side watchdog can fire before
   the agent reports the outage it exists to report. `--mcp-silence 0` stands it
@@ -493,8 +602,9 @@ the actual reason those two labs disagree.
 | [`acl.ts`](./acl.ts) | who may call this agent through the router |
 | [`skills/`](./skills) | three skills, uploaded to the Skills API unchanged. `graph-assembly` bundles `assemble.py` and `example-round.json` |
 | [`fixtures/`](./fixtures) | three corpus-validated questions, each grading something specific |
-| [`runs/`](./runs) | a real two-round graph from the deployed agent |
+| [`runs/`](./runs) | `g_e087.json`, a real two-round graph from the deployed agent, plus `g_minimal.json`, regenerated offline from `fixtures/round-minimal.json` and asserted byte-identical on every `bun run validate`. Excluded from the formatter for the same reason `manifest.json` is: it is generated |
 | [`SCHEMA.md`](./SCHEMA.md) | **the authoritative data contract** — input first, then output. Root-level on purpose: it is the file consumers integrate against |
+| [`schema/`](./schema) | the same contract as a validator. `graph.schema.json` is the module output; `interpretability.schema.json` is the **shared LABrador block**, `$ref`d from it and reusable by any other LABrador module |
 | [`docs/CONTRACT.md`](./docs/CONTRACT.md) | deliverables, MCP details, `assemble.py` spec |
 | [`docs/BUILD.md`](./docs/BUILD.md) | build plan and its six blocking acceptance facts |
 | `lib/`, `scripts/`, `agent/` | session runtime, deploy/console CLIs, eve router wrapper |

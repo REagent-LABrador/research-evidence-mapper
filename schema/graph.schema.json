@@ -1,0 +1,358 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/REagent-LABrador/research-evidence-mapper/main/schema/graph.schema.json",
+  "title": "Research Evidence Mapper — knowledge graph output",
+  "description": "The orchestrator-facing output contract for one round of research-evidence-mapper. The reply is always the FULL graph, never a delta. `{\"graph_id\": \"g\"}` alone does not satisfy this schema: coverage, papers, findings, links, gaps and interpretability are required. Prose companion: SCHEMA.md at the repository root; where the two disagree, this file is the machine contract and SCHEMA.md is the explanation.",
+  "type": "object",
+  "properties": {
+    "schema_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+$" },
+    "graph_id": { "type": "string", "minLength": 1 },
+    "question": { "type": ["string", "null"] },
+    "round": { "type": "integer", "minimum": 0 },
+    "status": { "enum": ["ok", "empty", "partial", "failed"] },
+    "generated_at": { "type": ["string", "null"] },
+    "error": {
+      "type": ["string", "null"],
+      "description": "One-line plain-text cause when status != ok. Prefixed \"PAPERCLIP UNAVAILABLE: \" when the corpus could not be reached at all."
+    },
+    "things": { "type": "array", "items": { "$ref": "#/$defs/thing" } },
+    "papers": { "type": "array", "items": { "$ref": "#/$defs/paper" } },
+    "findings": { "type": "array", "items": { "$ref": "#/$defs/finding" } },
+    "links": { "type": "array", "items": { "$ref": "#/$defs/link" } },
+    "gaps": { "type": "array", "items": { "$ref": "#/$defs/gap" } },
+    "coverage": { "$ref": "#/$defs/coverage" },
+    "rounds": { "type": "array", "items": { "$ref": "#/$defs/round" } },
+    "delta": {
+      "$ref": "#/$defs/delta",
+      "description": "Present on an assembled round. Absent on a read-back (`--show`), which replays stored state and has no prior round to diff against."
+    },
+    "interpretability": {
+      "$ref": "https://raw.githubusercontent.com/REagent-LABrador/research-evidence-mapper/main/schema/interpretability.schema.json#/$defs/interpretability"
+    }
+  },
+  "required": [
+    "schema_version",
+    "graph_id",
+    "question",
+    "round",
+    "status",
+    "generated_at",
+    "error",
+    "things",
+    "papers",
+    "findings",
+    "links",
+    "gaps",
+    "coverage",
+    "rounds",
+    "interpretability"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "thing": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "pattern": "^t[0-9]+$" },
+        "name": { "type": "string", "minLength": 1 },
+        "kind": {
+          "type": "string",
+          "minLength": 1,
+          "description": "protein | gene | small_molecule | disease | process | cell_type | intervention — open vocabulary; unrecognised kinds are carried through, not rewritten."
+        },
+        "aliases": { "type": "array", "items": { "type": "string" } },
+        "mentions": { "type": "integer", "minimum": 0 },
+        "uniprot_accession": { "type": ["string", "null"] },
+        "gene_symbol": { "type": ["string", "null"] },
+        "resolved_by": { "type": ["string", "null"] },
+        "merged_from": {
+          "type": "array",
+          "description": "Provenance of an entity merge: which name was folded in, and on what basis.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": ["string", "null"] },
+              "via": { "enum": ["accession", "name"] }
+            },
+            "required": ["name", "via"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": ["id", "name", "kind"],
+      "additionalProperties": true
+    },
+    "paper": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "pattern": "^p[0-9]+$" },
+        "doi": { "type": ["string", "null"] },
+        "pmid": { "type": ["string", "null"] },
+        "title": { "type": ["string", "null"] },
+        "year": { "type": ["integer", "null"] },
+        "journal": { "type": ["string", "null"] },
+        "first_author": { "type": ["string", "null"] },
+        "study_type": {
+          "type": ["string", "null"],
+          "description": "meta_analysis | clinical_trial | human_cohort | animal | test_tube | computational | review | unknown. An out-of-vocabulary value scores as `unknown` (0.4) rather than silently matching something close."
+        },
+        "is_preprint": { "type": ["boolean", "null"] },
+        "retracted": { "type": ["boolean", "null"] },
+        "round": { "type": "integer", "minimum": 0 },
+        "source_sha256": {
+          "type": ["string", "null"],
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "SHA-256 of the source text this paper's quotes were verified against, recorded at assembly time. null when no source text was supplied — see coverage.quotes_unverified."
+        }
+      },
+      "required": ["id"],
+      "additionalProperties": true
+    },
+    "finding": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "paper": { "type": "string", "minLength": 1 },
+        "from": { "type": "string", "minLength": 1 },
+        "how": { "type": "string", "minLength": 1 },
+        "to": { "type": "string", "minLength": 1 },
+        "says": { "enum": ["yes", "no", "no_effect"] },
+        "quote": { "type": "string", "minLength": 1 },
+        "quote_verified": {
+          "type": ["boolean", "null"],
+          "description": "true = the quote was matched verbatim against the paper's source text. false = source text was supplied and the quote was NOT found in it; assembly discards such findings, so false only appears after `--rebuild --source-dir` re-verified a stored graph, and it raises QUOTE_MISMATCH. null = no source text was available, so verification never ran. Fail closed: null is NEVER presented as verified."
+        },
+        "is_own_result": { "type": ["boolean", "null"] },
+        "hedged": { "type": ["boolean", "null"] },
+        "section": { "type": ["string", "null"] },
+        "where": { "type": ["string", "null"] },
+        "confidence": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "flags": { "type": "array", "items": { "type": "string" } },
+        "round": { "type": "integer", "minimum": 0 }
+      },
+      "required": [
+        "id",
+        "paper",
+        "from",
+        "how",
+        "to",
+        "says",
+        "quote",
+        "quote_verified",
+        "round"
+      ],
+      "additionalProperties": true
+    },
+    "link": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^L[0-9]+$",
+          "description": "Stable across rounds: an id is bound to the (from, how, to) triple the first round it appears, carried forward through entity merges, and never reused."
+        },
+        "from": { "type": "string", "minLength": 1 },
+        "how": { "type": "string", "minLength": 1 },
+        "to": { "type": "string", "minLength": 1 },
+        "state": {
+          "enum": ["agreed", "disagreed", "single_source", "no_effect"]
+        },
+        "basis": {
+          "enum": ["primary", "mixed", "hedged_only", "background_only"]
+        },
+        "confidence": {
+          "type": "object",
+          "description": "Heuristic decomposition, NOT a probability.",
+          "properties": {
+            "overall": { "type": "number", "minimum": 0, "maximum": 1 },
+            "label": { "enum": ["high", "medium", "low"] },
+            "agreement": { "type": "number", "minimum": 0, "maximum": 1 },
+            "evidence_quality": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "independence": { "type": "number", "minimum": 0, "maximum": 1 }
+          },
+          "required": [
+            "overall",
+            "label",
+            "agreement",
+            "evidence_quality",
+            "independence"
+          ],
+          "additionalProperties": false
+        },
+        "yes": { "type": "array", "items": { "type": "string" } },
+        "no": { "type": "array", "items": { "type": "string" } },
+        "no_effect": { "type": "array", "items": { "type": "string" } },
+        "why": { "type": ["string", "null"] },
+        "changed_in_round": { "type": ["integer", "null"] }
+      },
+      "required": [
+        "id",
+        "from",
+        "how",
+        "to",
+        "state",
+        "basis",
+        "confidence",
+        "yes",
+        "no",
+        "no_effect"
+      ],
+      "additionalProperties": false
+    },
+    "gap": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "pattern": "^g[0-9]+$" },
+        "missing": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "implied_by": { "type": "array", "items": { "type": "string" } },
+        "note": { "type": "string" },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "searched_in_round": { "type": ["integer", "null"] }
+      },
+      "required": ["id", "missing", "implied_by", "note", "confidence"],
+      "additionalProperties": false
+    },
+    "coverage": {
+      "type": "object",
+      "description": "What was NOT read. Always present.",
+      "properties": {
+        "found": { "type": ["integer", "null"], "minimum": 0 },
+        "read": { "type": ["integer", "null"], "minimum": 0 },
+        "used": { "type": ["integer", "null"], "minimum": 0 },
+        "figures_read": { "type": ["integer", "null"], "minimum": 0 },
+        "truncated": { "type": ["boolean", "null"] },
+        "stop_reason": {
+          "type": ["string", "null"],
+          "description": "max_papers | queries_exhausted | no_new_results | time_limit | complete | search_unavailable. Only `complete` means the literature was exhausted rather than the budget."
+        },
+        "depth": { "type": ["string", "null"] },
+        "limits": {
+          "type": "object",
+          "properties": {
+            "max_papers": { "type": ["integer", "null"], "minimum": 0 },
+            "max_queries": { "type": ["integer", "null"], "minimum": 0 }
+          },
+          "additionalProperties": true
+        },
+        "queries": {
+          "type": "array",
+          "description": "The search queries actually issued this round. Empty only when the caller did not record them, which raises QUERIES_NOT_RECORDED.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "q": { "type": "string", "minLength": 1 },
+              "tool": { "type": ["string", "null"] },
+              "search_id": { "type": ["string", "null"] },
+              "n_results": { "type": ["integer", "null"], "minimum": 0 },
+              "round": { "type": ["integer", "null"] }
+            },
+            "required": ["q"],
+            "additionalProperties": true
+          }
+        },
+        "no_quote_discarded": { "type": "integer", "minimum": 0 },
+        "id_seq": {
+          "type": "object",
+          "description": "Highest link/gap number ever issued for this graph, so a row that disappears does not free its id for a different thing next round. Absent on graphs assembled before it existed.",
+          "properties": {
+            "link": { "type": "integer", "minimum": 0 },
+            "gap": { "type": "integer", "minimum": 0 }
+          },
+          "additionalProperties": false
+        },
+        "quotes_unverified": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Retained findings whose quote could not be checked because no source text was supplied. Fail closed: counted and reported, never called verified."
+        },
+        "duplicates_dropped": { "type": "integer", "minimum": 0 },
+        "years": {
+          "type": ["array", "string", "number", "null"],
+          "description": "The publication window the search was restricted to. A number is the request contract's \"last N years\" form and is carried through verbatim; an array is an explicit [from, to]. null means no window was requested, NOT that the corpus is complete."
+        },
+        "defaults_applied": { "type": "array", "items": { "type": "string" } },
+        "confidence_profile": { "type": "object" },
+        "has_disease_node": { "type": "boolean" },
+        "interventions_without_target": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "interventions_without_target_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "proteins_without_accession": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "proteins_without_accession_count": { "type": "integer", "minimum": 0 }
+      },
+      "required": [
+        "found",
+        "read",
+        "used",
+        "limits",
+        "truncated",
+        "stop_reason",
+        "no_quote_discarded",
+        "quotes_unverified",
+        "queries"
+      ],
+      "additionalProperties": true
+    },
+    "round": {
+      "type": "object",
+      "properties": {
+        "n": { "type": "integer", "minimum": 0 },
+        "ask": {
+          "enum": ["new_question", "expand_node", "resolve_link", "test_gap"]
+        },
+        "target": { "type": ["string", "null"] },
+        "depth": { "type": ["string", "null"] },
+        "papers_added": { "type": "integer", "minimum": 0 },
+        "outcome": {
+          "enum": ["new_evidence", "nothing_new", "promoted", "contradicted"]
+        }
+      },
+      "required": ["n", "ask", "outcome"],
+      "additionalProperties": true
+    },
+    "delta": {
+      "type": "object",
+      "description": "Derived, never stored. A delta file would be a second source of truth.",
+      "properties": {
+        "round": { "type": "integer", "minimum": 0 },
+        "things_added": { "type": "array", "items": { "type": "string" } },
+        "papers_added": { "type": "array", "items": { "type": "string" } },
+        "findings_added": { "type": "array", "items": { "type": "string" } },
+        "links_added": { "type": "array", "items": { "type": "string" } },
+        "links_changed": { "type": "array", "items": { "type": "string" } },
+        "gaps_added": { "type": "array", "items": { "type": "string" } },
+        "gaps_resolved": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": [
+        "round",
+        "things_added",
+        "papers_added",
+        "findings_added",
+        "links_added",
+        "links_changed",
+        "gaps_added",
+        "gaps_resolved"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

@@ -157,10 +157,34 @@ deterministic.
 
 **Integrity**
 ```
-verify_quote(quote, source_text)     -> bool       normalized-whitespace substring
+verify_quote(quote, source_text)     -> bool       whitespace-insensitive substring
+reverify(graph, source_dir)          -> graph      re-check a stored graph's quotes
 ```
 Called before a finding is written. False → dropped, `no_quote_discarded += 1`.
 This is the guarantee the whole system rests on; it must be a check, not a prompt.
+
+It **fails closed**: `quote_verified` is only ever set `true` on the branch where
+a real string match succeeded. No `source_text` means the check never ran, which
+is not the same as passing — the finding is kept and marked `null`, counted in
+`coverage.quotes_unverified`, and graded no higher than `LOW`.
+
+The comparison ignores whitespace on both sides. Corpora render the same sentence
+with different spacing around punctuation (`( Figure 5F )` vs `(Figure 5F)`), and
+that decided two real findings. It cannot turn a paraphrase into a match — every
+non-space character must still appear, in order, contiguously.
+
+**Interpretability**
+```
+normalize_coverage(cov, findings)    -> dict       contract-required coverage fields
+build_interpretability(graph)        -> dict       the shared LABrador block
+abstain_graph(id, request, error)    -> graph      a served refusal, contract-complete
+```
+`build_interpretability` is a **pure function of the finished graph** — same rule
+`compute_delta` follows, same reason: a stored second copy is a second source of
+truth. It is required by `schema/graph.schema.json`, so a graph without it does
+not validate. Every scoring constant it cites (`CONFIDENCE_WEIGHTS`,
+`_STUDY_QUALITY`, `PREPRINT_PENALTY`, `GAP_RANKING_CONSTANTS`) is named in module
+scope rather than inlined, so nothing stays hidden in code.
 
 **Scoring**
 ```

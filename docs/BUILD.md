@@ -85,6 +85,13 @@ Six facts, each independently checked:
 5. round 2 (`resolve_link`) loads round 1 from memory and `round` increments
 6. three quotes spot-checked verbatim against their DOIs
 
+Fact 6 has since been **superseded by a systematic check.** Spot-checking three
+quotes was never a guarantee; `quote_verified` now records the result per finding
+and fails closed, and re-fetching source text for `runs/g_e087.json` re-checked
+all 44 — 35 matched, 9 could not be checked because their papers did not
+re-resolve in the corpus, and 1 genuinely failed. A spot-check of three would
+very likely have missed that one.
+
 ## Risks
 
 - ~~Bundled skill scripts may not be executable in the sandbox.~~ **Settled: they

@@ -1,0 +1,112 @@
+{
+  "_comment": "Minimal round bundle with REAL data: one real paper, two real quote-backed findings, and a short real excerpt as source_text. Assembling it offline is how the interpretability contract's verified path (quote_verified: true) stays checked in.",
+  "ask": "new_question",
+  "coverage": {
+    "depth": "quick",
+    "figures_read": 0,
+    "found": 71,
+    "limits": {
+      "max_papers": 10,
+      "max_queries": 2
+    },
+    "queries": [
+      {
+        "n_results": 20,
+        "q": "antioxidant supplementation intestinal tumor progression mice",
+        "search_id": "s_734cb5b6",
+        "tool": "paperclip.search"
+      }
+    ],
+    "read": 1,
+    "stop_reason": "max_papers",
+    "truncated": true,
+    "used": 1
+  },
+  "depth": "quick",
+  "findings": [
+    {
+      "from": "t1",
+      "hedged": false,
+      "how": "increases",
+      "id": "f1",
+      "is_own_result": true,
+      "paper": "p1",
+      "quote": "Here, we show that supplementation with the antioxidants N-acetylcysteine (NAC) and vitamin E promotes intestinal tumor progression in the ApcMin mouse model for familial adenomatous polyposis, a hereditary form of colorectal cancer, driven by Wnt signaling.",
+      "says": "yes",
+      "section": "abstract",
+      "to": "t15",
+      "where": "apcmin mice"
+    },
+    {
+      "from": "t2",
+      "hedged": false,
+      "how": "increases",
+      "id": "f2",
+      "is_own_result": true,
+      "paper": "p1",
+      "quote": "Here, we show that supplementation with the antioxidants N-acetylcysteine (NAC) and vitamin E promotes intestinal tumor progression in the ApcMin mouse model for familial adenomatous polyposis, a hereditary form of colorectal cancer, driven by Wnt signaling.",
+      "says": "yes",
+      "section": "abstract",
+      "to": "t15",
+      "where": "apcmin mice"
+    }
+  ],
+  "generated_at": "2026-08-16T00:00:00Z",
+  "graph_id": "g_min1",
+  "papers": [
+    {
+      "_comment_source_text": "A SHORT REAL EXCERPT, not the full paper: enough for the quote check and no more, so no paper full text is stored in this repository.",
+      "doi": "10.3390/antiox10020241",
+      "first_author": "Zhiyuan V. Zou",
+      "id": "p1",
+      "is_preprint": false,
+      "journal": "Antioxidants",
+      "pmid": "33557356",
+      "retracted": false,
+      "source_text": "Here, we show that supplementation with the antioxidants N-acetylcysteine (NAC) and vitamin E promotes intestinal tumor progression in the ApcMin mouse model for familial adenomatous polyposis, a hereditary form of colorectal cancer, driven by Wnt signaling. Both antioxidants increased tumor size in early neoplasias and tumor grades in more advanced lesions without any impact on tumor initiation",
+      "study_type": "animal",
+      "title": "Antioxidants Promote Intestinal Tumor Progression in Mice",
+      "year": 2021
+    }
+  ],
+  "question": "Do antioxidant supplements (N-acetylcysteine, vitamin E, vitamin C) accelerate or suppress cancer progression and metastasis?",
+  "round": 1,
+  "status": "ok",
+  "things": [
+    {
+      "aliases": [
+        "N-acetyl-cysteine",
+        "N-acetylcystein",
+        "N-acetylcysteine",
+        "NAC"
+      ],
+      "id": "t1",
+      "kind": "small_molecule",
+      "name": "N-acetylcysteine (NAC)"
+    },
+    {
+      "aliases": [
+        "Trolox",
+        "VE",
+        "alpha-tocopherol",
+        "vitamin E",
+        "vitamin E analogue",
+        "α-tocopherol"
+      ],
+      "id": "t2",
+      "kind": "small_molecule",
+      "name": "Vitamin E"
+    },
+    {
+      "aliases": [
+        "ApcMin tumor progression",
+        "colorectal tumor progression",
+        "intestinal tumor grade"
+      ],
+      "id": "t15",
+      "kind": "process",
+      "name": "intestinal tumor progression"
+    }
+  ],
+  "years": [2010, 2026]
+}

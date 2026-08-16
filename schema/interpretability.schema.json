@@ -1,0 +1,376 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/REagent-LABrador/research-evidence-mapper/main/schema/interpretability.schema.json",
+  "title": "LABrador shared interpretability block",
+  "description": "The interpretability contract every LABrador module emits on a successful or scientifically degraded/abstaining run. Modules $ref `#/$defs/interpretability` from their own output schema and make it required. Runtime facts (repo SHA, input/output hashes, LIVE/CACHED/FALLBACK origin, duration, exit status) belong to the orchestrator and are deliberately absent here.",
+  "$defs": {
+    "machine_code": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9_]*$",
+      "description": "Stable SCREAMING_SNAKE identifier. Never derived from array position."
+    },
+    "stable_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z][a-z0-9_]*\\.[A-Za-z0-9_.:\\-]+$",
+      "description": "Namespaced stable id, e.g. `metric.papers_used`. Must not encode array position."
+    },
+    "display_string": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 240,
+      "not": { "pattern": "<[A-Za-z/!][^>]*>" },
+      "description": "Short plain-text string for the UI. No HTML."
+    },
+    "json_scalar": {
+      "type": ["number", "string", "boolean", "null"],
+      "description": "A JSON scalar. NaN and Infinity are not JSON and must never be emitted."
+    },
+    "headline": {
+      "type": "object",
+      "description": "Answers `what did this module conclude` and `why`.",
+      "properties": {
+        "title": { "$ref": "#/$defs/display_string" },
+        "result": {
+          "$ref": "#/$defs/machine_code",
+          "description": "Stable machine-readable conclusion. Module-specific vocabulary, documented by the module."
+        },
+        "plain_language": {
+          "type": "string",
+          "minLength": 1,
+          "not": { "pattern": "<[A-Za-z/!][^>]*>" },
+          "description": "One sentence a non-specialist can read."
+        },
+        "status": {
+          "enum": [
+            "SUPPORTED",
+            "QUALIFIED",
+            "INCONCLUSIVE",
+            "FAILED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "basis": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "enum": ["OBSERVED", "INFERRED", "MODELED", "SYNTHETIC"] },
+          "description": "Where the conclusion comes from. SYNTHETIC must appear whenever any evidence or assumption is synthetic."
+        }
+      },
+      "required": ["title", "result", "plain_language", "status", "basis"],
+      "additionalProperties": false
+    },
+    "metric": {
+      "type": "object",
+      "description": "A headline number the UI can show. Answers `which evidence and assumptions support this result`.",
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "label": { "$ref": "#/$defs/display_string" },
+        "value": { "$ref": "#/$defs/json_scalar" },
+        "unit": {
+          "type": ["string", "null"],
+          "minLength": 1,
+          "description": "Required for every numeric value. null only for non-numeric values."
+        },
+        "display": { "$ref": "#/$defs/display_string" },
+        "meaning": { "type": "string", "minLength": 1 },
+        "direction": {
+          "enum": ["positive", "negative", "neutral", "mixed", "unknown"]
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/stable_id" },
+          "uniqueItems": true
+        },
+        "assumption_ids": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/stable_id" },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "value",
+        "unit",
+        "display",
+        "meaning",
+        "direction",
+        "evidence_ids",
+        "assumption_ids"
+      ],
+      "additionalProperties": false,
+      "if": {
+        "properties": { "value": { "type": "number" } },
+        "required": ["value"]
+      },
+      "then": { "properties": { "unit": { "type": "string", "minLength": 1 } } }
+    },
+    "step": {
+      "type": "object",
+      "description": "One calculation or decision. Answers `how was each derived value calculated`.",
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "label": { "$ref": "#/$defs/display_string" },
+        "method": { "type": "string", "minLength": 1 },
+        "formula": {
+          "type": ["string", "null"],
+          "description": "Human-readable formula. null when the step is a lookup or a retrieval rather than an arithmetic derivation."
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "path": { "type": "string", "minLength": 1 },
+              "value": {
+                "type": [
+                  "number",
+                  "string",
+                  "boolean",
+                  "null",
+                  "array",
+                  "object"
+                ],
+                "description": "The value actually used. null means unknown and must carry a limitation."
+              },
+              "unit": { "type": ["string", "null"], "minLength": 1 }
+            },
+            "required": ["path", "value", "unit"],
+            "additionalProperties": false
+          }
+        },
+        "result": {
+          "type": "object",
+          "properties": {
+            "value": { "$ref": "#/$defs/json_scalar" },
+            "unit": { "type": ["string", "null"], "minLength": 1 }
+          },
+          "required": ["value", "unit"],
+          "additionalProperties": false
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/stable_id" },
+          "uniqueItems": true
+        },
+        "assumption_ids": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/stable_id" },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "method",
+        "formula",
+        "inputs",
+        "result",
+        "evidence_ids",
+        "assumption_ids"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object",
+      "description": "One external source backing a claim. Never fabricated; `synthetic` must be true for any placeholder or illustrative source.",
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "claim": { "type": "string", "minLength": 1 },
+        "source_type": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Vocabulary is module-specific and documented by the module, e.g. publication, preprint, clinical_trial, registry, database, tool_output."
+        },
+        "source_id": {
+          "type": ["string", "null"],
+          "minLength": 1,
+          "description": "Durable identifier such as doi:10.x/y, pmid:12345678, NCT01234567. null when the source has none."
+        },
+        "source_url": { "type": ["string", "null"], "minLength": 1 },
+        "locator": {
+          "type": ["string", "null"],
+          "minLength": 1,
+          "description": "Where in the source: section, figure, page. null when not recorded."
+        },
+        "quote": {
+          "type": ["string", "null"],
+          "description": "Short verbatim quote, or null. A quote that could not be checked against source text must never be presented as verified."
+        },
+        "grade": { "enum": ["HIGH", "MODERATE", "LOW", "UNSUPPORTED"] },
+        "synthetic": { "type": "boolean" }
+      },
+      "required": [
+        "id",
+        "claim",
+        "source_type",
+        "source_id",
+        "source_url",
+        "locator",
+        "quote",
+        "grade",
+        "synthetic"
+      ],
+      "additionalProperties": false
+    },
+    "assumption": {
+      "type": "object",
+      "description": "An input the module chose or was given rather than observed.",
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "path": { "type": "string", "minLength": 1 },
+        "value": {
+          "type": ["number", "string", "boolean", "null", "array", "object"]
+        },
+        "unit": { "type": ["string", "null"], "minLength": 1 },
+        "basis": { "type": "string", "minLength": 1 },
+        "synthetic": { "type": "boolean" }
+      },
+      "required": ["id", "path", "value", "unit", "basis", "synthetic"],
+      "additionalProperties": false
+    },
+    "interval": {
+      "type": "object",
+      "description": "A range around a metric. `interval_type` names what the range IS; consumers must not assume a percentile.",
+      "properties": {
+        "metric_id": { "$ref": "#/$defs/stable_id" },
+        "low": { "type": ["number", "null"] },
+        "central": { "type": ["number", "null"] },
+        "high": { "type": ["number", "null"] },
+        "unit": { "type": ["string", "null"], "minLength": 1 },
+        "confidence_level": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Only for a genuine confidence interval. null for scenarios, observed ranges and heuristic spreads."
+        },
+        "interval_type": {
+          "enum": [
+            "percentile",
+            "confidence_interval",
+            "scenario",
+            "observed_range",
+            "heuristic_spread"
+          ],
+          "description": "Optional but strongly recommended; when absent, uncertainty.limitations must state what the range is."
+        }
+      },
+      "required": [
+        "metric_id",
+        "low",
+        "central",
+        "high",
+        "unit",
+        "confidence_level"
+      ],
+      "additionalProperties": false
+    },
+    "uncertainty": {
+      "type": "object",
+      "description": "Answers `what uncertainty remains`. A heuristic score is not a probability and must not be described as one.",
+      "properties": {
+        "method": { "type": "string", "minLength": 1 },
+        "intervals": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/interval" }
+        },
+        "seed": { "type": ["integer", "null"] },
+        "draws": { "type": ["integer", "null"], "minimum": 0 },
+        "limitations": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 },
+          "description": "What the interval does and does not mean. Required even when intervals is empty."
+        }
+      },
+      "required": ["method", "intervals", "seed", "draws", "limitations"],
+      "additionalProperties": false
+    },
+    "limitation": {
+      "type": "object",
+      "description": "A structured caveat. Unknown values are null plus a limitation, never 0/false/empty.",
+      "properties": {
+        "code": { "$ref": "#/$defs/machine_code" },
+        "severity": { "enum": ["INFO", "WARNING", "ERROR"] },
+        "message": { "type": "string", "minLength": 1 },
+        "field_path": { "type": ["string", "null"], "minLength": 1 }
+      },
+      "required": ["code", "severity", "message", "field_path"],
+      "additionalProperties": false
+    },
+    "counterfactual": {
+      "type": "object",
+      "description": "Answers `what would change or falsify the conclusion`.",
+      "properties": {
+        "change": { "type": "string", "minLength": 1 },
+        "result": { "type": "string", "minLength": 1 },
+        "meaning": { "type": "string", "minLength": 1 }
+      },
+      "required": ["change", "result", "meaning"],
+      "additionalProperties": false
+    },
+    "lineage": {
+      "type": "object",
+      "description": "Which inputs produced which output field.",
+      "properties": {
+        "output_path": { "type": "string", "minLength": 1 },
+        "input_paths": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "transformation": { "type": "string", "minLength": 1 }
+      },
+      "required": ["output_path", "input_paths", "transformation"],
+      "additionalProperties": false
+    },
+    "interpretability": {
+      "type": "object",
+      "description": "Required top-level block on every successful or scientifically degraded/abstaining module result. Arrays may be empty only when genuinely not applicable, and then a limitation must explain the absence.",
+      "properties": {
+        "schema_version": { "const": "1.0.0" },
+        "headline": { "$ref": "#/$defs/headline" },
+        "metrics": { "type": "array", "items": { "$ref": "#/$defs/metric" } },
+        "steps": { "type": "array", "items": { "$ref": "#/$defs/step" } },
+        "evidence": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/evidence" }
+        },
+        "assumptions": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/assumption" }
+        },
+        "uncertainty": { "$ref": "#/$defs/uncertainty" },
+        "limitations": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/limitation" }
+        },
+        "counterfactuals": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/counterfactual" }
+        },
+        "lineage": { "type": "array", "items": { "$ref": "#/$defs/lineage" } },
+        "extensions": {
+          "type": "object",
+          "description": "Module-specific structured data. The shared UI must never require it."
+        }
+      },
+      "required": [
+        "schema_version",
+        "headline",
+        "metrics",
+        "steps",
+        "evidence",
+        "assumptions",
+        "uncertainty",
+        "limitations",
+        "counterfactuals",
+        "lineage",
+        "extensions"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$ref": "#/$defs/interpretability"
+}

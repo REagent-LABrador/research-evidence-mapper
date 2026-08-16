@@ -11,7 +11,14 @@
     "figures_read": 2,
     "found": 71,
     "has_disease_node": true,
-    "interventions_without_target": ["t2", "t3", "t30", "t5", "t6", "t7"],
+    "interventions_without_target": [
+      "t2",
+      "t3",
+      "t30",
+      "t5",
+      "t6",
+      "t7"
+    ],
     "interventions_without_target_count": 6,
     "limits": {
       "max_papers": 25,
@@ -20,18 +27,27 @@
     "no_quote_discarded": 0,
     "proteins_without_accession": [],
     "proteins_without_accession_count": 0,
+    "queries": [],
+    "quotes_unverified": 9,
     "read": 7,
     "stop_reason": "no_new_results",
     "truncated": true,
     "used": 2
   },
   "delta": {
-    "findings_added": ["f1_1", "f2_1"],
+    "findings_added": [
+      "f1_1",
+      "f2_1"
+    ],
     "gaps_added": [],
     "gaps_resolved": [],
     "links_added": [],
-    "links_changed": ["L21"],
-    "papers_added": ["p20"],
+    "links_changed": [
+      "L21"
+    ],
+    "papers_added": [
+      "p20"
+    ],
     "round": 2,
     "things_added": []
   },
@@ -47,6 +63,7 @@
       "is_own_result": true,
       "paper": "p2",
       "quote": "We found that high therapeutic doses of NAC do not increase the growth of melanoma xenografts, but can cause metastatic spread and distant metastases.",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "abstract",
@@ -55,7 +72,9 @@
     },
     {
       "confidence": 0.6,
-      "flags": ["conditions_unstated"],
+      "flags": [
+        "conditions_unstated"
+      ],
       "from": "t1",
       "hedged": true,
       "how": "increases",
@@ -63,6 +82,7 @@
       "is_own_result": true,
       "paper": "p8",
       "quote": "Dietary supplementation with anti-oxidants actually increased incidence and death from lung and prostate cancer. Our results suggest that anti-oxidants promote disease progression, at least in melanoma, by promoting metastasis.",
+      "quote_verified": false,
       "round": 1,
       "says": "yes",
       "section": "discussion",
@@ -79,6 +99,7 @@
       "is_own_result": true,
       "paper": "p8",
       "quote": "In no case did NAC treatment significantly affect the growth of established subcutaneous tumours ( Figure 2a ) but it significantly increased the frequency of melanoma cells in the blood of mice transplanted with M405 and UT10 ( Figure 2b ) and significantly increased metastatic disease burden in mice with all three melanomas ( Figure 2c ).",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "results",
@@ -95,6 +116,7 @@
       "is_own_result": true,
       "paper": "p2",
       "quote": "We found that high therapeutic doses of NAC do not increase the growth of melanoma xenografts, but can cause metastatic spread and distant metastases.",
+      "quote_verified": true,
       "round": 1,
       "says": "no_effect",
       "section": "abstract",
@@ -111,6 +133,7 @@
       "is_own_result": true,
       "paper": "p8",
       "quote": "In no case did NAC treatment significantly affect the growth of established subcutaneous tumours ( Figure 2a ) but it significantly increased the frequency of melanoma cells in the blood of mice transplanted with M405 and UT10 ( Figure 2b ) and significantly increased metastatic disease burden in mice with all three melanomas ( Figure 2c ).",
+      "quote_verified": true,
       "round": 1,
       "says": "no_effect",
       "section": "results",
@@ -127,6 +150,7 @@
       "is_own_result": true,
       "paper": "p4",
       "quote": "N-acetylcysteine (NAC) is a widely used antioxidant. It has also attracted significant research interest with regard to its role in cancer progression, although the mechanisms involved remain controversial and poorly understood. Here, using murine models of breast cancer metastasis, we found that systemic NAC administration significantly enhanced pulmonary metastasis without altering primary tumor growth in immunocompetent mice, whereas this metastasis-promoting property of NAC was abrogated in T cell-deficient mice.",
+      "quote_verified": null,
       "round": 1,
       "says": "yes",
       "section": "abstract",
@@ -135,7 +159,9 @@
     },
     {
       "confidence": 0.75,
-      "flags": ["direction_from_context"],
+      "flags": [
+        "direction_from_context"
+      ],
       "from": "t1",
       "hedged": false,
       "how": "increases",
@@ -143,6 +169,7 @@
       "is_own_result": true,
       "paper": "p4",
       "quote": "N-acetylcysteine (NAC) is a widely used antioxidant. It has also attracted significant research interest with regard to its role in cancer progression, although the mechanisms involved remain controversial and poorly understood. Here, using murine models of breast cancer metastasis, we found that systemic NAC administration significantly enhanced pulmonary metastasis without altering primary tumor growth in immunocompetent mice, whereas this metastasis-promoting property of NAC was abrogated in T cell-deficient mice.",
+      "quote_verified": null,
       "round": 1,
       "says": "no_effect",
       "section": "abstract",
@@ -159,6 +186,7 @@
       "is_own_result": true,
       "paper": "p4",
       "quote": "N-acetylcysteine (NAC) is a widely used antioxidant. It has also attracted significant research interest with regard to its role in cancer progression, although the mechanisms involved remain controversial and poorly understood. Here, using murine models of breast cancer metastasis, we found that systemic NAC administration significantly enhanced pulmonary metastasis without altering primary tumor growth in immunocompetent mice, whereas this metastasis-promoting property of NAC was abrogated in T cell-deficient mice.",
+      "quote_verified": null,
       "round": 1,
       "says": "no_effect",
       "section": "abstract",
@@ -175,6 +203,7 @@
       "is_own_result": true,
       "paper": "p1",
       "quote": "Here, we show that supplementation with the antioxidants N-acetylcysteine (NAC) and vitamin E promotes intestinal tumor progression in the ApcMin mouse model for familial adenomatous polyposis, a hereditary form of colorectal cancer, driven by Wnt signaling.",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "abstract",
@@ -191,6 +220,7 @@
       "is_own_result": true,
       "paper": "p5",
       "quote": "RES and NAC enhance HCC formation in both DEN/HFD and AKT/Ras mice.",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "abstract",
@@ -207,6 +237,7 @@
       "is_own_result": true,
       "paper": "p18",
       "quote": "Rather, NAC treatment increased epithelial cell proliferation and promoted the expression of a pro-proliferative gene signature.",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "abstract",
@@ -223,6 +254,7 @@
       "is_own_result": true,
       "paper": "p4",
       "quote": "Mechanistically, we demonstrated that NAC endows neutrophils with an immunosuppressive phenotype, which is characterized by the upregulation of immunosuppressive genes, and these NAC-educated neutrophils potently suppress the activation and effector functions of T cells.",
+      "quote_verified": null,
       "round": 1,
       "says": "yes",
       "section": "abstract",
@@ -239,6 +271,7 @@
       "is_own_result": true,
       "paper": "p5",
       "quote": "We therefore performed Western blot to detect GST-pi, and found that GST-pi expression was increased in the liver tissues of both the RES- or NAC-treated mice, whereas nucleoprotein γH2AX was decreased (Figure 5F).",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "results",
@@ -255,6 +288,7 @@
       "is_own_result": true,
       "paper": "p2",
       "quote": "Trolox, an antioxidant vitamin E derivative, administered in vivo, decreased metastatic growth.",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "abstract",
@@ -271,6 +305,7 @@
       "is_own_result": true,
       "paper": "p1",
       "quote": "Here, we show that supplementation with the antioxidants N-acetylcysteine (NAC) and vitamin E promotes intestinal tumor progression in the ApcMin mouse model for familial adenomatous polyposis, a hereditary form of colorectal cancer, driven by Wnt signaling.",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "abstract",
@@ -287,6 +322,7 @@
       "is_own_result": true,
       "paper": "p17",
       "quote": "vitamin E drastically decreased the incidence of lung tumor and tumor multiplicity which were 17.0% and 0.32 ± 0.16, respectively (p < 0.05)",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "results",
@@ -303,6 +339,7 @@
       "is_own_result": true,
       "paper": "p11",
       "quote": "Supplemental alpha-tocopherol, beta-carotene, or both, relative to placebo, did not reduce the risk of liver cancer or CLD, either overall, during the intervention or during the post-intervention period.",
+      "quote_verified": null,
       "round": 1,
       "says": "no_effect",
       "section": "results",
@@ -319,6 +356,7 @@
       "is_own_result": true,
       "paper": "p12",
       "quote": "Vitamin E in a dose above the RDA (> 15 mg) significantly increased mortality (RR 1.03, 95% CI 1.00 to 1.05, I 2 = 0%).",
+      "quote_verified": null,
       "round": 1,
       "says": "yes",
       "section": "abstract",
@@ -335,6 +373,7 @@
       "is_own_result": false,
       "paper": "p18",
       "quote": "Results from the large-scale Selenium and Vitamin E Cancer Prevention Trial (SELECT) showed that antioxidants failed to prevent, and in some cases promoted, prostate cancer formation in men without a history of the disease.",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "discussion",
@@ -343,7 +382,9 @@
     },
     {
       "confidence": 0.7,
-      "flags": ["quote_spans_citation"],
+      "flags": [
+        "quote_spans_citation"
+      ],
       "from": "t3",
       "hedged": false,
       "how": "increases",
@@ -351,6 +392,7 @@
       "is_own_result": false,
       "paper": "p20",
       "quote": "In B16, melanoma-bearing mice spontaneous lung metastasis is inhibited by sodium ascorbate supplementation in drinking water in mice fed a restricted diet (low in tyrosine and phenylalanine) ( 10 ).",
+      "quote_verified": true,
       "round": 2,
       "says": "no",
       "section": "discussion",
@@ -367,6 +409,7 @@
       "is_own_result": true,
       "paper": "p3",
       "quote": "Four diet-relevant compounds from this list—VitC, β-carotene, retinyl palmitate, and canthaxanthin—were selected and found to accelerate metastasis in mice with BRAF V600E -driven malignant melanoma.",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "abstract",
@@ -383,6 +426,7 @@
       "is_own_result": true,
       "paper": "p3",
       "quote": "The increase in metastases was 1.6–2-fold and was similar with both doses for all four compounds.",
+      "quote_verified": true,
       "round": 2,
       "says": "yes",
       "section": "results",
@@ -399,6 +443,7 @@
       "is_own_result": true,
       "paper": "p6",
       "quote": "Ascorbate-supplemented gulo KO mice injected with B16FO melanoma cells demonstrated significant reduction (by 71%, p=0.005) in tumor metastasis compared to gulo KO mice on the control diet.",
+      "quote_verified": true,
       "round": 1,
       "says": "no",
       "section": "abstract",
@@ -415,6 +460,7 @@
       "is_own_result": true,
       "paper": "p7",
       "quote": "restoration of wild-type ascorbate levels led to a reduction in growth of B16-F10 (log phase P < 0.001) and LL/2 tumors (lag growth P < 0.001, log phase P < 0.05).",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "abstract",
@@ -431,6 +477,7 @@
       "is_own_result": true,
       "paper": "p6",
       "quote": "The mean tumor weight in ascorbate supplemented mice injected with 4T1 cells was reduced by 28% compared to tumor weight in scorbutic mice.",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "abstract",
@@ -439,7 +486,9 @@
     },
     {
       "confidence": 0.6,
-      "flags": ["effect_size_dropped"],
+      "flags": [
+        "effect_size_dropped"
+      ],
       "from": "t3",
       "hedged": false,
       "how": "decreases",
@@ -447,6 +496,7 @@
       "is_own_result": true,
       "paper": "p13",
       "quote": "The combination of pharmacological ascorbate with genotoxic agents, including oxaliplatin and irinotecan, synergistically inhibited gastric tumor growth in mouse models.",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "results",
@@ -463,6 +513,7 @@
       "is_own_result": true,
       "paper": "p19",
       "quote": "Taken together, these in vitro and in vivo data indicated that, pharmacological ascorbate inhibited pancreatic cancer growth and metastasis through a pro-oxidative mechanism, subsequently induced NAD+/ATP depletion selectively in cancer cells, and resulted in inhibition of cell proliferation and induction of cell death.",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "results",
@@ -479,6 +530,7 @@
       "is_own_result": true,
       "paper": "p15",
       "quote": "Collectively, these single‐cell resolution results indicate that APM suppresses tumor growth by inducing cell cycle arrest in malignant cells and interfering with prometastatic signaling pathways.",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "results",
@@ -495,6 +547,7 @@
       "is_own_result": true,
       "paper": "p16",
       "quote": "Additionally, AA prevented liver cancer metastasis in a xenotransplantation model without suppressing stemness gene expression in liver CSCs.",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "abstract",
@@ -511,6 +564,7 @@
       "is_own_result": true,
       "paper": "p14",
       "quote": "Here, we showed that vitamin C inhibited spheroid formation and metastasis in ID8 ovarian cancer-bearing mice.",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "abstract",
@@ -527,6 +581,7 @@
       "is_own_result": true,
       "paper": "p7",
       "quote": "restoration of wild-type ascorbate levels led to a reduction in growth of B16-F10 (log phase P < 0.001) and LL/2 tumors (lag growth P < 0.001, log phase P < 0.05).",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "abstract",
@@ -543,6 +598,7 @@
       "is_own_result": true,
       "paper": "p9",
       "quote": "Here, we administered the mitochondria-targeted antioxidants MitoQ and MitoTEMPO to mice with BRAF-induced malignant melanoma and KRAS-induced lung cancer, and found that these compounds had no impact on the number of primary tumors and metastases; and did not influence mitochondrial and nuclear DNA damage levels.",
+      "quote_verified": true,
       "round": 1,
       "says": "no_effect",
       "section": "abstract",
@@ -559,6 +615,7 @@
       "is_own_result": true,
       "paper": "p9",
       "quote": "Here, we administered the mitochondria-targeted antioxidants MitoQ and MitoTEMPO to mice with BRAF-induced malignant melanoma and KRAS-induced lung cancer, and found that these compounds had no impact on the number of primary tumors and metastases; and did not influence mitochondrial and nuclear DNA damage levels.",
+      "quote_verified": true,
       "round": 1,
       "says": "no_effect",
       "section": "abstract",
@@ -575,6 +632,7 @@
       "is_own_result": true,
       "paper": "p9",
       "quote": "Here, we administered the mitochondria-targeted antioxidants MitoQ and MitoTEMPO to mice with BRAF-induced malignant melanoma and KRAS-induced lung cancer, and found that these compounds had no impact on the number of primary tumors and metastases; and did not influence mitochondrial and nuclear DNA damage levels.",
+      "quote_verified": true,
       "round": 1,
       "says": "no_effect",
       "section": "abstract",
@@ -591,6 +649,7 @@
       "is_own_result": true,
       "paper": "p5",
       "quote": "RES and NAC enhance HCC formation in both DEN/HFD and AKT/Ras mice.",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "abstract",
@@ -607,6 +666,7 @@
       "is_own_result": true,
       "paper": "p5",
       "quote": "We therefore performed Western blot to detect GST-pi, and found that GST-pi expression was increased in the liver tissues of both the RES- or NAC-treated mice, whereas nucleoprotein γH2AX was decreased (Figure 5F).",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "results",
@@ -623,6 +683,7 @@
       "is_own_result": true,
       "paper": "p3",
       "quote": "Four diet-relevant compounds from this list—VitC, β-carotene, retinyl palmitate, and canthaxanthin—were selected and found to accelerate metastasis in mice with BRAF V600E -driven malignant melanoma.",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "abstract",
@@ -639,6 +700,7 @@
       "is_own_result": true,
       "paper": "p10",
       "quote": "The findings indicate that beta-carotene supplementation was associated with an increased risk of lung cancer (RR = 1.16, 95% CI = 1.06–1.26).",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "abstract",
@@ -655,6 +717,7 @@
       "is_own_result": true,
       "paper": "p11",
       "quote": "Supplemental alpha-tocopherol, beta-carotene, or both, relative to placebo, did not reduce the risk of liver cancer or CLD, either overall, during the intervention or during the post-intervention period.",
+      "quote_verified": null,
       "round": 1,
       "says": "no_effect",
       "section": "results",
@@ -671,6 +734,7 @@
       "is_own_result": true,
       "paper": "p12",
       "quote": "Beta-carotene in a dose above 9.6 mg significantly increased mortality (relative risk (RR) 1.06, 95% confidence interval (CI) 1.02 to 1.09, I 2 = 13%).",
+      "quote_verified": null,
       "round": 1,
       "says": "yes",
       "section": "abstract",
@@ -687,6 +751,7 @@
       "is_own_result": true,
       "paper": "p3",
       "quote": "Four diet-relevant compounds from this list—VitC, β-carotene, retinyl palmitate, and canthaxanthin—were selected and found to accelerate metastasis in mice with BRAF V600E -driven malignant melanoma.",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "abstract",
@@ -703,6 +768,7 @@
       "is_own_result": true,
       "paper": "p3",
       "quote": "Four diet-relevant compounds from this list—VitC, β-carotene, retinyl palmitate, and canthaxanthin—were selected and found to accelerate metastasis in mice with BRAF V600E -driven malignant melanoma.",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "abstract",
@@ -719,6 +785,7 @@
       "is_own_result": true,
       "paper": "p3",
       "quote": "Genomics analyses revealed that the transcription factor BACH1 is activated following antioxidant administration and knockout of Bach1 in mouse melanoma cells reduced lymph node and liver metastasis in xenograft mouse models.",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "abstract",
@@ -735,6 +802,7 @@
       "is_own_result": true,
       "paper": "p5",
       "quote": "Collectively, these results indicate that GST-pi mediates the promoting effect of antioxidants in HCC initiation and progression.",
+      "quote_verified": true,
       "round": 1,
       "says": "yes",
       "section": "results",
@@ -746,406 +814,2858 @@
     {
       "confidence": 0.4642,
       "id": "g1",
-      "implied_by": ["L14", "L33"],
-      "missing": ["t2", "t5"],
+      "implied_by": [
+        "L14",
+        "L33"
+      ],
+      "missing": [
+        "t2",
+        "t5"
+      ],
       "note": "both connect to t27; no direct link reported (implied via 3 intermediates)",
       "searched_in_round": null
     },
     {
       "confidence": 0.3203,
       "id": "g2",
-      "implied_by": ["L13", "L6"],
-      "missing": ["t1", "t2"],
+      "implied_by": [
+        "L13",
+        "L6"
+      ],
+      "missing": [
+        "t1",
+        "t2"
+      ],
       "note": "both connect to t15; no direct link reported (implied via 2 intermediates)",
       "searched_in_round": null
     },
     {
       "confidence": 0.3203,
       "id": "g3",
-      "implied_by": ["L28", "L7"],
-      "missing": ["t1", "t4"],
+      "implied_by": [
+        "L28",
+        "L7"
+      ],
+      "missing": [
+        "t1",
+        "t4"
+      ],
       "note": "both connect to t16; no direct link reported (implied via 2 intermediates)",
       "searched_in_round": null
     },
     {
       "confidence": 0.3024,
       "id": "g4",
-      "implied_by": ["L16", "L3"],
-      "missing": ["t1", "t3"],
+      "implied_by": [
+        "L16",
+        "L3"
+      ],
+      "missing": [
+        "t1",
+        "t3"
+      ],
       "note": "both connect to t12; no direct link reported (implied via 3 intermediates)",
       "searched_in_round": null
     },
     {
       "confidence": 0.2449,
       "id": "g5",
-      "implied_by": ["L32", "L33"],
-      "missing": ["t25", "t27"],
+      "implied_by": [
+        "L32",
+        "L33"
+      ],
+      "missing": [
+        "t25",
+        "t27"
+      ],
       "note": "both connect to t5; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.2012,
       "id": "g6",
-      "implied_by": ["L31", "L33"],
-      "missing": ["t11", "t27"],
+      "implied_by": [
+        "L31",
+        "L33"
+      ],
+      "missing": [
+        "t11",
+        "t27"
+      ],
       "note": "both connect to t5; no direct link reported (implied via 2 intermediates)",
       "searched_in_round": null
     },
     {
       "confidence": 0.1796,
       "id": "g7",
-      "implied_by": ["L31", "L32"],
-      "missing": ["t11", "t25"],
+      "implied_by": [
+        "L31",
+        "L32"
+      ],
+      "missing": [
+        "t11",
+        "t25"
+      ],
       "note": "both connect to t5; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.1646,
       "id": "g8",
-      "implied_by": ["L30", "L31"],
-      "missing": ["t11", "t26"],
+      "implied_by": [
+        "L30",
+        "L31"
+      ],
+      "missing": [
+        "t11",
+        "t26"
+      ],
       "note": "both connect to t5; no direct link reported (implied via 2 intermediates)",
       "searched_in_round": null
     },
     {
       "confidence": 0.1646,
       "id": "g9",
-      "implied_by": ["L30", "L33"],
-      "missing": ["t26", "t27"],
+      "implied_by": [
+        "L30",
+        "L33"
+      ],
+      "missing": [
+        "t26",
+        "t27"
+      ],
       "note": "both connect to t5; no direct link reported (implied via 2 intermediates)",
       "searched_in_round": null
     },
     {
       "confidence": 0.1552,
       "id": "g10",
-      "implied_by": ["L26", "L3"],
-      "missing": ["t1", "t30"],
+      "implied_by": [
+        "L26",
+        "L3"
+      ],
+      "missing": [
+        "t1",
+        "t30"
+      ],
       "note": "both connect to t12; no direct link reported (implied via 2 intermediates)",
       "searched_in_round": null
     },
     {
       "confidence": 0.1552,
       "id": "g11",
-      "implied_by": ["L16", "L26"],
-      "missing": ["t3", "t30"],
+      "implied_by": [
+        "L16",
+        "L26"
+      ],
+      "missing": [
+        "t3",
+        "t30"
+      ],
       "note": "both connect to t12; no direct link reported (implied via 2 intermediates)",
       "searched_in_round": null
     },
     {
       "confidence": 0.147,
       "id": "g12",
-      "implied_by": ["L30", "L32"],
-      "missing": ["t25", "t26"],
+      "implied_by": [
+        "L30",
+        "L32"
+      ],
+      "missing": [
+        "t25",
+        "t26"
+      ],
       "note": "both connect to t5; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.1272,
       "id": "g13",
-      "implied_by": ["L10", "L13"],
-      "missing": ["t11", "t15"],
+      "implied_by": [
+        "L10",
+        "L13"
+      ],
+      "missing": [
+        "t11",
+        "t15"
+      ],
       "note": "both connect to t2; no direct link reported (implied via 2 intermediates)",
       "searched_in_round": null
     },
     {
       "confidence": 0.1136,
       "id": "g14",
-      "implied_by": ["L10", "L11"],
-      "missing": ["t11", "t23"],
+      "implied_by": [
+        "L10",
+        "L11"
+      ],
+      "missing": [
+        "t11",
+        "t23"
+      ],
       "note": "both connect to t2; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.1136,
       "id": "g15",
-      "implied_by": ["L11", "L13"],
-      "missing": ["t15", "t23"],
+      "implied_by": [
+        "L11",
+        "L13"
+      ],
+      "missing": [
+        "t15",
+        "t23"
+      ],
       "note": "both connect to t2; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.1136,
       "id": "g16",
-      "implied_by": ["L13", "L14"],
-      "missing": ["t15", "t27"],
+      "implied_by": [
+        "L13",
+        "L14"
+      ],
+      "missing": [
+        "t15",
+        "t27"
+      ],
       "note": "both connect to t2; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.1136,
       "id": "g17",
-      "implied_by": ["L11", "L14"],
-      "missing": ["t23", "t27"],
+      "implied_by": [
+        "L11",
+        "L14"
+      ],
+      "missing": [
+        "t23",
+        "t27"
+      ],
       "note": "both connect to t2; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.1072,
       "id": "g18",
-      "implied_by": ["L25", "L26"],
-      "missing": ["t11", "t12"],
+      "implied_by": [
+        "L25",
+        "L26"
+      ],
+      "missing": [
+        "t11",
+        "t12"
+      ],
       "note": "both connect to t30; no direct link reported (implied via 3 intermediates)",
       "searched_in_round": null
     },
     {
       "confidence": 0.0933,
       "id": "g19",
-      "implied_by": ["L19", "L21"],
-      "missing": ["t11", "t19"],
+      "implied_by": [
+        "L19",
+        "L21"
+      ],
+      "missing": [
+        "t11",
+        "t19"
+      ],
       "note": "both connect to t3; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.093,
       "id": "g20",
-      "implied_by": ["L12", "L13"],
-      "missing": ["t15", "t26"],
+      "implied_by": [
+        "L12",
+        "L13"
+      ],
+      "missing": [
+        "t15",
+        "t26"
+      ],
       "note": "both connect to t2; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.093,
       "id": "g21",
-      "implied_by": ["L11", "L12"],
-      "missing": ["t23", "t26"],
+      "implied_by": [
+        "L11",
+        "L12"
+      ],
+      "missing": [
+        "t23",
+        "t26"
+      ],
       "note": "both connect to t2; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0901,
       "id": "g22",
-      "implied_by": ["L25", "L27"],
-      "missing": ["t11", "t31"],
+      "implied_by": [
+        "L25",
+        "L27"
+      ],
+      "missing": [
+        "t11",
+        "t31"
+      ],
       "note": "both connect to t30; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0901,
       "id": "g23",
-      "implied_by": ["L26", "L27"],
-      "missing": ["t12", "t31"],
+      "implied_by": [
+        "L26",
+        "L27"
+      ],
+      "missing": [
+        "t12",
+        "t31"
+      ],
       "note": "both connect to t30; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0832,
       "id": "g24",
-      "implied_by": ["L10", "L21"],
-      "missing": ["t2", "t3"],
+      "implied_by": [
+        "L10",
+        "L21"
+      ],
+      "missing": [
+        "t2",
+        "t3"
+      ],
       "note": "both connect to t11; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0832,
       "id": "g25",
-      "implied_by": ["L10", "L34"],
-      "missing": ["t2", "t6"],
+      "implied_by": [
+        "L10",
+        "L34"
+      ],
+      "missing": [
+        "t2",
+        "t6"
+      ],
       "note": "both connect to t11; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0832,
       "id": "g26",
-      "implied_by": ["L10", "L35"],
-      "missing": ["t2", "t7"],
+      "implied_by": [
+        "L10",
+        "L35"
+      ],
+      "missing": [
+        "t2",
+        "t7"
+      ],
       "note": "both connect to t11; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0832,
       "id": "g27",
-      "implied_by": ["L10", "L36"],
-      "missing": ["t2", "t8"],
+      "implied_by": [
+        "L10",
+        "L36"
+      ],
+      "missing": [
+        "t2",
+        "t8"
+      ],
       "note": "both connect to t11; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0821,
       "id": "g28",
-      "implied_by": ["L16", "L17"],
-      "missing": ["t12", "t14"],
+      "implied_by": [
+        "L16",
+        "L17"
+      ],
+      "missing": [
+        "t12",
+        "t14"
+      ],
       "note": "both connect to t3; no direct link reported (implied via 2 intermediates)",
       "searched_in_round": null
     },
     {
       "confidence": 0.0744,
       "id": "g29",
-      "implied_by": ["L3", "L4"],
-      "missing": ["t12", "t13"],
+      "implied_by": [
+        "L3",
+        "L4"
+      ],
+      "missing": [
+        "t12",
+        "t13"
+      ],
       "note": "both connect to t1; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0744,
       "id": "g30",
-      "implied_by": ["L3", "L6"],
-      "missing": ["t12", "t15"],
+      "implied_by": [
+        "L3",
+        "L6"
+      ],
+      "missing": [
+        "t12",
+        "t15"
+      ],
       "note": "both connect to t1; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0744,
       "id": "g31",
-      "implied_by": ["L3", "L7"],
-      "missing": ["t12", "t16"],
+      "implied_by": [
+        "L3",
+        "L7"
+      ],
+      "missing": [
+        "t12",
+        "t16"
+      ],
       "note": "both connect to t1; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0744,
       "id": "g32",
-      "implied_by": ["L3", "L8"],
-      "missing": ["t12", "t17"],
+      "implied_by": [
+        "L3",
+        "L8"
+      ],
+      "missing": [
+        "t12",
+        "t17"
+      ],
       "note": "both connect to t1; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0744,
       "id": "g33",
-      "implied_by": ["L1", "L3"],
-      "missing": ["t12", "t24"],
+      "implied_by": [
+        "L1",
+        "L3"
+      ],
+      "missing": [
+        "t12",
+        "t24"
+      ],
       "note": "both connect to t1; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0744,
       "id": "g34",
-      "implied_by": ["L3", "L9"],
-      "missing": ["t12", "t9"],
+      "implied_by": [
+        "L3",
+        "L9"
+      ],
+      "missing": [
+        "t12",
+        "t9"
+      ],
       "note": "both connect to t1; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0744,
       "id": "g35",
-      "implied_by": ["L4", "L6"],
-      "missing": ["t13", "t15"],
+      "implied_by": [
+        "L4",
+        "L6"
+      ],
+      "missing": [
+        "t13",
+        "t15"
+      ],
       "note": "both connect to t1; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0744,
       "id": "g36",
-      "implied_by": ["L4", "L7"],
-      "missing": ["t13", "t16"],
+      "implied_by": [
+        "L4",
+        "L7"
+      ],
+      "missing": [
+        "t13",
+        "t16"
+      ],
       "note": "both connect to t1; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0744,
       "id": "g37",
-      "implied_by": ["L4", "L8"],
-      "missing": ["t13", "t17"],
+      "implied_by": [
+        "L4",
+        "L8"
+      ],
+      "missing": [
+        "t13",
+        "t17"
+      ],
       "note": "both connect to t1; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0744,
       "id": "g38",
-      "implied_by": ["L4", "L9"],
-      "missing": ["t13", "t9"],
+      "implied_by": [
+        "L4",
+        "L9"
+      ],
+      "missing": [
+        "t13",
+        "t9"
+      ],
       "note": "both connect to t1; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0744,
       "id": "g39",
-      "implied_by": ["L6", "L7"],
-      "missing": ["t15", "t16"],
+      "implied_by": [
+        "L6",
+        "L7"
+      ],
+      "missing": [
+        "t15",
+        "t16"
+      ],
       "note": "both connect to t1; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0744,
       "id": "g40",
-      "implied_by": ["L6", "L8"],
-      "missing": ["t15", "t17"],
+      "implied_by": [
+        "L6",
+        "L8"
+      ],
+      "missing": [
+        "t15",
+        "t17"
+      ],
       "note": "both connect to t1; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0744,
       "id": "g41",
-      "implied_by": ["L1", "L6"],
-      "missing": ["t15", "t24"],
+      "implied_by": [
+        "L1",
+        "L6"
+      ],
+      "missing": [
+        "t15",
+        "t24"
+      ],
       "note": "both connect to t1; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0744,
       "id": "g42",
-      "implied_by": ["L6", "L9"],
-      "missing": ["t15", "t9"],
+      "implied_by": [
+        "L6",
+        "L9"
+      ],
+      "missing": [
+        "t15",
+        "t9"
+      ],
       "note": "both connect to t1; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0744,
       "id": "g43",
-      "implied_by": ["L7", "L8"],
-      "missing": ["t16", "t17"],
+      "implied_by": [
+        "L7",
+        "L8"
+      ],
+      "missing": [
+        "t16",
+        "t17"
+      ],
       "note": "both connect to t1; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0744,
       "id": "g44",
-      "implied_by": ["L1", "L7"],
-      "missing": ["t16", "t24"],
+      "implied_by": [
+        "L1",
+        "L7"
+      ],
+      "missing": [
+        "t16",
+        "t24"
+      ],
       "note": "both connect to t1; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0744,
       "id": "g45",
-      "implied_by": ["L1", "L8"],
-      "missing": ["t17", "t24"],
+      "implied_by": [
+        "L1",
+        "L8"
+      ],
+      "missing": [
+        "t17",
+        "t24"
+      ],
       "note": "both connect to t1; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0744,
       "id": "g46",
-      "implied_by": ["L8", "L9"],
-      "missing": ["t17", "t9"],
+      "implied_by": [
+        "L8",
+        "L9"
+      ],
+      "missing": [
+        "t17",
+        "t9"
+      ],
       "note": "both connect to t1; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0744,
       "id": "g47",
-      "implied_by": ["L1", "L9"],
-      "missing": ["t24", "t9"],
+      "implied_by": [
+        "L1",
+        "L9"
+      ],
+      "missing": [
+        "t24",
+        "t9"
+      ],
       "note": "both connect to t1; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0733,
       "id": "g48",
-      "implied_by": ["L18", "L21"],
-      "missing": ["t11", "t18"],
+      "implied_by": [
+        "L18",
+        "L21"
+      ],
+      "missing": [
+        "t11",
+        "t18"
+      ],
       "note": "both connect to t3; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0733,
       "id": "g49",
-      "implied_by": ["L21", "L22"],
-      "missing": ["t11", "t20"],
+      "implied_by": [
+        "L21",
+        "L22"
+      ],
+      "missing": [
+        "t11",
+        "t20"
+      ],
       "note": "both connect to t3; no direct link reported",
       "searched_in_round": null
     },
     {
       "confidence": 0.0733,
       "id": "g50",
-      "implied_by": ["L21", "L23"],
-      "missing": ["t11", "t21"],
+      "implied_by": [
+        "L21",
+        "L23"
+      ],
+      "missing": [
+        "t11",
+        "t21"
+      ],
       "note": "both connect to t3; no direct link reported",
       "searched_in_round": null
     }
   ],
   "generated_at": "2026-08-16T05:30:00Z",
   "graph_id": "g_e087",
+  "interpretability": {
+    "assumptions": [
+      {
+        "basis": "Depth tier requested by the caller; it sets the paper budget for the round. null means the caller did not state one.",
+        "id": "assumption.depth",
+        "path": "input.depth",
+        "synthetic": false,
+        "unit": "tier",
+        "value": "standard"
+      },
+      {
+        "basis": "Hard ceiling on papers read this round. Every coverage count is bounded by it, so an absent relationship may be a budget artefact.",
+        "id": "assumption.limits.max_papers",
+        "path": "input.coverage.limits.max_papers",
+        "synthetic": false,
+        "unit": "papers",
+        "value": 25
+      },
+      {
+        "basis": "Hard ceiling on distinct corpus queries issued this round.",
+        "id": "assumption.limits.max_queries",
+        "path": "input.coverage.limits.max_queries",
+        "synthetic": false,
+        "unit": "queries",
+        "value": 4
+      },
+      {
+        "basis": "Publication window the search was restricted to. null means no window was requested, NOT that the corpus is complete.",
+        "id": "assumption.years",
+        "path": "input.years",
+        "synthetic": false,
+        "unit": "year range",
+        "value": null
+      },
+      {
+        "basis": "Fixed weights in score_link. Chosen, not fitted: no labelled corpus exists to fit them against.",
+        "id": "assumption.confidence_weights",
+        "path": "code.score_link",
+        "synthetic": false,
+        "unit": "weight",
+        "value": {
+          "agreement": 0.4,
+          "evidence_quality": 0.4,
+          "independence": 0.2
+        }
+      },
+      {
+        "basis": "Study-design quality prior. An out-of-vocabulary study_type scores as `unknown` (0.4) rather than silently matching something close.",
+        "id": "assumption.study_quality_table",
+        "path": "code._STUDY_QUALITY",
+        "synthetic": false,
+        "unit": "score",
+        "value": {
+          "animal": 0.6,
+          "clinical_trial": 0.9,
+          "computational": 0.4,
+          "human_cohort": 0.8,
+          "meta_analysis": 1.0,
+          "review": 0.3,
+          "test_tube": 0.5,
+          "unknown": 0.4
+        }
+      },
+      {
+        "basis": "Multiplier applied to a preprint's design score, for absence of peer review.",
+        "id": "assumption.preprint_penalty",
+        "path": "code.evidence_quality",
+        "synthetic": false,
+        "unit": "factor",
+        "value": 0.8
+      },
+      {
+        "basis": "Only a paper's own results count toward a link's STATE, its agreement term and its independence term -- a review restating forty studies is one paper, and is not independent evidence for any of them. Note the exception: `evidence_quality` averages over every finding on the link, cited background included.",
+        "id": "assumption.own_result_only",
+        "path": "code._own",
+        "synthetic": false,
+        "unit": "flag",
+        "value": true
+      },
+      {
+        "basis": "Constants in the open-triangle gap ranking, including the 0.6 ceiling that keeps a gap a proposal rather than a finding.",
+        "id": "assumption.gap_ranking",
+        "path": "code.find_gaps",
+        "synthetic": false,
+        "unit": "constants",
+        "value": {
+          "cap": 50,
+          "confidence_ceiling": 0.6,
+          "degree_cap": 24,
+          "route_bonus_coefficient": 0.12,
+          "shared_paper_penalty": 0.65
+        }
+      }
+    ],
+    "counterfactuals": [
+      {
+        "change": "One further animal study by a different group reports the opposite direction for L2 (N-acetylcysteine (NAC) --increases--> melanoma metastasis).",
+        "meaning": "The strongest relationship in the graph is not robust to a single contradicting primary result; it is a claim about the literature, not about the biology.",
+        "result": "state agreed -> disagreed, heuristic confidence 0.84 -> 0.74"
+      },
+      {
+        "change": "One independent replication of L14 (Vitamin E --increases--> all-cause mortality (human antioxidant RCTs)) by a different first author.",
+        "meaning": "Shows how much of this relationship's score is the independence term rather than the evidence itself.",
+        "result": "state single_source -> agreed, heuristic confidence 0.6 -> 1.0"
+      },
+      {
+        "change": "The literature search is re-run without the corpus limits in `coverage.limits`.",
+        "meaning": "Absence of a relationship in this graph is evidence about what was read, not about what exists. Only `stop_reason: complete` means the literature was exhausted rather than the budget.",
+        "result": "unknown -- 7 of 71 papers found were read this round"
+      }
+    ],
+    "evidence": [
+      {
+        "claim": "N-acetylcysteine (NAC) increases intestinal tumor progression (apcmin mice)",
+        "grade": "MODERATE",
+        "id": "evidence.f1",
+        "locator": "abstract",
+        "quote": "Here, we show that supplementation with the antioxidants N-acetylcysteine (NAC) and vitamin E promotes intestinal tumor progression in the ApcMin mouse model for familial adenomatous polyposis, a hereditary form of colorectal cancer, driven by Wnt signaling.",
+        "source_id": "doi:10.3390/antiox10020241",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3390/antiox10020241",
+        "synthetic": false
+      },
+      {
+        "claim": "BACH1 activates melanoma metastasis (xenograft mouse, bach1 knockout)",
+        "grade": "MODERATE",
+        "id": "evidence.f10",
+        "locator": "abstract",
+        "quote": "Genomics analyses revealed that the transcription factor BACH1 is activated following antioxidant administration and knockout of Bach1 in mouse melanoma cells reduced lymph node and liver metastasis in xenograft mouse models.",
+        "source_id": "doi:10.1016/j.redox.2023.102619",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1016/j.redox.2023.102619",
+        "synthetic": false
+      },
+      {
+        "claim": "N-acetylcysteine (NAC) increases breast cancer metastasis (immunocompetent mice)",
+        "grade": "LOW",
+        "id": "evidence.f11",
+        "locator": "abstract",
+        "quote": "N-acetylcysteine (NAC) is a widely used antioxidant. It has also attracted significant research interest with regard to its role in cancer progression, although the mechanisms involved remain controversial and poorly understood. Here, using murine models of breast cancer metastasis, we found that systemic NAC administration significantly enhanced pulmonary metastasis without altering primary tumor growth in immunocompetent mice, whereas this metastasis-promoting property of NAC was abrogated in T cell-deficient mice.",
+        "source_id": "doi:10.3390/ijms27010526",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3390/ijms27010526",
+        "synthetic": false
+      },
+      {
+        "claim": "N-acetylcysteine (NAC) has no effect on breast cancer primary tumor growth (immunocompetent mice)",
+        "grade": "LOW",
+        "id": "evidence.f12",
+        "locator": "abstract",
+        "quote": "N-acetylcysteine (NAC) is a widely used antioxidant. It has also attracted significant research interest with regard to its role in cancer progression, although the mechanisms involved remain controversial and poorly understood. Here, using murine models of breast cancer metastasis, we found that systemic NAC administration significantly enhanced pulmonary metastasis without altering primary tumor growth in immunocompetent mice, whereas this metastasis-promoting property of NAC was abrogated in T cell-deficient mice.",
+        "source_id": "doi:10.3390/ijms27010526",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3390/ijms27010526",
+        "synthetic": false
+      },
+      {
+        "claim": "N-acetylcysteine (NAC) has no effect on breast cancer metastasis (t cell-deficient mice)",
+        "grade": "LOW",
+        "id": "evidence.f13",
+        "locator": "abstract",
+        "quote": "N-acetylcysteine (NAC) is a widely used antioxidant. It has also attracted significant research interest with regard to its role in cancer progression, although the mechanisms involved remain controversial and poorly understood. Here, using murine models of breast cancer metastasis, we found that systemic NAC administration significantly enhanced pulmonary metastasis without altering primary tumor growth in immunocompetent mice, whereas this metastasis-promoting property of NAC was abrogated in T cell-deficient mice.",
+        "source_id": "doi:10.3390/ijms27010526",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3390/ijms27010526",
+        "synthetic": false
+      },
+      {
+        "claim": "N-acetylcysteine (NAC) activates neutrophil immunosuppressive reprogramming (murine breast cancer metastasis model)",
+        "grade": "LOW",
+        "id": "evidence.f14",
+        "locator": "abstract",
+        "quote": "Mechanistically, we demonstrated that NAC endows neutrophils with an immunosuppressive phenotype, which is characterized by the upregulation of immunosuppressive genes, and these NAC-educated neutrophils potently suppress the activation and effector functions of T cells.",
+        "source_id": "doi:10.3390/ijms27010526",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3390/ijms27010526",
+        "synthetic": false
+      },
+      {
+        "claim": "Resveratrol increases hepatocellular carcinoma (HCC) initiation and progression (den/hfd and akt/ras mice)",
+        "grade": "MODERATE",
+        "id": "evidence.f15",
+        "locator": "abstract",
+        "quote": "RES and NAC enhance HCC formation in both DEN/HFD and AKT/Ras mice.",
+        "source_id": "doi:10.3389/fphar.2025.1574039",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3389/fphar.2025.1574039",
+        "synthetic": false
+      },
+      {
+        "claim": "N-acetylcysteine (NAC) increases hepatocellular carcinoma (HCC) initiation and progression (den/hfd and akt/ras mice)",
+        "grade": "MODERATE",
+        "id": "evidence.f16",
+        "locator": "abstract",
+        "quote": "RES and NAC enhance HCC formation in both DEN/HFD and AKT/Ras mice.",
+        "source_id": "doi:10.3389/fphar.2025.1574039",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3389/fphar.2025.1574039",
+        "synthetic": false
+      },
+      {
+        "claim": "Resveratrol increases GST-pi (den/hfd mice, liver tissue)",
+        "grade": "MODERATE",
+        "id": "evidence.f17",
+        "locator": "results",
+        "quote": "We therefore performed Western blot to detect GST-pi, and found that GST-pi expression was increased in the liver tissues of both the RES- or NAC-treated mice, whereas nucleoprotein γH2AX was decreased (Figure 5F).",
+        "source_id": "doi:10.3389/fphar.2025.1574039",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3389/fphar.2025.1574039",
+        "synthetic": false
+      },
+      {
+        "claim": "N-acetylcysteine (NAC) increases GST-pi (den/hfd mice, liver tissue)",
+        "grade": "MODERATE",
+        "id": "evidence.f18",
+        "locator": "results",
+        "quote": "We therefore performed Western blot to detect GST-pi, and found that GST-pi expression was increased in the liver tissues of both the RES- or NAC-treated mice, whereas nucleoprotein γH2AX was decreased (Figure 5F).",
+        "source_id": "doi:10.3389/fphar.2025.1574039",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3389/fphar.2025.1574039",
+        "synthetic": false
+      },
+      {
+        "claim": "GST-pi drives hepatocellular carcinoma (HCC) initiation and progression (akt/ras mice, ea inhibitor recovery)",
+        "grade": "MODERATE",
+        "id": "evidence.f19",
+        "locator": "results",
+        "quote": "Collectively, these results indicate that GST-pi mediates the promoting effect of antioxidants in HCC initiation and progression.",
+        "source_id": "doi:10.3389/fphar.2025.1574039",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3389/fphar.2025.1574039",
+        "synthetic": false
+      },
+      {
+        "claim": "Vitamin C increases melanoma metastasis (braf v600e-driven melanoma, mouse)",
+        "grade": "MODERATE",
+        "id": "evidence.f1_1",
+        "locator": "results",
+        "quote": "The increase in metastases was 1.6–2-fold and was similar with both doses for all four compounds.",
+        "source_id": "doi:10.1016/j.redox.2023.102619",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1016/j.redox.2023.102619",
+        "synthetic": false
+      },
+      {
+        "claim": "Vitamin E increases intestinal tumor progression (apcmin mice)",
+        "grade": "MODERATE",
+        "id": "evidence.f2",
+        "locator": "abstract",
+        "quote": "Here, we show that supplementation with the antioxidants N-acetylcysteine (NAC) and vitamin E promotes intestinal tumor progression in the ApcMin mouse model for familial adenomatous polyposis, a hereditary form of colorectal cancer, driven by Wnt signaling.",
+        "source_id": "doi:10.3390/antiox10020241",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3390/antiox10020241",
+        "synthetic": false
+      },
+      {
+        "claim": "Vitamin C does not increases melanoma metastasis (b16f0 melanoma, gulo ko mice)",
+        "grade": "MODERATE",
+        "id": "evidence.f20",
+        "locator": "abstract",
+        "quote": "Ascorbate-supplemented gulo KO mice injected with B16FO melanoma cells demonstrated significant reduction (by 71%, p=0.005) in tumor metastasis compared to gulo KO mice on the control diet.",
+        "source_id": "doi:10.3892/ijo.2012.1712",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3892/ijo.2012.1712",
+        "synthetic": false
+      },
+      {
+        "claim": "Vitamin C decreases breast cancer primary tumor growth (4t1 breast cancer, gulo ko mice)",
+        "grade": "MODERATE",
+        "id": "evidence.f21",
+        "locator": "abstract",
+        "quote": "The mean tumor weight in ascorbate supplemented mice injected with 4T1 cells was reduced by 28% compared to tumor weight in scorbutic mice.",
+        "source_id": "doi:10.3892/ijo.2012.1712",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3892/ijo.2012.1712",
+        "synthetic": false
+      },
+      {
+        "claim": "Vitamin C decreases melanoma primary tumor growth (gulo-/- mice, b16-f10 melanoma)",
+        "grade": "MODERATE",
+        "id": "evidence.f22",
+        "locator": "abstract",
+        "quote": "restoration of wild-type ascorbate levels led to a reduction in growth of B16-F10 (log phase P < 0.001) and LL/2 tumors (lag growth P < 0.001, log phase P < 0.05).",
+        "source_id": "doi:10.1002/cam4.349",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1002/cam4.349",
+        "synthetic": false
+      },
+      {
+        "claim": "Vitamin C decreases Lewis lung carcinoma tumor growth (gulo-/- mice, ll/2 lewis lung carcinoma)",
+        "grade": "MODERATE",
+        "id": "evidence.f23",
+        "locator": "abstract",
+        "quote": "restoration of wild-type ascorbate levels led to a reduction in growth of B16-F10 (log phase P < 0.001) and LL/2 tumors (lag growth P < 0.001, log phase P < 0.05).",
+        "source_id": "doi:10.1002/cam4.349",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1002/cam4.349",
+        "synthetic": false
+      },
+      {
+        "claim": "N-acetylcysteine (NAC) increases melanoma metastasis (human melanoma xenograft, nsg mice)",
+        "grade": "MODERATE",
+        "id": "evidence.f24",
+        "locator": "results",
+        "quote": "In no case did NAC treatment significantly affect the growth of established subcutaneous tumours ( Figure 2a ) but it significantly increased the frequency of melanoma cells in the blood of mice transplanted with M405 and UT10 ( Figure 2b ) and significantly increased metastatic disease burden in mice with all three melanomas ( Figure 2c ).",
+        "source_id": "doi:10.1038/nature15726",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1038/nature15726",
+        "synthetic": false
+      },
+      {
+        "claim": "N-acetylcysteine (NAC) has no effect on melanoma primary tumor growth (human melanoma xenograft, nsg mice)",
+        "grade": "MODERATE",
+        "id": "evidence.f25",
+        "locator": "results",
+        "quote": "In no case did NAC treatment significantly affect the growth of established subcutaneous tumours ( Figure 2a ) but it significantly increased the frequency of melanoma cells in the blood of mice transplanted with M405 and UT10 ( Figure 2b ) and significantly increased metastatic disease burden in mice with all three melanomas ( Figure 2c ).",
+        "source_id": "doi:10.1038/nature15726",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1038/nature15726",
+        "synthetic": false
+      },
+      {
+        "claim": "N-acetylcysteine (NAC) increases melanoma metastasis",
+        "grade": "LOW",
+        "id": "evidence.f26",
+        "locator": "discussion",
+        "quote": "Dietary supplementation with anti-oxidants actually increased incidence and death from lung and prostate cancer. Our results suggest that anti-oxidants promote disease progression, at least in melanoma, by promoting metastasis.",
+        "source_id": "doi:10.1038/nature15726",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1038/nature15726",
+        "synthetic": false
+      },
+      {
+        "claim": "mitochondria-targeted antioxidants (MitoQ/MitoTEMPO) has no effect on melanoma primary tumor growth (braf-driven melanoma, mouse)",
+        "grade": "MODERATE",
+        "id": "evidence.f27",
+        "locator": "abstract",
+        "quote": "Here, we administered the mitochondria-targeted antioxidants MitoQ and MitoTEMPO to mice with BRAF-induced malignant melanoma and KRAS-induced lung cancer, and found that these compounds had no impact on the number of primary tumors and metastases; and did not influence mitochondrial and nuclear DNA damage levels.",
+        "source_id": "doi:10.3390/antiox10020163",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3390/antiox10020163",
+        "synthetic": false
+      },
+      {
+        "claim": "mitochondria-targeted antioxidants (MitoQ/MitoTEMPO) has no effect on melanoma metastasis (braf-driven melanoma, mouse)",
+        "grade": "MODERATE",
+        "id": "evidence.f28",
+        "locator": "abstract",
+        "quote": "Here, we administered the mitochondria-targeted antioxidants MitoQ and MitoTEMPO to mice with BRAF-induced malignant melanoma and KRAS-induced lung cancer, and found that these compounds had no impact on the number of primary tumors and metastases; and did not influence mitochondrial and nuclear DNA damage levels.",
+        "source_id": "doi:10.3390/antiox10020163",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3390/antiox10020163",
+        "synthetic": false
+      },
+      {
+        "claim": "mitochondria-targeted antioxidants (MitoQ/MitoTEMPO) has no effect on KRAS-driven lung cancer progression (kras-driven lung cancer, mouse)",
+        "grade": "MODERATE",
+        "id": "evidence.f29",
+        "locator": "abstract",
+        "quote": "Here, we administered the mitochondria-targeted antioxidants MitoQ and MitoTEMPO to mice with BRAF-induced malignant melanoma and KRAS-induced lung cancer, and found that these compounds had no impact on the number of primary tumors and metastases; and did not influence mitochondrial and nuclear DNA damage levels.",
+        "source_id": "doi:10.3390/antiox10020163",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3390/antiox10020163",
+        "synthetic": false
+      },
+      {
+        "claim": "Vitamin C does not increases melanoma metastasis (b16 melanoma mouse, restricted diet)",
+        "grade": "LOW",
+        "id": "evidence.f2_1",
+        "locator": "discussion",
+        "quote": "In B16, melanoma-bearing mice spontaneous lung metastasis is inhibited by sodium ascorbate supplementation in drinking water in mice fed a restricted diet (low in tyrosine and phenylalanine) ( 10 ).",
+        "source_id": "doi:10.3389/fonc.2014.00227",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3389/fonc.2014.00227",
+        "synthetic": false
+      },
+      {
+        "claim": "N-acetylcysteine (NAC) increases melanoma metastasis (melanoma xenograft mice)",
+        "grade": "MODERATE",
+        "id": "evidence.f3",
+        "locator": "abstract",
+        "quote": "We found that high therapeutic doses of NAC do not increase the growth of melanoma xenografts, but can cause metastatic spread and distant metastases.",
+        "source_id": "doi:10.3390/cancers14153614",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3390/cancers14153614",
+        "synthetic": false
+      },
+      {
+        "claim": "beta-carotene increases lung cancer risk (human) (meta-analysis of rcts, smokers and general population)",
+        "grade": "HIGH",
+        "id": "evidence.f30",
+        "locator": "abstract",
+        "quote": "The findings indicate that beta-carotene supplementation was associated with an increased risk of lung cancer (RR = 1.16, 95% CI = 1.06–1.26).",
+        "source_id": "doi:10.3390/nu14071361",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3390/nu14071361",
+        "synthetic": false
+      },
+      {
+        "claim": "Vitamin E has no effect on liver cancer incidence and CLD mortality (ATBC) (atbc trial, finnish male smokers)",
+        "grade": "LOW",
+        "id": "evidence.f31",
+        "locator": "results",
+        "quote": "Supplemental alpha-tocopherol, beta-carotene, or both, relative to placebo, did not reduce the risk of liver cancer or CLD, either overall, during the intervention or during the post-intervention period.",
+        "source_id": "doi:10.1038/bjc.2014.514",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1038/bjc.2014.514",
+        "synthetic": false
+      },
+      {
+        "claim": "beta-carotene has no effect on liver cancer incidence and CLD mortality (ATBC) (atbc trial, finnish male smokers)",
+        "grade": "LOW",
+        "id": "evidence.f32",
+        "locator": "results",
+        "quote": "Supplemental alpha-tocopherol, beta-carotene, or both, relative to placebo, did not reduce the risk of liver cancer or CLD, either overall, during the intervention or during the post-intervention period.",
+        "source_id": "doi:10.1038/bjc.2014.514",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1038/bjc.2014.514",
+        "synthetic": false
+      },
+      {
+        "claim": "beta-carotene increases all-cause mortality (human antioxidant RCTs) (meta-analysis of rcts, adults, dose above rda)",
+        "grade": "LOW",
+        "id": "evidence.f33",
+        "locator": "abstract",
+        "quote": "Beta-carotene in a dose above 9.6 mg significantly increased mortality (relative risk (RR) 1.06, 95% confidence interval (CI) 1.02 to 1.09, I 2 = 13%).",
+        "source_id": "doi:10.1371/journal.pone.0074558",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1371/journal.pone.0074558",
+        "synthetic": false
+      },
+      {
+        "claim": "Vitamin E increases all-cause mortality (human antioxidant RCTs) (meta-analysis of rcts, adults, dose above rda)",
+        "grade": "LOW",
+        "id": "evidence.f34",
+        "locator": "abstract",
+        "quote": "Vitamin E in a dose above the RDA (> 15 mg) significantly increased mortality (RR 1.03, 95% CI 1.00 to 1.05, I 2 = 0%).",
+        "source_id": "doi:10.1371/journal.pone.0074558",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1371/journal.pone.0074558",
+        "synthetic": false
+      },
+      {
+        "claim": "Vitamin C decreases gastric cancer growth (gastric cancer xenograft + oxaliplatin/irinotecan, mouse)",
+        "grade": "MODERATE",
+        "id": "evidence.f35",
+        "locator": "results",
+        "quote": "The combination of pharmacological ascorbate with genotoxic agents, including oxaliplatin and irinotecan, synergistically inhibited gastric tumor growth in mouse models.",
+        "source_id": "doi:10.7150/thno.21745",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.7150/thno.21745",
+        "synthetic": false
+      },
+      {
+        "claim": "Vitamin C suppresses peritoneal tumor metastasis (id8 ovarian cancer, mouse)",
+        "grade": "MODERATE",
+        "id": "evidence.f36",
+        "locator": "abstract",
+        "quote": "Here, we showed that vitamin C inhibited spheroid formation and metastasis in ID8 ovarian cancer-bearing mice.",
+        "source_id": "doi:10.3389/fphar.2020.00645",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3389/fphar.2020.00645",
+        "synthetic": false
+      },
+      {
+        "claim": "Vitamin C suppresses renal cancer bone metastasis (apm, renal cancer stem-like cells, mouse)",
+        "grade": "MODERATE",
+        "id": "evidence.f37",
+        "locator": "results",
+        "quote": "Collectively, these single‐cell resolution results indicate that APM suppresses tumor growth by inducing cell cycle arrest in malignant cells and interfering with prometastatic signaling pathways.",
+        "source_id": "doi:10.1002/advs.202501011",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1002/advs.202501011",
+        "synthetic": false
+      },
+      {
+        "claim": "Vitamin C suppresses liver cancer growth and metastasis (liver cancer xenotransplantation, mouse)",
+        "grade": "MODERATE",
+        "id": "evidence.f38",
+        "locator": "abstract",
+        "quote": "Additionally, AA prevented liver cancer metastasis in a xenotransplantation model without suppressing stemness gene expression in liver CSCs.",
+        "source_id": "doi:10.3389/fphar.2021.726015",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3389/fphar.2021.726015",
+        "synthetic": false
+      },
+      {
+        "claim": "Vitamin E decreases smoking-induced lung tumor incidence (smoking-induced lung tumor, swiss mice)",
+        "grade": "MODERATE",
+        "id": "evidence.f39",
+        "locator": "results",
+        "quote": "vitamin E drastically decreased the incidence of lung tumor and tumor multiplicity which were 17.0% and 0.32 ± 0.16, respectively (p < 0.05)",
+        "source_id": "doi:10.1186/1471-2407-8-383",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1186/1471-2407-8-383",
+        "synthetic": false
+      },
+      {
+        "claim": "N-acetylcysteine (NAC) has no effect on melanoma primary tumor growth (melanoma xenograft mice)",
+        "grade": "MODERATE",
+        "id": "evidence.f4",
+        "locator": "abstract",
+        "quote": "We found that high therapeutic doses of NAC do not increase the growth of melanoma xenografts, but can cause metastatic spread and distant metastases.",
+        "source_id": "doi:10.3390/cancers14153614",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3390/cancers14153614",
+        "synthetic": false
+      },
+      {
+        "claim": "N-acetylcysteine (NAC) increases prostate epithelial proliferation (nkx3.1 mutant mice)",
+        "grade": "MODERATE",
+        "id": "evidence.f40",
+        "locator": "abstract",
+        "quote": "Rather, NAC treatment increased epithelial cell proliferation and promoted the expression of a pro-proliferative gene signature.",
+        "source_id": "doi:10.1371/journal.pone.0046792",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1371/journal.pone.0046792",
+        "synthetic": false
+      },
+      {
+        "claim": "Vitamin E increases prostate cancer risk (human, SELECT trial) (select trial, human)",
+        "grade": "MODERATE",
+        "id": "evidence.f41",
+        "locator": "discussion",
+        "quote": "Results from the large-scale Selenium and Vitamin E Cancer Prevention Trial (SELECT) showed that antioxidants failed to prevent, and in some cases promoted, prostate cancer formation in men without a history of the disease.",
+        "source_id": "doi:10.1371/journal.pone.0046792",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1371/journal.pone.0046792",
+        "synthetic": false
+      },
+      {
+        "claim": "Vitamin C decreases pancreatic cancer growth and metastasis (panc-1 orthotopic xenograft, mouse)",
+        "grade": "HIGH",
+        "id": "evidence.f42",
+        "locator": "results",
+        "quote": "Taken together, these in vitro and in vivo data indicated that, pharmacological ascorbate inhibited pancreatic cancer growth and metastasis through a pro-oxidative mechanism, subsequently induced NAD+/ATP depletion selectively in cancer cells, and resulted in inhibition of cell proliferation and induction of cell death.",
+        "source_id": "doi:10.1038/s41598-017-17568-8",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1038/s41598-017-17568-8",
+        "synthetic": false
+      },
+      {
+        "claim": "Vitamin E decreases melanoma metastasis (melanoma xenograft mice)",
+        "grade": "MODERATE",
+        "id": "evidence.f5",
+        "locator": "abstract",
+        "quote": "Trolox, an antioxidant vitamin E derivative, administered in vivo, decreased metastatic growth.",
+        "source_id": "doi:10.3390/cancers14153614",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.3390/cancers14153614",
+        "synthetic": false
+      },
+      {
+        "claim": "Vitamin C increases melanoma metastasis (braf v600e-driven melanoma, mouse)",
+        "grade": "MODERATE",
+        "id": "evidence.f6",
+        "locator": "abstract",
+        "quote": "Four diet-relevant compounds from this list—VitC, β-carotene, retinyl palmitate, and canthaxanthin—were selected and found to accelerate metastasis in mice with BRAF V600E -driven malignant melanoma.",
+        "source_id": "doi:10.1016/j.redox.2023.102619",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1016/j.redox.2023.102619",
+        "synthetic": false
+      },
+      {
+        "claim": "beta-carotene increases melanoma metastasis (braf v600e-driven melanoma, mouse)",
+        "grade": "MODERATE",
+        "id": "evidence.f7",
+        "locator": "abstract",
+        "quote": "Four diet-relevant compounds from this list—VitC, β-carotene, retinyl palmitate, and canthaxanthin—were selected and found to accelerate metastasis in mice with BRAF V600E -driven malignant melanoma.",
+        "source_id": "doi:10.1016/j.redox.2023.102619",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1016/j.redox.2023.102619",
+        "synthetic": false
+      },
+      {
+        "claim": "retinyl palmitate increases melanoma metastasis (braf v600e-driven melanoma, mouse)",
+        "grade": "MODERATE",
+        "id": "evidence.f8",
+        "locator": "abstract",
+        "quote": "Four diet-relevant compounds from this list—VitC, β-carotene, retinyl palmitate, and canthaxanthin—were selected and found to accelerate metastasis in mice with BRAF V600E -driven malignant melanoma.",
+        "source_id": "doi:10.1016/j.redox.2023.102619",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1016/j.redox.2023.102619",
+        "synthetic": false
+      },
+      {
+        "claim": "canthaxanthin increases melanoma metastasis (braf v600e-driven melanoma, mouse)",
+        "grade": "MODERATE",
+        "id": "evidence.f9",
+        "locator": "abstract",
+        "quote": "Four diet-relevant compounds from this list—VitC, β-carotene, retinyl palmitate, and canthaxanthin—were selected and found to accelerate metastasis in mice with BRAF V600E -driven malignant melanoma.",
+        "source_id": "doi:10.1016/j.redox.2023.102619",
+        "source_type": "publication",
+        "source_url": "https://doi.org/10.1016/j.redox.2023.102619",
+        "synthetic": false
+      }
+    ],
+    "extensions": {
+      "confidence_decomposition": {
+        "heuristic": true,
+        "is_probability": false,
+        "labels": {
+          "high": ">= 0.7",
+          "low": "< 0.4",
+          "medium": ">= 0.4"
+        },
+        "terms": [
+          "agreement",
+          "evidence_quality",
+          "independence"
+        ],
+        "weights": {
+          "agreement": 0.4,
+          "evidence_quality": 0.4,
+          "independence": 0.2
+        }
+      },
+      "gaps": [
+        {
+          "id": "g1",
+          "missing_labels": [
+            "Vitamin E",
+            "beta-carotene"
+          ]
+        },
+        {
+          "id": "g2",
+          "missing_labels": [
+            "N-acetylcysteine (NAC)",
+            "Vitamin E"
+          ]
+        },
+        {
+          "id": "g3",
+          "missing_labels": [
+            "N-acetylcysteine (NAC)",
+            "Resveratrol"
+          ]
+        },
+        {
+          "id": "g4",
+          "missing_labels": [
+            "N-acetylcysteine (NAC)",
+            "Vitamin C"
+          ]
+        },
+        {
+          "id": "g5",
+          "missing_labels": [
+            "lung cancer risk (human)",
+            "all-cause mortality (human antioxidant RCTs)"
+          ]
+        },
+        {
+          "id": "g6",
+          "missing_labels": [
+            "melanoma metastasis",
+            "all-cause mortality (human antioxidant RCTs)"
+          ]
+        },
+        {
+          "id": "g7",
+          "missing_labels": [
+            "melanoma metastasis",
+            "lung cancer risk (human)"
+          ]
+        },
+        {
+          "id": "g8",
+          "missing_labels": [
+            "melanoma metastasis",
+            "liver cancer incidence and CLD mortality (ATBC)"
+          ]
+        },
+        {
+          "id": "g9",
+          "missing_labels": [
+            "liver cancer incidence and CLD mortality (ATBC)",
+            "all-cause mortality (human antioxidant RCTs)"
+          ]
+        },
+        {
+          "id": "g10",
+          "missing_labels": [
+            "N-acetylcysteine (NAC)",
+            "mitochondria-targeted antioxidants (MitoQ/MitoTEMPO)"
+          ]
+        },
+        {
+          "id": "g11",
+          "missing_labels": [
+            "Vitamin C",
+            "mitochondria-targeted antioxidants (MitoQ/MitoTEMPO)"
+          ]
+        },
+        {
+          "id": "g12",
+          "missing_labels": [
+            "lung cancer risk (human)",
+            "liver cancer incidence and CLD mortality (ATBC)"
+          ]
+        },
+        {
+          "id": "g13",
+          "missing_labels": [
+            "melanoma metastasis",
+            "intestinal tumor progression"
+          ]
+        },
+        {
+          "id": "g14",
+          "missing_labels": [
+            "melanoma metastasis",
+            "smoking-induced lung tumor incidence"
+          ]
+        },
+        {
+          "id": "g15",
+          "missing_labels": [
+            "intestinal tumor progression",
+            "smoking-induced lung tumor incidence"
+          ]
+        },
+        {
+          "id": "g16",
+          "missing_labels": [
+            "intestinal tumor progression",
+            "all-cause mortality (human antioxidant RCTs)"
+          ]
+        },
+        {
+          "id": "g17",
+          "missing_labels": [
+            "smoking-induced lung tumor incidence",
+            "all-cause mortality (human antioxidant RCTs)"
+          ]
+        },
+        {
+          "id": "g18",
+          "missing_labels": [
+            "melanoma metastasis",
+            "melanoma primary tumor growth"
+          ]
+        },
+        {
+          "id": "g19",
+          "missing_labels": [
+            "melanoma metastasis",
+            "pancreatic cancer growth and metastasis"
+          ]
+        },
+        {
+          "id": "g20",
+          "missing_labels": [
+            "intestinal tumor progression",
+            "liver cancer incidence and CLD mortality (ATBC)"
+          ]
+        },
+        {
+          "id": "g21",
+          "missing_labels": [
+            "smoking-induced lung tumor incidence",
+            "liver cancer incidence and CLD mortality (ATBC)"
+          ]
+        },
+        {
+          "id": "g22",
+          "missing_labels": [
+            "melanoma metastasis",
+            "KRAS-driven lung cancer progression"
+          ]
+        },
+        {
+          "id": "g23",
+          "missing_labels": [
+            "melanoma primary tumor growth",
+            "KRAS-driven lung cancer progression"
+          ]
+        },
+        {
+          "id": "g24",
+          "missing_labels": [
+            "Vitamin E",
+            "Vitamin C"
+          ]
+        },
+        {
+          "id": "g25",
+          "missing_labels": [
+            "Vitamin E",
+            "retinyl palmitate"
+          ]
+        },
+        {
+          "id": "g26",
+          "missing_labels": [
+            "Vitamin E",
+            "canthaxanthin"
+          ]
+        },
+        {
+          "id": "g27",
+          "missing_labels": [
+            "Vitamin E",
+            "BACH1"
+          ]
+        },
+        {
+          "id": "g28",
+          "missing_labels": [
+            "melanoma primary tumor growth",
+            "breast cancer primary tumor growth"
+          ]
+        },
+        {
+          "id": "g29",
+          "missing_labels": [
+            "melanoma primary tumor growth",
+            "breast cancer metastasis"
+          ]
+        },
+        {
+          "id": "g30",
+          "missing_labels": [
+            "melanoma primary tumor growth",
+            "intestinal tumor progression"
+          ]
+        },
+        {
+          "id": "g31",
+          "missing_labels": [
+            "melanoma primary tumor growth",
+            "hepatocellular carcinoma (HCC) initiation and progression"
+          ]
+        },
+        {
+          "id": "g32",
+          "missing_labels": [
+            "melanoma primary tumor growth",
+            "prostate epithelial proliferation"
+          ]
+        },
+        {
+          "id": "g33",
+          "missing_labels": [
+            "melanoma primary tumor growth",
+            "neutrophil immunosuppressive reprogramming"
+          ]
+        },
+        {
+          "id": "g34",
+          "missing_labels": [
+            "melanoma primary tumor growth",
+            "GST-pi"
+          ]
+        },
+        {
+          "id": "g35",
+          "missing_labels": [
+            "breast cancer metastasis",
+            "intestinal tumor progression"
+          ]
+        },
+        {
+          "id": "g36",
+          "missing_labels": [
+            "breast cancer metastasis",
+            "hepatocellular carcinoma (HCC) initiation and progression"
+          ]
+        },
+        {
+          "id": "g37",
+          "missing_labels": [
+            "breast cancer metastasis",
+            "prostate epithelial proliferation"
+          ]
+        },
+        {
+          "id": "g38",
+          "missing_labels": [
+            "breast cancer metastasis",
+            "GST-pi"
+          ]
+        },
+        {
+          "id": "g39",
+          "missing_labels": [
+            "intestinal tumor progression",
+            "hepatocellular carcinoma (HCC) initiation and progression"
+          ]
+        },
+        {
+          "id": "g40",
+          "missing_labels": [
+            "intestinal tumor progression",
+            "prostate epithelial proliferation"
+          ]
+        },
+        {
+          "id": "g41",
+          "missing_labels": [
+            "intestinal tumor progression",
+            "neutrophil immunosuppressive reprogramming"
+          ]
+        },
+        {
+          "id": "g42",
+          "missing_labels": [
+            "intestinal tumor progression",
+            "GST-pi"
+          ]
+        },
+        {
+          "id": "g43",
+          "missing_labels": [
+            "hepatocellular carcinoma (HCC) initiation and progression",
+            "prostate epithelial proliferation"
+          ]
+        },
+        {
+          "id": "g44",
+          "missing_labels": [
+            "hepatocellular carcinoma (HCC) initiation and progression",
+            "neutrophil immunosuppressive reprogramming"
+          ]
+        },
+        {
+          "id": "g45",
+          "missing_labels": [
+            "prostate epithelial proliferation",
+            "neutrophil immunosuppressive reprogramming"
+          ]
+        },
+        {
+          "id": "g46",
+          "missing_labels": [
+            "prostate epithelial proliferation",
+            "GST-pi"
+          ]
+        },
+        {
+          "id": "g47",
+          "missing_labels": [
+            "neutrophil immunosuppressive reprogramming",
+            "GST-pi"
+          ]
+        },
+        {
+          "id": "g48",
+          "missing_labels": [
+            "melanoma metastasis",
+            "gastric cancer growth"
+          ]
+        },
+        {
+          "id": "g49",
+          "missing_labels": [
+            "melanoma metastasis",
+            "renal cancer bone metastasis"
+          ]
+        },
+        {
+          "id": "g50",
+          "missing_labels": [
+            "melanoma metastasis",
+            "liver cancer growth and metastasis"
+          ]
+        }
+      ],
+      "graph": {
+        "graph_id": "g_e087",
+        "round": 2,
+        "rounds": [
+          {
+            "ask": "new_question",
+            "depth": "standard",
+            "n": 1,
+            "outcome": "new_evidence",
+            "papers_added": 19,
+            "target": null
+          },
+          {
+            "ask": "resolve_link",
+            "depth": "standard",
+            "n": 2,
+            "outcome": "new_evidence",
+            "papers_added": 2,
+            "target": "L21"
+          }
+        ],
+        "schema_version": "1.1"
+      },
+      "id_conventions": {
+        "evidence": "evidence.<finding id, any character outside [A-Za-z0-9_.:-] replaced by _>",
+        "gaps": "the gap id in output.gaps[]",
+        "note": "Every id here resolves into the graph beside it. The block annotates the graph; it does not restate it.",
+        "relationships": "the link id in output.links[]"
+      },
+      "module": "research-evidence-mapper",
+      "quote_verification": {
+        "by_evidence": {
+          "evidence.f1": true,
+          "evidence.f10": true,
+          "evidence.f11": null,
+          "evidence.f12": null,
+          "evidence.f13": null,
+          "evidence.f14": null,
+          "evidence.f15": true,
+          "evidence.f16": true,
+          "evidence.f17": true,
+          "evidence.f18": true,
+          "evidence.f19": true,
+          "evidence.f1_1": true,
+          "evidence.f2": true,
+          "evidence.f20": true,
+          "evidence.f21": true,
+          "evidence.f22": true,
+          "evidence.f23": true,
+          "evidence.f24": true,
+          "evidence.f25": true,
+          "evidence.f26": false,
+          "evidence.f27": true,
+          "evidence.f28": true,
+          "evidence.f29": true,
+          "evidence.f2_1": true,
+          "evidence.f3": true,
+          "evidence.f30": true,
+          "evidence.f31": null,
+          "evidence.f32": null,
+          "evidence.f33": null,
+          "evidence.f34": null,
+          "evidence.f35": true,
+          "evidence.f36": true,
+          "evidence.f37": true,
+          "evidence.f38": true,
+          "evidence.f39": true,
+          "evidence.f4": true,
+          "evidence.f40": true,
+          "evidence.f41": true,
+          "evidence.f42": true,
+          "evidence.f5": true,
+          "evidence.f6": true,
+          "evidence.f7": true,
+          "evidence.f8": true,
+          "evidence.f9": true
+        },
+        "discarded": 0,
+        "fails_closed": true,
+        "method": "verbatim substring match after NFKC and typographic folding; mechanical, not a model judgement",
+        "mismatched": 1,
+        "unchecked": 8,
+        "verified": 35
+      },
+      "quote_verified": false,
+      "relationships": [
+        {
+          "contradicting": [],
+          "id": "L1",
+          "label": "N-acetylcysteine (NAC) --activates--> neutrophil immunosuppressive reprogramming",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f14"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L10",
+          "label": "Vitamin E --decreases--> melanoma metastasis",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f5"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L11",
+          "label": "Vitamin E --decreases--> smoking-induced lung tumor incidence",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f39"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L12",
+          "label": "Vitamin E --decreases--> liver cancer incidence and CLD mortality (ATBC)",
+          "no_effect": [
+            "evidence.f31"
+          ],
+          "supporting": []
+        },
+        {
+          "contradicting": [],
+          "id": "L13",
+          "label": "Vitamin E --increases--> intestinal tumor progression",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f2"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L14",
+          "label": "Vitamin E --increases--> all-cause mortality (human antioxidant RCTs)",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f34"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L15",
+          "label": "Vitamin E --increases--> prostate cancer risk (human, SELECT trial)",
+          "no_effect": [],
+          "supporting": []
+        },
+        {
+          "contradicting": [],
+          "id": "L16",
+          "label": "Vitamin C --decreases--> melanoma primary tumor growth",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f22"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L17",
+          "label": "Vitamin C --decreases--> breast cancer primary tumor growth",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f21"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L18",
+          "label": "Vitamin C --decreases--> gastric cancer growth",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f35"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L19",
+          "label": "Vitamin C --decreases--> pancreatic cancer growth and metastasis",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f42"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L2",
+          "label": "N-acetylcysteine (NAC) --increases--> melanoma metastasis",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f24",
+            "evidence.f26",
+            "evidence.f3"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L20",
+          "label": "Vitamin C --decreases--> Lewis lung carcinoma tumor growth",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f23"
+          ]
+        },
+        {
+          "contradicting": [
+            "evidence.f20"
+          ],
+          "id": "L21",
+          "label": "Vitamin C --increases--> melanoma metastasis",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f1_1",
+            "evidence.f6"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L22",
+          "label": "Vitamin C --suppresses--> renal cancer bone metastasis",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f37"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L23",
+          "label": "Vitamin C --suppresses--> liver cancer growth and metastasis",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f38"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L24",
+          "label": "Vitamin C --suppresses--> peritoneal tumor metastasis",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f36"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L25",
+          "label": "mitochondria-targeted antioxidants (MitoQ/MitoTEMPO) --increases--> melanoma metastasis",
+          "no_effect": [
+            "evidence.f28"
+          ],
+          "supporting": []
+        },
+        {
+          "contradicting": [],
+          "id": "L26",
+          "label": "mitochondria-targeted antioxidants (MitoQ/MitoTEMPO) --increases--> melanoma primary tumor growth",
+          "no_effect": [
+            "evidence.f27"
+          ],
+          "supporting": []
+        },
+        {
+          "contradicting": [],
+          "id": "L27",
+          "label": "mitochondria-targeted antioxidants (MitoQ/MitoTEMPO) --increases--> KRAS-driven lung cancer progression",
+          "no_effect": [
+            "evidence.f29"
+          ],
+          "supporting": []
+        },
+        {
+          "contradicting": [],
+          "id": "L28",
+          "label": "Resveratrol --increases--> hepatocellular carcinoma (HCC) initiation and progression",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f15"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L29",
+          "label": "Resveratrol --increases--> GST-pi",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f17"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L3",
+          "label": "N-acetylcysteine (NAC) --increases--> melanoma primary tumor growth",
+          "no_effect": [
+            "evidence.f25",
+            "evidence.f4"
+          ],
+          "supporting": []
+        },
+        {
+          "contradicting": [],
+          "id": "L30",
+          "label": "beta-carotene --decreases--> liver cancer incidence and CLD mortality (ATBC)",
+          "no_effect": [
+            "evidence.f32"
+          ],
+          "supporting": []
+        },
+        {
+          "contradicting": [],
+          "id": "L31",
+          "label": "beta-carotene --increases--> melanoma metastasis",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f7"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L32",
+          "label": "beta-carotene --increases--> lung cancer risk (human)",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f30"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L33",
+          "label": "beta-carotene --increases--> all-cause mortality (human antioxidant RCTs)",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f33"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L34",
+          "label": "retinyl palmitate --increases--> melanoma metastasis",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f8"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L35",
+          "label": "canthaxanthin --increases--> melanoma metastasis",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f9"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L36",
+          "label": "BACH1 --activates--> melanoma metastasis",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f10"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L37",
+          "label": "GST-pi --drives--> hepatocellular carcinoma (HCC) initiation and progression",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f19"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L4",
+          "label": "N-acetylcysteine (NAC) --increases--> breast cancer metastasis",
+          "no_effect": [
+            "evidence.f13"
+          ],
+          "supporting": [
+            "evidence.f11"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L5",
+          "label": "N-acetylcysteine (NAC) --increases--> breast cancer primary tumor growth",
+          "no_effect": [
+            "evidence.f12"
+          ],
+          "supporting": []
+        },
+        {
+          "contradicting": [],
+          "id": "L6",
+          "label": "N-acetylcysteine (NAC) --increases--> intestinal tumor progression",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f1"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L7",
+          "label": "N-acetylcysteine (NAC) --increases--> hepatocellular carcinoma (HCC) initiation and progression",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f16"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L8",
+          "label": "N-acetylcysteine (NAC) --increases--> prostate epithelial proliferation",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f40"
+          ]
+        },
+        {
+          "contradicting": [],
+          "id": "L9",
+          "label": "N-acetylcysteine (NAC) --increases--> GST-pi",
+          "no_effect": [],
+          "supporting": [
+            "evidence.f18"
+          ]
+        }
+      ],
+      "search": {
+        "depth": "standard",
+        "figures_read": 2,
+        "found": 71,
+        "limits": {
+          "max_papers": 25,
+          "max_queries": 4
+        },
+        "queries": [],
+        "read": 7,
+        "stop_reason": "no_new_results",
+        "truncated": true,
+        "used": 2,
+        "years": null
+      }
+    },
+    "headline": {
+      "basis": [
+        "OBSERVED",
+        "INFERRED",
+        "MODELED"
+      ],
+      "plain_language": "Read 2 papers and mapped 37 relationships from 44 quote-backed findings; 1 are corroborated by more than one paper, 28 rest on a single paper, and 1 are disputed.",
+      "result": "EVIDENCE_MAPPED_DISPUTED",
+      "status": "QUALIFIED",
+      "title": "Evidence graph: 37 relationships from 20 papers"
+    },
+    "limitations": [
+      {
+        "code": "QUOTE_MISMATCH",
+        "field_path": "output.findings[].quote_verified",
+        "message": "1 retained findings carry a quote that was checked against source text and did NOT appear in it. This is not a wording difference -- the match is whitespace- and typography-normalized -- so treat these as unsourced: f26.",
+        "severity": "ERROR"
+      },
+      {
+        "code": "UNVERIFIED_QUOTE",
+        "field_path": "output.findings[].quote_verified",
+        "message": "8 of 44 retained findings carry a quote that was never checked against source text, because no source text was supplied for their paper. Their quotes are shown but must not be treated as verified, and their evidence grade is capped at LOW.",
+        "severity": "ERROR"
+      },
+      {
+        "code": "COVERAGE_INCOMPLETE",
+        "field_path": "output.coverage.stop_reason",
+        "message": "stop_reason=no_new_results. Only `complete` means the literature was exhausted rather than the budget.",
+        "severity": "WARNING"
+      },
+      {
+        "code": "INTERVENTIONS_WITHOUT_TARGET",
+        "field_path": "output.coverage.interventions_without_target",
+        "message": "6 intervention nodes have no molecular target in the graph.",
+        "severity": "WARNING"
+      },
+      {
+        "code": "QUERIES_NOT_RECORDED",
+        "field_path": "output.coverage.queries",
+        "message": "The round did not record the search queries it issued, so the search cannot be reproduced or audited from this output.",
+        "severity": "WARNING"
+      },
+      {
+        "code": "SINGLE_SOURCE_LINKS",
+        "field_path": "output.links[].state",
+        "message": "28 of 37 relationships rest on exactly one paper.",
+        "severity": "WARNING"
+      },
+      {
+        "code": "TRUNCATED_SEARCH",
+        "field_path": "output.coverage.truncated",
+        "message": "The search was truncated (stop_reason=no_new_results). Absence of a relationship is evidence about what was read, not about what exists.",
+        "severity": "WARNING"
+      },
+      {
+        "code": "UNTAGGED_VALUE",
+        "field_path": "interpretability.metrics",
+        "message": "These metrics are structural counts of the graph itself and reference neither evidence nor an assumption: metric.entities.",
+        "severity": "WARNING"
+      },
+      {
+        "code": "DISPUTED_LINKS",
+        "field_path": "output.links[].why",
+        "message": "1 relationships have primary papers reporting opposite directions; `why` names the differing conditions where they could be identified.",
+        "severity": "INFO"
+      },
+      {
+        "code": "HEURISTIC_CONFIDENCE",
+        "field_path": "output.links[].confidence.overall",
+        "message": "link.confidence.overall is a heuristic score (0.4*agreement + 0.4*evidence_quality + 0.2*independence), not a probability. Do not threshold it as one.",
+        "severity": "INFO"
+      },
+      {
+        "code": "INTERPRETABILITY_PARTIAL",
+        "field_path": "output.papers[].source_sha256",
+        "message": "No source-text hash for 3 of 20 papers, and no Paperclip document id or page/figure locator is recorded for any paper -- the corpus does not expose stable document ids through the search interface used here. Evidence locators fall back to the finding's section label.",
+        "severity": "INFO"
+      },
+      {
+        "code": "UNKNOWN_VALUE",
+        "field_path": "interpretability",
+        "message": "1 values in this block are null because they were never recorded or could not be computed. Null is not zero and not false. Full list: assumption.years.",
+        "severity": "INFO"
+      },
+      {
+        "code": "YEARS_NOT_SPECIFIED",
+        "field_path": "input.years",
+        "message": "No publication window was requested, so a windowed absence cannot be distinguished from a real one.",
+        "severity": "INFO"
+      }
+    ],
+    "lineage": [
+      {
+        "input_paths": [
+          "input.findings[]",
+          "input.papers[].source_text"
+        ],
+        "output_path": "output.findings[]",
+        "transformation": "Kept only when the quote matches the paper's source text verbatim after NFKC and whitespace folding; deduplicated by (paper, relationship, folded quote) so a retried round cannot double-count."
+      },
+      {
+        "input_paths": [
+          "input.papers[].source_text"
+        ],
+        "output_path": "output.papers[].source_sha256",
+        "transformation": "SHA-256 of the exact source text the quotes were checked against. null when none was supplied."
+      },
+      {
+        "input_paths": [
+          "input.things[]"
+        ],
+        "output_path": "output.things[]",
+        "transformation": "Merged on UniProt accession first, then on normalized name; a conflicting accession blocks a name merge."
+      },
+      {
+        "input_paths": [
+          "output.links[].from",
+          "output.links[].how",
+          "output.links[].to",
+          "prior.links[].id"
+        ],
+        "output_path": "output.links[].id",
+        "transformation": "Bound to the (from, how, to) triple the round it first appears and carried forward through entity merges, so delta and changed_in_round keep naming the same relationship across rounds."
+      },
+      {
+        "input_paths": [
+          "output.findings[].says",
+          "output.findings[].is_own_result"
+        ],
+        "output_path": "output.links[].state",
+        "transformation": "Counts of yes/no/no_effect over own-result findings only."
+      },
+      {
+        "input_paths": [
+          "output.findings[].says",
+          "output.papers[].study_type",
+          "output.papers[].is_preprint",
+          "output.papers[].first_author"
+        ],
+        "output_path": "output.links[].confidence.overall",
+        "transformation": "0.4*agreement + 0.4*evidence_quality + 0.2*independence."
+      },
+      {
+        "input_paths": [
+          "output.findings[].where"
+        ],
+        "output_path": "output.links[].why",
+        "transformation": "Emitted only for a disagreed link whose supporting and contradicting findings report non-overlapping conditions."
+      },
+      {
+        "input_paths": [
+          "output.links[]",
+          "output.things[]"
+        ],
+        "output_path": "output.gaps[]",
+        "transformation": "Open triangles ranked multiplicatively; ids keyed on the missing pair so test_gap can target one by id across rounds."
+      },
+      {
+        "input_paths": [
+          "prior graph",
+          "output.links[].changed_in_round"
+        ],
+        "output_path": "output.delta",
+        "transformation": "Diff against the stored prior round. Derived, never stored."
+      }
+    ],
+    "metrics": [
+      {
+        "assumption_ids": [
+          "assumption.depth",
+          "assumption.limits.max_queries"
+        ],
+        "direction": "neutral",
+        "display": "71 found",
+        "evidence_ids": [],
+        "id": "metric.papers_found",
+        "label": "Papers matched by search",
+        "meaning": "How many papers the corpus returned before any reading. Bounded by the query budget, not by what exists.",
+        "unit": "papers",
+        "value": 71
+      },
+      {
+        "assumption_ids": [
+          "assumption.depth",
+          "assumption.limits.max_papers"
+        ],
+        "direction": "neutral",
+        "display": "7 read",
+        "evidence_ids": [],
+        "id": "metric.papers_read",
+        "label": "Papers read",
+        "meaning": "How many matched papers were actually opened this round.",
+        "unit": "papers",
+        "value": 7
+      },
+      {
+        "assumption_ids": [
+          "assumption.limits.max_papers",
+          "assumption.own_result_only"
+        ],
+        "direction": "neutral",
+        "display": "2 used",
+        "evidence_ids": [],
+        "id": "metric.papers_used",
+        "label": "Papers contributing evidence",
+        "meaning": "Papers that produced at least one quote-backed finding. The gap between read and used is the screening loss.",
+        "unit": "papers",
+        "value": 2
+      },
+      {
+        "assumption_ids": [],
+        "direction": "positive",
+        "display": "35 verified",
+        "evidence_ids": [
+          "evidence.f1",
+          "evidence.f10",
+          "evidence.f15",
+          "evidence.f16",
+          "evidence.f17",
+          "evidence.f18",
+          "evidence.f19",
+          "evidence.f1_1",
+          "evidence.f2",
+          "evidence.f20",
+          "evidence.f21",
+          "evidence.f22",
+          "evidence.f23",
+          "evidence.f24",
+          "evidence.f25",
+          "evidence.f27",
+          "evidence.f28",
+          "evidence.f29",
+          "evidence.f2_1",
+          "evidence.f3",
+          "evidence.f30",
+          "evidence.f35",
+          "evidence.f36",
+          "evidence.f37",
+          "evidence.f38",
+          "evidence.f39",
+          "evidence.f4",
+          "evidence.f40",
+          "evidence.f41",
+          "evidence.f42",
+          "evidence.f5",
+          "evidence.f6",
+          "evidence.f7",
+          "evidence.f8",
+          "evidence.f9"
+        ],
+        "id": "metric.findings_verified",
+        "label": "Quote-verified findings",
+        "meaning": "Findings whose quote was matched verbatim against the paper's source text. This is a string match, not a judgement.",
+        "unit": "findings",
+        "value": 35
+      },
+      {
+        "assumption_ids": [],
+        "direction": "negative",
+        "display": "8 unchecked",
+        "evidence_ids": [
+          "evidence.f11",
+          "evidence.f12",
+          "evidence.f13",
+          "evidence.f14",
+          "evidence.f31",
+          "evidence.f32",
+          "evidence.f33",
+          "evidence.f34"
+        ],
+        "id": "metric.findings_unverified",
+        "label": "Findings with unchecked quotes",
+        "meaning": "Findings kept without source text to check their quote against. Never counted as verified.",
+        "unit": "findings",
+        "value": 8
+      },
+      {
+        "assumption_ids": [],
+        "direction": "negative",
+        "display": "1 mismatched",
+        "evidence_ids": [
+          "evidence.f26"
+        ],
+        "id": "metric.findings_quote_mismatch",
+        "label": "Findings whose quote did not match",
+        "meaning": "Findings whose quote was checked against source text and was not found in it. Treat as unsourced.",
+        "unit": "findings",
+        "value": 1
+      },
+      {
+        "assumption_ids": [
+          "assumption.own_result_only"
+        ],
+        "direction": "neutral",
+        "display": "37 relationships",
+        "evidence_ids": [],
+        "id": "metric.relationships",
+        "label": "Relationships",
+        "meaning": "Distinct (subject, predicate, object) triples supported by at least one paper's own result.",
+        "unit": "relationships",
+        "value": 37
+      },
+      {
+        "assumption_ids": [
+          "assumption.own_result_only"
+        ],
+        "direction": "mixed",
+        "display": "1 disputed",
+        "evidence_ids": [
+          "evidence.f1_1",
+          "evidence.f20",
+          "evidence.f6"
+        ],
+        "id": "metric.relationships_disputed",
+        "label": "Disputed relationships",
+        "meaning": "Relationships where primary papers report opposite directions. These are the ones worth reading by hand.",
+        "unit": "relationships",
+        "value": 1
+      },
+      {
+        "assumption_ids": [
+          "assumption.own_result_only"
+        ],
+        "direction": "positive",
+        "display": "1 corroborated",
+        "evidence_ids": [
+          "evidence.f24",
+          "evidence.f26",
+          "evidence.f3"
+        ],
+        "id": "metric.relationships_agreed",
+        "label": "Corroborated relationships",
+        "meaning": "Relationships where two or more papers agree on direction.",
+        "unit": "relationships",
+        "value": 1
+      },
+      {
+        "assumption_ids": [
+          "assumption.own_result_only"
+        ],
+        "direction": "negative",
+        "display": "28 single-source",
+        "evidence_ids": [
+          "evidence.f1",
+          "evidence.f10",
+          "evidence.f11",
+          "evidence.f13",
+          "evidence.f14",
+          "evidence.f15",
+          "evidence.f16",
+          "evidence.f17",
+          "evidence.f18",
+          "evidence.f19",
+          "evidence.f2",
+          "evidence.f21",
+          "evidence.f22",
+          "evidence.f23",
+          "evidence.f30",
+          "evidence.f33",
+          "evidence.f34",
+          "evidence.f35",
+          "evidence.f36",
+          "evidence.f37",
+          "evidence.f38",
+          "evidence.f39",
+          "evidence.f40",
+          "evidence.f42",
+          "evidence.f5",
+          "evidence.f7",
+          "evidence.f8",
+          "evidence.f9"
+        ],
+        "id": "metric.relationships_single_source",
+        "label": "Single-source relationships",
+        "meaning": "Relationships resting on exactly one paper. Uncorroborated, not wrong.",
+        "unit": "relationships",
+        "value": 28
+      },
+      {
+        "assumption_ids": [
+          "assumption.own_result_only"
+        ],
+        "direction": "neutral",
+        "display": "7 null results",
+        "evidence_ids": [
+          "evidence.f12",
+          "evidence.f25",
+          "evidence.f27",
+          "evidence.f28",
+          "evidence.f29",
+          "evidence.f31",
+          "evidence.f32",
+          "evidence.f4"
+        ],
+        "id": "metric.relationships_no_effect",
+        "label": "Reported-null relationships",
+        "meaning": "Relationships where the only primary evidence is an explicit no-effect result. Kept separately so a null is never read as an absence of evidence.",
+        "unit": "relationships",
+        "value": 7
+      },
+      {
+        "assumption_ids": [
+          "assumption.gap_ranking"
+        ],
+        "direction": "neutral",
+        "display": "50 open gaps",
+        "evidence_ids": [],
+        "id": "metric.gaps_open",
+        "label": "Untested relationships proposed",
+        "meaning": "Pairs connected through an intermediate but with no direct link reported. Proposals for the next round, not findings.",
+        "unit": "gaps",
+        "value": 50
+      },
+      {
+        "assumption_ids": [
+          "assumption.confidence_weights",
+          "assumption.preprint_penalty",
+          "assumption.study_quality_table"
+        ],
+        "direction": "unknown",
+        "display": "0.4426 mean",
+        "evidence_ids": [],
+        "id": "metric.mean_link_confidence",
+        "label": "Mean heuristic confidence",
+        "meaning": "Mean of the per-relationship heuristic score. A ranking aid, NOT a probability that any relationship is true.",
+        "unit": "score",
+        "value": 0.4426
+      },
+      {
+        "assumption_ids": [],
+        "direction": "neutral",
+        "display": "31 entities",
+        "evidence_ids": [],
+        "id": "metric.entities",
+        "label": "Distinct entities",
+        "meaning": "Nodes after accession-first merging of synonyms.",
+        "unit": "entities",
+        "value": 31
+      }
+    ],
+    "schema_version": "1.0.0",
+    "steps": [
+      {
+        "assumption_ids": [
+          "assumption.limits.max_queries",
+          "assumption.depth",
+          "assumption.years"
+        ],
+        "evidence_ids": [],
+        "formula": null,
+        "id": "step.search",
+        "inputs": [
+          {
+            "path": "input.coverage.queries",
+            "unit": null,
+            "value": []
+          },
+          {
+            "path": "input.coverage.limits.max_queries",
+            "unit": "queries",
+            "value": 4
+          },
+          {
+            "path": "input.depth",
+            "unit": "tier",
+            "value": "standard"
+          }
+        ],
+        "label": "Search the corpus",
+        "method": "Paperclip full-text search over the biomedical corpus",
+        "result": {
+          "unit": "papers",
+          "value": 71
+        }
+      },
+      {
+        "assumption_ids": [
+          "assumption.limits.max_papers"
+        ],
+        "evidence_ids": [],
+        "formula": "papers_found -> papers_read -> papers_used",
+        "id": "step.screen",
+        "inputs": [
+          {
+            "path": "output.coverage.found",
+            "unit": "papers",
+            "value": 71
+          },
+          {
+            "path": "output.coverage.limits.max_papers",
+            "unit": "papers",
+            "value": 25
+          }
+        ],
+        "label": "Read and screen",
+        "method": "Full-text read, then keep papers that yield a quote-backed finding",
+        "result": {
+          "unit": "papers",
+          "value": 2
+        }
+      },
+      {
+        "assumption_ids": [],
+        "evidence_ids": [],
+        "formula": "fold(NFKC(quote)) is a substring of fold(NFKC(source_text)); non-matching findings are discarded, findings with no source text are retained and marked quote_verified=null",
+        "id": "step.quote_verification",
+        "inputs": [
+          {
+            "path": "input.findings[].quote",
+            "unit": "findings",
+            "value": 44
+          },
+          {
+            "path": "input.papers[].source_text",
+            "unit": "papers",
+            "value": 17
+          }
+        ],
+        "label": "Verify every quote against source text",
+        "method": "Mechanical substring match, not a model judgement",
+        "result": {
+          "unit": "findings",
+          "value": 35
+        }
+      },
+      {
+        "assumption_ids": [],
+        "evidence_ids": [],
+        "formula": "a conflicting accession BLOCKS a name merge, so human Q9NWZ3 and mouse Q8R4K2 stay distinct",
+        "id": "step.entity_resolution",
+        "inputs": [
+          {
+            "path": "input.things",
+            "unit": "entities",
+            "value": 31
+          }
+        ],
+        "label": "Merge synonymous entities",
+        "method": "UniProt accession first, then separator-insensitive normalized name",
+        "result": {
+          "unit": "entities",
+          "value": 31
+        }
+      },
+      {
+        "assumption_ids": [
+          "assumption.own_result_only"
+        ],
+        "evidence_ids": [],
+        "formula": "state = disagreed if yes and no; agreed if >=2 one way; single_source if exactly one; no_effect if only explicit nulls",
+        "id": "step.link_assembly",
+        "inputs": [
+          {
+            "path": "output.findings",
+            "unit": "findings",
+            "value": 44
+          }
+        ],
+        "label": "Group findings into relationships",
+        "method": "Group by (from, how, to) over own-result findings only",
+        "result": {
+          "unit": "relationships",
+          "value": 37
+        }
+      },
+      {
+        "assumption_ids": [
+          "assumption.own_result_only"
+        ],
+        "evidence_ids": [],
+        "formula": "0.5 + (yes - no) / (2 * (yes + no)); a lone source is 0.5, never 1.0",
+        "id": "step.confidence.agreement",
+        "inputs": [
+          {
+            "path": "output.links[].yes|no",
+            "unit": "relationships",
+            "value": 37
+          }
+        ],
+        "label": "Agreement term",
+        "method": "Direction balance across a relationship's own results",
+        "result": {
+          "unit": "score",
+          "value": 0.4099
+        }
+      },
+      {
+        "assumption_ids": [
+          "assumption.study_quality_table",
+          "assumption.preprint_penalty"
+        ],
+        "evidence_ids": [],
+        "formula": "mean(_STUDY_QUALITY[study_type]), x0.8 per preprint",
+        "id": "step.confidence.evidence_quality",
+        "inputs": [
+          {
+            "path": "output.papers[].study_type",
+            "unit": "papers",
+            "value": 20
+          }
+        ],
+        "label": "Evidence-quality term",
+        "method": "Study-design prior, averaged over the relationship's findings",
+        "result": {
+          "unit": "score",
+          "value": 0.6561
+        }
+      },
+      {
+        "assumption_ids": [],
+        "evidence_ids": [],
+        "formula": "(distinct first authors - 1) / (papers - 1); one group is not a consensus, so a single group scores 0.0",
+        "id": "step.confidence.independence",
+        "inputs": [
+          {
+            "path": "output.papers[].first_author",
+            "unit": "authors",
+            "value": 20
+          }
+        ],
+        "label": "Independence term",
+        "method": "Distinct first authors behind a relationship",
+        "result": {
+          "unit": "score",
+          "value": 0.0811
+        }
+      },
+      {
+        "assumption_ids": [
+          "assumption.confidence_weights"
+        ],
+        "evidence_ids": [],
+        "formula": "0.4*agreement + 0.4*evidence_quality + 0.2*independence; label high >=0.7, medium >=0.4, else low",
+        "id": "step.confidence.overall",
+        "inputs": [
+          {
+            "path": "code.CONFIDENCE_WEIGHTS.agreement",
+            "unit": "weight",
+            "value": 0.4
+          },
+          {
+            "path": "code.CONFIDENCE_WEIGHTS.evidence_quality",
+            "unit": "weight",
+            "value": 0.4
+          },
+          {
+            "path": "code.CONFIDENCE_WEIGHTS.independence",
+            "unit": "weight",
+            "value": 0.2
+          }
+        ],
+        "label": "Combine into a heuristic confidence score",
+        "method": "Fixed-weight linear combination. HEURISTIC -- not a probability, not calibrated against any outcome",
+        "result": {
+          "unit": "score",
+          "value": 0.4426
+        }
+      },
+      {
+        "assumption_ids": [
+          "assumption.gap_ranking"
+        ],
+        "evidence_ids": [],
+        "formula": "min(conf_AB, conf_BC) * basis_AB * basis_BC * independence * (1/sqrt(gaps spawned by the hub)) * (1 + 0.12*log2(routes)), capped at 0.6",
+        "id": "step.gap_ranking",
+        "inputs": [
+          {
+            "path": "output.links",
+            "unit": "relationships",
+            "value": 37
+          },
+          {
+            "path": "code.GAP_RANKING_CONSTANTS",
+            "unit": null,
+            "value": {
+              "cap": 50,
+              "confidence_ceiling": 0.6,
+              "degree_cap": 24,
+              "route_bonus_coefficient": 0.12,
+              "shared_paper_penalty": 0.65
+            }
+          }
+        ],
+        "label": "Rank untested relationships",
+        "method": "Open triangles (A-B and B-C exist, A-C does not), ranked multiplicatively to break the ties a min() score produces",
+        "result": {
+          "unit": "gaps",
+          "value": 50
+        }
+      },
+      {
+        "assumption_ids": [
+          "assumption.limits.max_papers",
+          "assumption.limits.max_queries"
+        ],
+        "evidence_ids": [],
+        "formula": null,
+        "id": "step.stop",
+        "inputs": [
+          {
+            "path": "output.coverage.stop_reason",
+            "unit": null,
+            "value": "no_new_results"
+          },
+          {
+            "path": "output.coverage.truncated",
+            "unit": null,
+            "value": true
+          }
+        ],
+        "label": "Stop the round",
+        "method": "Stopping rule: no_new_results",
+        "result": {
+          "unit": "papers",
+          "value": 2
+        }
+      }
+    ],
+    "uncertainty": {
+      "draws": null,
+      "intervals": [
+        {
+          "central": 0.4426,
+          "confidence_level": null,
+          "high": 0.84,
+          "interval_type": "observed_range",
+          "low": 0.24,
+          "metric_id": "metric.mean_link_confidence",
+          "unit": "score"
+        }
+      ],
+      "limitations": [
+        "low/central/high are the observed minimum, mean and maximum of the per-relationship heuristic score across the 37 relationships in this graph. They are an observed range -- NOT percentiles, NOT a confidence interval, and NOT a sampling distribution.",
+        "The score is a ranking aid over what was read. It is not a probability that a relationship is true, and it is not calibrated against any outcome.",
+        "seed and draws are null because assembly is deterministic: the same round bundle produces byte-identical output.",
+        "The dominant uncertainty is not in the score, it is in coverage: 7 of 71 matched papers were read this round."
+      ],
+      "method": "Heuristic confidence decomposition (agreement, evidence quality, independence). No sampling, no model fitting and no statistical inference is performed.",
+      "seed": null
+    }
+  },
   "links": [
     {
       "basis": "primary",
@@ -1165,7 +3685,9 @@
       "state": "single_source",
       "to": "t24",
       "why": null,
-      "yes": ["f14"]
+      "yes": [
+        "f14"
+      ]
     },
     {
       "basis": "mixed",
@@ -1185,7 +3707,11 @@
       "state": "agreed",
       "to": "t11",
       "why": null,
-      "yes": ["f24", "f26", "f3"]
+      "yes": [
+        "f24",
+        "f26",
+        "f3"
+      ]
     },
     {
       "basis": "primary",
@@ -1201,7 +3727,10 @@
       "how": "increases",
       "id": "L3",
       "no": [],
-      "no_effect": ["f25", "f4"],
+      "no_effect": [
+        "f25",
+        "f4"
+      ],
       "state": "no_effect",
       "to": "t12",
       "why": null,
@@ -1221,11 +3750,15 @@
       "how": "increases",
       "id": "L4",
       "no": [],
-      "no_effect": ["f13"],
+      "no_effect": [
+        "f13"
+      ],
       "state": "single_source",
       "to": "t13",
       "why": null,
-      "yes": ["f11"]
+      "yes": [
+        "f11"
+      ]
     },
     {
       "basis": "primary",
@@ -1241,7 +3774,9 @@
       "how": "increases",
       "id": "L5",
       "no": [],
-      "no_effect": ["f12"],
+      "no_effect": [
+        "f12"
+      ],
       "state": "no_effect",
       "to": "t14",
       "why": null,
@@ -1265,7 +3800,9 @@
       "state": "single_source",
       "to": "t15",
       "why": null,
-      "yes": ["f1"]
+      "yes": [
+        "f1"
+      ]
     },
     {
       "basis": "primary",
@@ -1285,7 +3822,9 @@
       "state": "single_source",
       "to": "t16",
       "why": null,
-      "yes": ["f16"]
+      "yes": [
+        "f16"
+      ]
     },
     {
       "basis": "primary",
@@ -1305,7 +3844,9 @@
       "state": "single_source",
       "to": "t17",
       "why": null,
-      "yes": ["f40"]
+      "yes": [
+        "f40"
+      ]
     },
     {
       "basis": "primary",
@@ -1325,7 +3866,9 @@
       "state": "single_source",
       "to": "t9",
       "why": null,
-      "yes": ["f18"]
+      "yes": [
+        "f18"
+      ]
     },
     {
       "basis": "primary",
@@ -1345,7 +3888,9 @@
       "state": "single_source",
       "to": "t11",
       "why": null,
-      "yes": ["f5"]
+      "yes": [
+        "f5"
+      ]
     },
     {
       "basis": "primary",
@@ -1365,7 +3910,9 @@
       "state": "single_source",
       "to": "t23",
       "why": null,
-      "yes": ["f39"]
+      "yes": [
+        "f39"
+      ]
     },
     {
       "basis": "primary",
@@ -1381,7 +3928,9 @@
       "how": "decreases",
       "id": "L12",
       "no": [],
-      "no_effect": ["f31"],
+      "no_effect": [
+        "f31"
+      ],
       "state": "no_effect",
       "to": "t26",
       "why": null,
@@ -1405,7 +3954,9 @@
       "state": "single_source",
       "to": "t15",
       "why": null,
-      "yes": ["f2"]
+      "yes": [
+        "f2"
+      ]
     },
     {
       "basis": "primary",
@@ -1425,7 +3976,9 @@
       "state": "single_source",
       "to": "t27",
       "why": null,
-      "yes": ["f34"]
+      "yes": [
+        "f34"
+      ]
     },
     {
       "basis": "background_only",
@@ -1465,7 +4018,9 @@
       "state": "single_source",
       "to": "t12",
       "why": null,
-      "yes": ["f22"]
+      "yes": [
+        "f22"
+      ]
     },
     {
       "basis": "primary",
@@ -1485,7 +4040,9 @@
       "state": "single_source",
       "to": "t14",
       "why": null,
-      "yes": ["f21"]
+      "yes": [
+        "f21"
+      ]
     },
     {
       "basis": "primary",
@@ -1505,7 +4062,9 @@
       "state": "single_source",
       "to": "t18",
       "why": null,
-      "yes": ["f35"]
+      "yes": [
+        "f35"
+      ]
     },
     {
       "basis": "primary",
@@ -1525,7 +4084,9 @@
       "state": "single_source",
       "to": "t19",
       "why": null,
-      "yes": ["f42"]
+      "yes": [
+        "f42"
+      ]
     },
     {
       "basis": "primary",
@@ -1545,7 +4106,9 @@
       "state": "single_source",
       "to": "t29",
       "why": null,
-      "yes": ["f23"]
+      "yes": [
+        "f23"
+      ]
     },
     {
       "basis": "primary",
@@ -1560,12 +4123,17 @@
       "from": "t3",
       "how": "increases",
       "id": "L21",
-      "no": ["f20"],
+      "no": [
+        "f20"
+      ],
       "no_effect": [],
       "state": "disagreed",
       "to": "t11",
       "why": "conditions differ: {braf v600e-driven melanoma, mouse} vs {b16f0 melanoma, gulo ko mice}",
-      "yes": ["f1_1", "f6"]
+      "yes": [
+        "f1_1",
+        "f6"
+      ]
     },
     {
       "basis": "primary",
@@ -1585,7 +4153,9 @@
       "state": "single_source",
       "to": "t20",
       "why": null,
-      "yes": ["f37"]
+      "yes": [
+        "f37"
+      ]
     },
     {
       "basis": "primary",
@@ -1605,7 +4175,9 @@
       "state": "single_source",
       "to": "t21",
       "why": null,
-      "yes": ["f38"]
+      "yes": [
+        "f38"
+      ]
     },
     {
       "basis": "primary",
@@ -1625,7 +4197,9 @@
       "state": "single_source",
       "to": "t22",
       "why": null,
-      "yes": ["f36"]
+      "yes": [
+        "f36"
+      ]
     },
     {
       "basis": "primary",
@@ -1641,7 +4215,9 @@
       "how": "increases",
       "id": "L25",
       "no": [],
-      "no_effect": ["f28"],
+      "no_effect": [
+        "f28"
+      ],
       "state": "no_effect",
       "to": "t11",
       "why": null,
@@ -1661,7 +4237,9 @@
       "how": "increases",
       "id": "L26",
       "no": [],
-      "no_effect": ["f27"],
+      "no_effect": [
+        "f27"
+      ],
       "state": "no_effect",
       "to": "t12",
       "why": null,
@@ -1681,7 +4259,9 @@
       "how": "increases",
       "id": "L27",
       "no": [],
-      "no_effect": ["f29"],
+      "no_effect": [
+        "f29"
+      ],
       "state": "no_effect",
       "to": "t31",
       "why": null,
@@ -1705,7 +4285,9 @@
       "state": "single_source",
       "to": "t16",
       "why": null,
-      "yes": ["f15"]
+      "yes": [
+        "f15"
+      ]
     },
     {
       "basis": "primary",
@@ -1725,7 +4307,9 @@
       "state": "single_source",
       "to": "t9",
       "why": null,
-      "yes": ["f17"]
+      "yes": [
+        "f17"
+      ]
     },
     {
       "basis": "primary",
@@ -1741,7 +4325,9 @@
       "how": "decreases",
       "id": "L30",
       "no": [],
-      "no_effect": ["f32"],
+      "no_effect": [
+        "f32"
+      ],
       "state": "no_effect",
       "to": "t26",
       "why": null,
@@ -1765,7 +4351,9 @@
       "state": "single_source",
       "to": "t11",
       "why": null,
-      "yes": ["f7"]
+      "yes": [
+        "f7"
+      ]
     },
     {
       "basis": "primary",
@@ -1785,7 +4373,9 @@
       "state": "single_source",
       "to": "t25",
       "why": null,
-      "yes": ["f30"]
+      "yes": [
+        "f30"
+      ]
     },
     {
       "basis": "primary",
@@ -1805,7 +4395,9 @@
       "state": "single_source",
       "to": "t27",
       "why": null,
-      "yes": ["f33"]
+      "yes": [
+        "f33"
+      ]
     },
     {
       "basis": "primary",
@@ -1825,7 +4417,9 @@
       "state": "single_source",
       "to": "t11",
       "why": null,
-      "yes": ["f8"]
+      "yes": [
+        "f8"
+      ]
     },
     {
       "basis": "primary",
@@ -1845,7 +4439,9 @@
       "state": "single_source",
       "to": "t11",
       "why": null,
-      "yes": ["f9"]
+      "yes": [
+        "f9"
+      ]
     },
     {
       "basis": "primary",
@@ -1865,7 +4461,9 @@
       "state": "single_source",
       "to": "t11",
       "why": null,
-      "yes": ["f10"]
+      "yes": [
+        "f10"
+      ]
     },
     {
       "basis": "primary",
@@ -1885,7 +4483,9 @@
       "state": "single_source",
       "to": "t16",
       "why": null,
-      "yes": ["f19"]
+      "yes": [
+        "f19"
+      ]
     }
   ],
   "papers": [
@@ -1898,6 +4498,7 @@
       "pmid": "33557356",
       "retracted": false,
       "round": 1,
+      "source_sha256": "94236e6590e4e5a2577fc83be496c6cf50b49a66fa741cc2c11f6f79a6f429a5",
       "study_type": "animal",
       "title": "Antioxidants Promote Intestinal Tumor Progression in Mice",
       "year": 2021
@@ -1911,6 +4512,7 @@
       "pmid": "35892873",
       "retracted": false,
       "round": 1,
+      "source_sha256": "8b71dc2e9ed5e9376c233844184429de369a8395aeb9a0fee9dae2e99a37c9e4",
       "study_type": "animal",
       "title": "N-Acetylcysteine Promotes Metastatic Spread of Melanoma in Mice",
       "year": 2022
@@ -1924,6 +4526,7 @@
       "pmid": "36774779",
       "retracted": false,
       "round": 1,
+      "source_sha256": "fe82c529c647951375a7c01ddfab81f2319691686c87d9ebf513ec4c4005e01a",
       "study_type": "animal",
       "title": "ROS-lowering doses of vitamins C and A accelerate malignant melanoma metastasis",
       "year": 2023
@@ -1950,6 +4553,7 @@
       "pmid": "40356978",
       "retracted": false,
       "round": 1,
+      "source_sha256": "df20c681eafdcc5ed0c262fa07f36e09b96481f0dff6f37792f27513301a87e4",
       "study_type": "animal",
       "title": "Resveratrol and N-acetylcystein reduce hepatic steatosis but enhance initiation and progression of hepatocellular carcinoma by inhibiting GST-pi-MAPK axis in mice",
       "year": 2025
@@ -1963,6 +4567,7 @@
       "pmid": "23175106",
       "retracted": false,
       "round": 1,
+      "source_sha256": "7a56de56868e1b0dfe7a9655c59f5a2ffe03b298d4f100e305bb46889aac363e",
       "study_type": "animal",
       "title": "Ascorbate supplementation inhibits growth and metastasis of B16FO melanoma and 4T1 breast cancer cells in vitamin C-deficient mice",
       "year": 2013
@@ -1976,6 +4581,7 @@
       "pmid": "25354695",
       "retracted": false,
       "round": 1,
+      "source_sha256": "e1b6aad9ed94c95e53bd97d14affd79bf43813ebc1660cfd71cca44ba022f94e",
       "study_type": "animal",
       "title": "Restoring physiological levels of ascorbate slows tumor growth and moderates HIF-1 pathway activity in Gulo -/- mice",
       "year": 2015
@@ -1989,6 +4595,7 @@
       "pmid": "26466563",
       "retracted": false,
       "round": 1,
+      "source_sha256": "9dc12877f6f8cddebaeaa9ed5084dd2f523bf81f657d010eed66ef5e5a9c2bbc",
       "study_type": "animal",
       "title": "Oxidative stress inhibits distant metastasis by human melanoma cells",
       "year": 2015
@@ -2002,6 +4609,7 @@
       "pmid": "33499262",
       "retracted": false,
       "round": 1,
+      "source_sha256": "be967a6b85ef3b506cf9abde891fa3aa0de399fc0da9c37974e343169aec6740",
       "study_type": "animal",
       "title": "Mitochondria-Targeted Antioxidants MitoQ and MitoTEMPO Do Not Influence BRAF-Driven Malignant Melanoma and KRAS-Driven Lung Cancer Progression in Mice",
       "year": 2021
@@ -2015,6 +4623,7 @@
       "pmid": "35405977",
       "retracted": false,
       "round": 1,
+      "source_sha256": "fba71062ccdcf347898218c77b25f2293fbbc63c47e60d4c464960e4aa48263b",
       "study_type": "meta_analysis",
       "title": "Role of Beta-Carotene in Lung Cancer Primary Chemoprevention: A Systematic Review with Meta-Analysis and Meta-Regression",
       "year": 2022
@@ -2054,6 +4663,7 @@
       "pmid": "29507622",
       "retracted": false,
       "round": 1,
+      "source_sha256": "99505738c4df3a72da90665c2637b0d562558773347097c071d9582e9a97d3a7",
       "study_type": "animal",
       "title": "Pharmacological Ascorbate Suppresses Growth of Gastric Cancer Cells with GLUT1 Overexpression and Enhances the Efficacy of Oxaliplatin Through Redox Modulation",
       "year": 2018
@@ -2067,6 +4677,7 @@
       "pmid": "32477126",
       "retracted": false,
       "round": 1,
+      "source_sha256": "ad02e6ab37aa0a554634b0927f62037389723eda6925739676506503ed507f4d",
       "study_type": "animal",
       "title": "Vitamin C Inhibits Metastasis of Peritoneal Tumors By Preventing Spheroid Formation in ID8 Murine Epithelial Peritoneal Cancer Model",
       "year": 2020
@@ -2080,6 +4691,7 @@
       "pmid": "40433925",
       "retracted": false,
       "round": 1,
+      "source_sha256": "42f141fe28178155f15b04e89f3be340a37bc83a248b2e5176981a339aff0fc2",
       "study_type": "animal",
       "title": "Single-Cell Analysis Reveals that Vitamin C Inhibits Bone Metastasis of Renal Cancer via Cell Cycle Arrest and Microenvironment Remodeling",
       "year": 2025
@@ -2093,6 +4705,7 @@
       "pmid": "34504430",
       "retracted": false,
       "round": 1,
+      "source_sha256": "c5a41bad8726a9e0b9a63d2a418928a97e583a717313a0e9a710aed371b23171",
       "study_type": "animal",
       "title": "Ascorbic Acid Inhibits Liver Cancer Growth and Metastasis in vitro and in vivo, Independent of Stemness Gene Regulation",
       "year": 2021
@@ -2106,6 +4719,7 @@
       "pmid": "19099597",
       "retracted": false,
       "round": 1,
+      "source_sha256": "bf5fc5b16df49d5946a617d124742ed2b9a00efa0f4b096b13b9b7867c91b5c3",
       "study_type": "animal",
       "title": "Antioxidant intervention of smoking-induced lung tumor in mice by vitamin E and quercetin",
       "year": 2008
@@ -2119,6 +4733,7 @@
       "pmid": "23077524",
       "retracted": false,
       "round": 1,
+      "source_sha256": "0a7368396ced0185b9a5a547185f482a356b68c16ab80753c553daaa28b278b7",
       "study_type": "animal",
       "title": "Antioxidant Treatment Promotes Prostate Epithelial Proliferation in Nkx3.1 Mutant Mice",
       "year": 2012
@@ -2132,6 +4747,7 @@
       "pmid": "29215048",
       "retracted": false,
       "round": 1,
+      "source_sha256": "6378d141b5ecec2c672f0d69b655db1845c5c2ef83a8b1e5e3b6baecc238f29b",
       "study_type": "clinical_trial",
       "title": "High Dose Parenteral Ascorbate Inhibited Pancreatic Cancer Growth and Metastasis: Mechanisms and a Phase I/IIa study",
       "year": 2017
@@ -2145,6 +4761,7 @@
       "pmid": "25202679",
       "retracted": false,
       "round": 2,
+      "source_sha256": "1f6eb771f0529b59a0f605ad204d0d7bceb62558ad3018adb6a9051fedfdf9d8",
       "study_type": "test_tube",
       "title": "Epigenetic Impacts of Ascorbate on Human Metastatic Melanoma Cells",
       "year": 2014
@@ -2225,21 +4842,28 @@
       "name": "Vitamin C"
     },
     {
-      "aliases": ["RES"],
+      "aliases": [
+        "RES"
+      ],
       "id": "t4",
       "kind": "small_molecule",
       "mentions": 1,
       "name": "Resveratrol"
     },
     {
-      "aliases": ["provitamin A", "β-carotene"],
+      "aliases": [
+        "provitamin A",
+        "β-carotene"
+      ],
       "id": "t5",
       "kind": "small_molecule",
       "mentions": 1,
       "name": "beta-carotene"
     },
     {
-      "aliases": ["vitamin A palmitate"],
+      "aliases": [
+        "vitamin A palmitate"
+      ],
       "id": "t6",
       "kind": "small_molecule",
       "mentions": 1,
@@ -2253,7 +4877,9 @@
       "name": "canthaxanthin"
     },
     {
-      "aliases": ["Bach1"],
+      "aliases": [
+        "Bach1"
+      ],
       "gene_symbol": "BACH1",
       "id": "t8",
       "kind": "gene",
@@ -2263,7 +4889,10 @@
       "uniprot_accession": "O14867"
     },
     {
-      "aliases": ["GSTP1", "glutathione-S-transferase-pi"],
+      "aliases": [
+        "GSTP1",
+        "glutathione-S-transferase-pi"
+      ],
       "gene_symbol": "GSTP1",
       "id": "t9",
       "kind": "gene",
@@ -2331,7 +4960,10 @@
       "name": "breast cancer metastasis"
     },
     {
-      "aliases": ["4T1 tumor growth", "breast cancer tumor weight"],
+      "aliases": [
+        "4T1 tumor growth",
+        "breast cancer tumor weight"
+      ],
       "id": "t14",
       "kind": "process",
       "mentions": 1,
@@ -2349,42 +4981,59 @@
       "name": "intestinal tumor progression"
     },
     {
-      "aliases": ["HCC formation", "HCC growth"],
+      "aliases": [
+        "HCC formation",
+        "HCC growth"
+      ],
       "id": "t16",
       "kind": "process",
       "mentions": 1,
       "name": "hepatocellular carcinoma (HCC) initiation and progression"
     },
     {
-      "aliases": ["prostate epithelial hyperplasia", "prostate tumorigenesis"],
+      "aliases": [
+        "prostate epithelial hyperplasia",
+        "prostate tumorigenesis"
+      ],
       "id": "t17",
       "kind": "process",
       "mentions": 1,
       "name": "prostate epithelial proliferation"
     },
     {
-      "aliases": ["gastric tumor growth"],
+      "aliases": [
+        "gastric tumor growth"
+      ],
       "id": "t18",
       "kind": "process",
       "mentions": 1,
       "name": "gastric cancer growth"
     },
     {
-      "aliases": ["pancreatic cancer metastases", "pancreatic tumor progress"],
+      "aliases": [
+        "pancreatic cancer metastases",
+        "pancreatic tumor progress"
+      ],
       "id": "t19",
       "kind": "process",
       "mentions": 1,
       "name": "pancreatic cancer growth and metastasis"
     },
     {
-      "aliases": ["RCC bone metastasis", "bone metastatic RCC"],
+      "aliases": [
+        "RCC bone metastasis",
+        "bone metastatic RCC"
+      ],
       "id": "t20",
       "kind": "process",
       "mentions": 1,
       "name": "renal cancer bone metastasis"
     },
     {
-      "aliases": ["liver CSC tumor growth", "liver cancer metastasis"],
+      "aliases": [
+        "liver CSC tumor growth",
+        "liver cancer metastasis"
+      ],
       "id": "t21",
       "kind": "process",
       "mentions": 1,
@@ -2401,28 +5050,38 @@
       "name": "peritoneal tumor metastasis"
     },
     {
-      "aliases": ["lung tumor incidence", "lung tumor multiplicity"],
+      "aliases": [
+        "lung tumor incidence",
+        "lung tumor multiplicity"
+      ],
       "id": "t23",
       "kind": "process",
       "mentions": 1,
       "name": "smoking-induced lung tumor incidence"
     },
     {
-      "aliases": ["immunosuppressive neutrophil phenotype"],
+      "aliases": [
+        "immunosuppressive neutrophil phenotype"
+      ],
       "id": "t24",
       "kind": "process",
       "mentions": 1,
       "name": "neutrophil immunosuppressive reprogramming"
     },
     {
-      "aliases": ["lung cancer incidence in RCTs"],
+      "aliases": [
+        "lung cancer incidence in RCTs"
+      ],
       "id": "t25",
       "kind": "process",
       "mentions": 1,
       "name": "lung cancer risk (human)"
     },
     {
-      "aliases": ["chronic liver disease mortality", "liver cancer incidence"],
+      "aliases": [
+        "chronic liver disease mortality",
+        "liver cancer incidence"
+      ],
       "id": "t26",
       "kind": "process",
       "mentions": 1,
@@ -2436,28 +5095,38 @@
       "name": "all-cause mortality (human antioxidant RCTs)"
     },
     {
-      "aliases": ["prostate cancer formation in SELECT trial"],
+      "aliases": [
+        "prostate cancer formation in SELECT trial"
+      ],
       "id": "t28",
       "kind": "process",
       "mentions": 1,
       "name": "prostate cancer risk (human, SELECT trial)"
     },
     {
-      "aliases": ["LL/2 tumor growth"],
+      "aliases": [
+        "LL/2 tumor growth"
+      ],
       "id": "t29",
       "kind": "process",
       "mentions": 1,
       "name": "Lewis lung carcinoma tumor growth"
     },
     {
-      "aliases": ["MitoQ", "MitoTEMPO"],
+      "aliases": [
+        "MitoQ",
+        "MitoTEMPO"
+      ],
       "id": "t30",
       "kind": "small_molecule",
       "mentions": 1,
       "name": "mitochondria-targeted antioxidants (MitoQ/MitoTEMPO)"
     },
     {
-      "aliases": ["lung cancer progression", "lung tumor burden"],
+      "aliases": [
+        "lung cancer progression",
+        "lung tumor burden"
+      ],
       "id": "t31",
       "kind": "process",
       "mentions": 1,

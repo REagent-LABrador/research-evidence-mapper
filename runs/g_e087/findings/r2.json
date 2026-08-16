@@ -1,7 +1,9 @@
 [
   {
     "confidence": 0.7,
-    "flags": ["quote_spans_citation"],
+    "flags": [
+      "quote_spans_citation"
+    ],
     "from": "t3",
     "hedged": false,
     "how": "increases",
@@ -9,6 +11,7 @@
     "is_own_result": false,
     "paper": "p20",
     "quote": "In B16, melanoma-bearing mice spontaneous lung metastasis is inhibited by sodium ascorbate supplementation in drinking water in mice fed a restricted diet (low in tyrosine and phenylalanine) ( 10 ).",
+    "quote_verified": true,
     "round": 2,
     "says": "no",
     "section": "discussion",
@@ -25,6 +28,7 @@
     "is_own_result": true,
     "paper": "p3",
     "quote": "The increase in metastases was 1.6–2-fold and was similar with both doses for all four compounds.",
+    "quote_verified": true,
     "round": 2,
     "says": "yes",
     "section": "results",

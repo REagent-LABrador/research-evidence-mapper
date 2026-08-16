@@ -1,9 +1,7 @@
 {
   "_comment": "Copy this, replace every value, delete the _comment keys. This is the ONLY input assemble.py needs. Do not re-derive the shape from the source.",
-
   "graph_id": "g_7f2a",
   "_comment_graph_id": "omit entirely for new_question — a stable id is minted from the question",
-
   "question": "does IRAK4 inhibition affect synovial fibroblasts",
   "round": 2,
   "ask": "resolve_link",
@@ -14,7 +12,6 @@
   "generated_at": "2026-08-16T02:05:00Z",
   "status": "ok",
   "_comment_status": "your judgement of THIS round: ok | empty | partial | failed",
-
   "coverage": {
     "depth": "standard",
     "found": 46,
@@ -23,11 +20,28 @@
     "truncated": true,
     "stop_reason": "queries_exhausted",
     "_comment_stop_reason": "max_papers | queries_exhausted | no_new_results | time_limit | complete | search_unavailable",
-    "limits": { "max_papers": 25, "max_queries": 4 },
-    "figures_read": 1
+    "limits": {
+      "max_papers": 25,
+      "max_queries": 4
+    },
+    "figures_read": 1,
+    "_comment_queries": "REQUIRED by the output contract. One object per search you actually issued -- not the ones you planned. search_id is Paperclip's [s_...] handle; use null when there isn't one. An empty list is legal and raises QUERIES_NOT_RECORDED.",
+    "queries": [
+      {
+        "q": "IRAK4 inhibitor synovial fibroblast rheumatoid arthritis",
+        "tool": "paperclip.search",
+        "search_id": "s_6247a4f6",
+        "n_results": 20
+      },
+      {
+        "q": "PF-06650833 IL-6 release fibroblast-like synoviocytes",
+        "tool": "paperclip.search",
+        "search_id": "s_9b1e04af",
+        "n_results": 12
+      }
+    ]
   },
   "_comment_coverage": "the REAL numbers. no_quote_discarded and duplicates_dropped are added by the script — do not set them.",
-
   "things": [
     {
       "id": "t1",
@@ -51,7 +65,6 @@
     }
   ],
   "_comment_things": "only NEW or newly-aliased entities. Existing ones keep their ids; the script merges by normalized name and alias.",
-
   "papers": [
     {
       "id": "p1",
@@ -70,7 +83,6 @@
       "_comment_source_text": "REQUIRED for quote verification. Every quote is string-matched against it and dropped if it does not match. Stripped from the output."
     }
   ],
-
   "findings": [
     {
       "id": "f1",
@@ -89,7 +101,8 @@
       "is_own_result": true,
       "_comment_is_own_result": "false for a claim the paper CITES rather than shows. A review restating forty studies is one paper, not forty.",
       "hedged": false,
-      "confidence": 0.9
+      "confidence": 0.9,
+      "_comment_quote_verified": "Do NOT set this. assemble.py sets it: true when the quote matched source_text, null when no source_text was supplied so the check never ran. null is never read as verified."
     }
   ]
 }

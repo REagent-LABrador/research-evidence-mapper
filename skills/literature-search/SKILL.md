@@ -32,6 +32,21 @@ The tier is the budget. One round per request; never escalate on your own.
 
 Copy the row you used into `coverage.limits` and `coverage.depth`.
 
+**Record every query you issue in `coverage.queries`**, one object per search:
+
+```json
+{ "q": "<the query string, exactly as sent>",
+  "tool": "paperclip.search",
+  "search_id": "s_6247a4f6",
+  "n_results": 20 }
+```
+
+`search_id` is the `[s_…]` handle Paperclip prints on the results line; copy it
+when it is there and use `null` when it is not. A round that omits this ships a
+`QUERIES_NOT_RECORDED` warning to the consumer, because a search nobody recorded
+cannot be reproduced or audited. Record the queries you actually sent, not the
+ones you planned — a query you dropped for budget is not a query you ran.
+
 ## Query construction, by ask
 
 - **`new_question`** — decompose into entities and the relationship between
