@@ -51,7 +51,7 @@ request {graph_id?, ask, target, depth}
 | `skills/graph-assembly/SKILL.md` + `assemble.py` | dedup, scoring, gaps — deterministic, in code |
 | `fixtures/` | 3 questions: well-studied, sparse, genuinely disputed |
 
-**Compiled by `/managed-agent-deploy`:** `manifest.json` (sonnet-5, `message`,
+**Compiled by the deploy step:** `manifest.json` (sonnet-5, `message`,
 `session_policy: "fresh"`, Paperclip in `mcp_servers` with
 `permission: "always_allow"`, `memory` block), `acl.ts` (`{ public: true }`),
 `agent/tools/research-evidence-mapper.ts`. No `tools.ts` unless Paperclip turns out to be
@@ -65,7 +65,7 @@ stdio — then one handler wraps it.
 | 1 | `fixtures/` | defines "done" before anything aims at it |
 | 2 | `CLAUDE.md` + 3 skills | |
 | 3 | **Hand-run the pipeline in this session** on the largest fixture | demo-safe fallback if deploy fails |
-| 4 | `/managed-agent-deploy research-evidence-mapper` + smoke | |
+| 4 | `bun run deploy` + smoke | |
 | 5 | HTML render | where the points are; needs real data first |
 
 ## Verify

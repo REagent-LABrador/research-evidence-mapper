@@ -226,7 +226,7 @@ output. Non-determinism here silently corrupts every score.
 | 1 | fixtures | 3 questions, each with a stated reason it's in the set |
 | 2 | `CLAUDE.md` + 3 skills + `assemble.py` | `assemble.py` twice-run byte-identical on a fixture |
 | 3 | hand-run in session on largest fixture | output validates against `SCHEMA.md` |
-| 4 | `/managed-agent-deploy research-evidence-mapper` | deploy succeeds |
+| 4 | `bun run deploy` | deploy succeeds |
 | 5 | smoke, blocking | six facts below |
 | 6 | render | deferred |
 
