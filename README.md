@@ -28,6 +28,22 @@ pick a winner — it identified that one camp used **Gulo-knockout mice**, which
 cannot synthesise vitamin C, and that this is the boundary the disagreement sits
 on.
 
+> ### Integrating against this agent? Read [`SCHEMA.md`](./SCHEMA.md).
+>
+> **[`SCHEMA.md`](./SCHEMA.md) is at the root of this repository** — the same
+> directory as this README, not inside `docs/`. It is the authoritative contract:
+> the request you send, every field of the graph that comes back, the closed
+> vocabularies, and the guarantees. This README summarises it; **where the two
+> disagree, `SCHEMA.md` is correct and the README is a bug.**
+>
+> ```
+> research-evidence-mapper/
+> ├── SCHEMA.md      <-- the contract. start here to integrate.
+> ├── README.md      <-- this file. orientation and how to run it.
+> ├── CLAUDE.md          the deployed system prompt
+> └── docs/              design record only — not the contract
+> ```
+
 **Status: deployed, and its own acceptance test passes.** `agent_015feTqKz3Bmtec2RaWaE2sW` **v12** runs
 on the Claude Developer Platform with three skills, a memory store and the
 Paperclip MCP attached. All four ask types have executed against it, and all six
@@ -73,7 +89,7 @@ The distinguishing behaviours:
 
 ## Input / output schema
 
-Full contract in [`SCHEMA.md`](./SCHEMA.md). Summary:
+Full contract in [`SCHEMA.md`](./SCHEMA.md), at the repository root. Summary:
 
 ### Input — the task string is one JSON object
 
@@ -483,8 +499,11 @@ the actual reason those two labs disagree.
 | [`docs/BUILD.md`](./docs/BUILD.md) | build plan and its six blocking acceptance facts |
 | `lib/`, `scripts/`, `agent/` | session runtime, deploy/console CLIs, eve router wrapper |
 
-This README is the entry point; [`SCHEMA.md`](./SCHEMA.md) is the
-reference. Where the two disagree, SCHEMA.md wins and the disagreement is a bug.
+This README is the entry point; [`SCHEMA.md`](./SCHEMA.md) — **at the repository
+root, beside this file** — is the reference. Where the two disagree, `SCHEMA.md`
+wins and the disagreement is a bug. It is kept at the root deliberately, because
+it is the one file another team writes code against; please do not move it into
+`docs/`.
 
 ## Provenance
 

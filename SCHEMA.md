@@ -1,5 +1,12 @@
 # Knowledge Graph — Stage 1 ⇄ Stage 2 Contract
 
+**This is the authoritative contract for the agent, and it lives at the root**
+**of the repository.** Everything a consumer needs is here: the request you
+send, every field of the graph that comes back, the closed vocabularies, and
+the guarantees. [`README.md`](./README.md) summarises this file for
+orientation; where the two disagree, this file is correct.
+
+
 One JSON file per question, **grown across rounds**. Five lists referencing each
 other by `id`. Nothing nested.
 
