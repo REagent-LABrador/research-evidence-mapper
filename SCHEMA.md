@@ -230,6 +230,299 @@ Rules:
 }
 ```
 
+## Worked example — a real request and a real reply
+
+Everything below is copied out of [`runs/g_e087.json`](./runs/g_e087.json), the
+graph the deployed agent actually produced. Values are unedited; the lists are
+**excerpted**, and the counts under each show what the full artifact holds.
+
+### The request
+
+Two rounds were sent. Round 1 seeded the graph
+([`fixtures/q-disputed.txt`](./fixtures/q-disputed.txt)):
+
+```json
+{
+  "ask": "new_question",
+  "target": "Do antioxidant supplements (N-acetylcysteine, vitamin E, vitamin C) accelerate or suppress cancer progression and metastasis?",
+  "depth": "standard",
+  "reason": "fixture: two labs publish directly opposing in vivo results — the graph must yield at least one disagreed link"
+}
+```
+
+Round 2 asked for more evidence on the one link that came back `disagreed`:
+
+```json
+{
+  "graph_id": "g_e087",
+  "ask": "resolve_link",
+  "target": "L21",
+  "depth": "standard",
+  "reason": "round-2 artifact: exercise links_changed on the disagreed link"
+}
+```
+
+### The reply
+
+Full graph both times. After round 2 it held **31 things,
+20 papers, 44 findings,
+37 links, 50 gaps** — about 51 KB.
+
+**The link the question was really about.** Two labs disagree, and the graph
+neither averaged them nor picked a winner:
+
+```json
+{
+  "basis": "primary",
+  "changed_in_round": 2,
+  "confidence": {
+    "agreement": 0.6667,
+    "evidence_quality": 0.575,
+    "independence": 1.0,
+    "label": "medium",
+    "overall": 0.6967
+  },
+  "from": "t3",
+  "how": "increases",
+  "id": "L21",
+  "no": [
+    "f20"
+  ],
+  "no_effect": [],
+  "state": "disagreed",
+  "to": "t11",
+  "why": "conditions differ: {braf v600e-driven melanoma, mouse} vs {b16f0 melanoma, gulo ko mice}",
+  "yes": [
+    "f1_1",
+    "f6"
+  ]
+}
+```
+
+`why` is the payload. One camp used BRAF-V600E melanoma in ordinary mice, the
+other B16F0 melanoma in **Gulo-knockout** mice — animals that cannot synthesise
+vitamin C, which is precisely why the two results differ. `agreement` is 0.6667
+rather than 1.0 because two findings say yes and one says no, and
+`independence` is 1.0 because the yes and no come from different first authors.
+
+**The evidence behind it.** Every finding carries the sentence it came from:
+
+```json
+[
+  {
+    "confidence": 0.9,
+    "flags": [],
+    "from": "t3",
+    "hedged": false,
+    "how": "increases",
+    "id": "f6",
+    "is_own_result": true,
+    "paper": "p3",
+    "quote": "Four diet-relevant compounds from this list—VitC, β-carotene, retinyl palmitate, and canthaxanthin—were selected and found to accelerate metastasis in mice with BRAF V600E -driven malignant melanoma.",
+    "round": 1,
+    "says": "yes",
+    "section": "abstract",
+    "to": "t11",
+    "where": "braf v600e-driven melanoma, mouse"
+  }
+]
+```
+
+and the finding that disagrees with it:
+
+```json
+[
+  {
+    "id": "f20",
+    "from": "t3",
+    "how": "increases",
+    "to": "t11",
+    "says": "no",
+    "quote": "Ascorbate-supplemented gulo KO mice injected with B16FO melanoma cells demonstrated significant reduction (by 71%, p=0.005) in tumor metastasis compared to gulo KO mice on the control diet.",
+    "paper": "p6",
+    "where": "b16f0 melanoma, gulo ko mice",
+    "section": "abstract",
+    "is_own_result": true,
+    "hedged": false,
+    "confidence": 0.9,
+    "round": 1,
+    "flags": []
+  }
+]
+```
+
+Note `where` on each. That field is what `explain_disagreement` compares, which
+is why it is worth populating carefully — with both set to the same conditions,
+this would have been a flat contradiction instead of a boundary.
+
+**The papers they cite**, deduped on DOI → PMID → title+year:
+
+```json
+[
+  {
+    "id": "p3",
+    "title": "ROS-lowering doses of vitamins C and A accelerate malignant melanoma metastasis",
+    "year": 2023,
+    "journal": "Redox Biology",
+    "doi": "10.1016/j.redox.2023.102619",
+    "pmid": "36774779",
+    "first_author": "Muhammad Kashif",
+    "study_type": "animal",
+    "is_preprint": false,
+    "retracted": false,
+    "round": 1
+  },
+  {
+    "id": "p6",
+    "title": "Ascorbate supplementation inhibits growth and metastasis of B16FO melanoma and 4T1 breast cancer cells in vitamin C-deficient mice",
+    "year": 2013,
+    "journal": "International Journal of Oncology",
+    "doi": "10.3892/ijo.2012.1712",
+    "pmid": "23175106",
+    "first_author": "John Cha",
+    "study_type": "animal",
+    "is_preprint": false,
+    "retracted": false,
+    "round": 1
+  }
+]
+```
+
+**The entities**, resolved against the whole graph rather than this round:
+
+```json
+[
+  {
+    "aliases": [
+      "AA",
+      "APM",
+      "Asc",
+      "IVC",
+      "L-ascorbic acid 2-phosphate sesquimagnesium (APM)",
+      "VitC",
+      "ascorbate",
+      "ascorbic acid",
+      "pharmacological ascorbate",
+      "sodium ascorbate",
+      "vitamin C"
+    ],
+    "id": "t3",
+    "kind": "small_molecule",
+    "mentions": 2,
+    "merged_from": [
+      {
+        "name": "Vitamin C",
+        "via": "name"
+      }
+    ],
+    "name": "Vitamin C"
+  },
+  {
+    "aliases": [
+      "B16FO melanoma metastasis",
+      "distant metastasis by melanoma cells",
+      "malignant melanoma metastasis",
+      "melanoma metastatic spread"
+    ],
+    "id": "t11",
+    "kind": "process",
+    "mentions": 2,
+    "merged_from": [
+      {
+        "name": "melanoma metastasis",
+        "via": "name"
+      }
+    ],
+    "name": "melanoma metastasis"
+  }
+]
+```
+
+Neither carries a `uniprot_accession`: one is a small molecule and the other a
+process, and neither has a UniProt entry. The field belongs on `protein` and
+`gene` nodes only — `coverage.proteins_without_accession` below reports the ones
+that should have had it.
+
+**What round 2 changed**, derived and returned with the graph:
+
+```json
+{
+  "findings_added": [
+    "f1_1",
+    "f2_1"
+  ],
+  "gaps_added": [],
+  "gaps_resolved": [],
+  "links_added": [],
+  "links_changed": [
+    "L21"
+  ],
+  "papers_added": [
+    "p20"
+  ],
+  "round": 2,
+  "things_added": []
+}
+```
+
+`resolve_link` moved its target and nothing else: no new things, no new links,
+two findings from one new paper, and `L21` rescored from 0.64 to 0.6967.
+
+**Coverage — what was *not* read:**
+
+```json
+{
+  "confidence_profile": {
+    "below_0_65": 2,
+    "hedged_but_confident": [],
+    "max": 0.9,
+    "min": 0.6,
+    "n": 44
+  },
+  "depth": "standard",
+  "figures_read": 2,
+  "found": 71,
+  "has_disease_node": true,
+  "interventions_without_target": [
+    "t2",
+    "t3",
+    "t30",
+    "t5",
+    "t6",
+    "t7"
+  ],
+  "interventions_without_target_count": 6,
+  "limits": {
+    "max_papers": 25,
+    "max_queries": 4
+  },
+  "no_quote_discarded": 0,
+  "proteins_without_accession": [],
+  "proteins_without_accession_count": 0,
+  "read": 7,
+  "stop_reason": "no_new_results",
+  "truncated": true,
+  "used": 2
+}
+```
+
+Read that honestly: **71 results found, 7 read,
+2 used**, `truncated: true`, and `stop_reason` says the round ended
+because it ran out of queries rather than because the literature ran out. Only
+`stop_reason: "complete"` means the latter.
+
+`confidence_profile` shows the self-reported scores spanning
+0.6–0.9 with
+2 findings below 0.65, and
+`hedged_but_confident` empty — no finding claims to be hedged while also scoring
+above 0.65.
+
+`interventions_without_target` lists nodes that never said what they act on, and
+`proteins_without_accession` lists protein nodes with no identifier. Both are
+**reported, never enforced**: a shortfall is visible in the output instead of
+silently absent.
+
+
 ## Where the graph lives
 
 **Stage 1 owns storage. Stage 2 never holds or sends the graph** — it sends a
