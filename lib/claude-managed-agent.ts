@@ -267,6 +267,12 @@ const DEFAULT_TIMEOUT_MS = 10 * 60 * 1000;
 // never got to its tools at all. Fail fast and name the likely causes.
 const DEFAULT_MCP_SILENCE_MS = 120_000;
 
+// A dropped event stream is not a failed run: the session lives server-side and
+// keeps going. Observed on a `deep` round that had already made 32 MCP calls --
+// the agent went quiet during local assembly, the connection idled, and the SSE
+// read failed with a TimeoutError, losing the whole round. Reopen instead.
+const MAX_STREAM_RECONNECTS = 5;
+
 /**
  * Run one task against a deployed managed agent and wait for the result.
  * Thin consumer of `streamTask` for callers that don't need progress.
@@ -442,6 +448,7 @@ async function* consumeUntilEndTurn(args: {
     seen: false,
     silenceMs: mcpSilenceMs,
   };
+  const seen = new Set<string>();
   const state: StreamState = {
     lastMessage: "",
     longestMessage: "",
@@ -449,10 +456,70 @@ async function* consumeUntilEndTurn(args: {
     pendingToolUses: new Map(),
   };
 
+  for (let attempt = 0; attempt <= MAX_STREAM_RECONNECTS; attempt += 1) {
+    const outcome = yield* consumeOneStream({
+      client,
+      deadline,
+      mcpWatch,
+      opts,
+      seen,
+      sessionId,
+      state,
+      timeoutMs,
+      toolsByName,
+    });
+    if (outcome) {
+      return outcome;
+    }
+    if (Date.now() > deadline) {
+      break;
+    }
+  }
+
+  return { outcome: state.outcome, sessionId, text: finalText(opts, state) };
+}
+
+/**
+ * Consume ONE event stream. Returns the run result when the turn ends, or
+ * undefined when the stream simply stopped -- which the caller treats as a drop
+ * worth reopening rather than an answer.
+ *
+ * Events are deduped by id across reconnects: a replayed custom_tool_use would
+ * otherwise be answered twice.
+ */
+async function* consumeOneStream(a: {
+  client: Anthropic;
+  deadline: number;
+  mcpWatch: McpWatch;
+  opts: RunTaskOptions;
+  seen: Set<string>;
+  sessionId: string;
+  state: StreamState;
+  timeoutMs: number;
+  toolsByName: Map<string, CustomToolSpec>;
+}): AsyncGenerator<TaskProgress, RunTaskResult | undefined> {
+  const {
+    client,
+    deadline,
+    mcpWatch,
+    opts,
+    seen,
+    sessionId,
+    state,
+    timeoutMs,
+    toolsByName,
+  } = a;
   const stream = await client.beta.sessions.events.stream(sessionId);
 
   for await (const raw of stream) {
     assertWithinDeadline(deadline, timeoutMs, sessionId);
+    const eventId = (raw as { id?: string }).id;
+    if (eventId && seen.has(eventId)) {
+      continue;
+    }
+    if (eventId) {
+      seen.add(eventId);
+    }
     opts.onEvent?.(SessionEvent.parse(raw));
 
     const parsed = KnownEvent.safeParse(raw);
@@ -493,8 +560,6 @@ async function* consumeUntilEndTurn(args: {
     });
     // session resumes; keep streaming
   }
-
-  return { outcome: state.outcome, sessionId, text: finalText(opts, state) };
 }
 
 /** Human-readable label for a progress snapshot; undefined = nothing to show. */
