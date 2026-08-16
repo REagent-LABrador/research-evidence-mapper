@@ -17,12 +17,13 @@
   "scripts": {
     "deploy": "bun scripts/deploy.ts",
     "console": "bun scripts/console.ts",
+    "execute": "bun scripts/execute.ts",
     "dev": "eve dev",
     "typecheck": "tsc --noEmit",
     "check": "ultracite check",
     "validate": "bun scripts/validate.ts",
     "rotate": "bun scripts/rotate-paperclip-credential.ts",
-    "test": "python3 skills/graph-assembly/assemble.py --selftest && bun scripts/validate.ts",
+    "test": "python3 skills/graph-assembly/assemble.py --selftest && bun scripts/validate.ts && bun test tests",
     "fix": "ultracite fix"
   },
   "type": "module",

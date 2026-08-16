@@ -25,5 +25,13 @@
   //                    and `bun run validate` asserts runs/g_minimal.json is
   //                    byte-identical to a fresh assembly, which a reformat
   //                    breaks.
-  "files": { "includes": ["!manifest.json", "!runs"] }
+  "files": {
+    "includes": [
+      "!manifest.json",
+      "!runs",
+      // Vendored byte-for-byte from platform-contracts; contract.lock.json
+      // verifies its SHA-256, so local formatting would break the pin.
+      "!contracts"
+    ]
+  }
 }
