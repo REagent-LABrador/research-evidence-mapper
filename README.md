@@ -4,6 +4,18 @@ A deployed **Claude Managed Agent** that turns one question about the scientific
 literature into a machine-readable knowledge graph, and grows that graph across
 rounds.
 
+For a noninteractive local caller, use the deployed agent without opening the
+Console:
+
+```bash
+bun run execute -- --input request.json --output graph.json --timeout-ms 1200000
+```
+
+On success, `graph.json` is the exact native graph documented below. A provider,
+credential, timeout, or invalid-output failure writes a small
+`status: "CANNOT_COMPLETE"` object with a stable `reason_code` and exits `2`.
+The command does not deploy or update the managed agent.
+
 It reads real papers through Paperclip, extracts every claim as a **verbatim
 quote** from text it actually fetched, and returns the whole graph as JSON —
 entities, evidence, scored relationships, and the places where the literature
@@ -640,4 +652,3 @@ and the shared runtime it needs are included here; the other nodes belong to
 their own authors.
 
 MIT — see [LICENSE](./LICENSE).
-
